@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_NAMING_WITH_REGION_REVIEW",
+  "snapshotUtc": "2026-10-19T09:14:10.3330778Z",
+  "projectPath": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised",
+  "scope": "Assets 자체 C#의 private 필드, 상수, bool 지역변수와 매개변수의 semantic 명명 변환. Packages 및 외부 제공 코드는 제외.",
+  "validationBoundary": "Roslyn 정적 컴파일 및 격리 fixture 검사 결과입니다. 이번 명명 변경 이후 Unity Editor Play 또는 기기 실행 결과를 대신하지 않습니다.",
+  "summary": {
+    "changedFiles": 14,
+    "boolLocals": 10,
+    "boolParameters": 15,
+    "referenceTokens": 41,
+    "addedSerializationAliases": 0,
+    "fieldStringChanges": 0,
+    "postRenameCount": 0,
+    "postChangedFiles": 0,
+    "compilationVariants": [
+      "EditorWindows",
+      "PlayerWindows",
+      "PlayerAndroid"
+    ],
+    "compilationErrorsBeforeAndAfter": 0
+  },
+  "preservedContracts": [
+    "프로퍼티와 메서드 이름 보존",
+    "공개 DTO 필드 및 JSON 계약 변경 없음",
+    "직렬화 필드·별칭과 필드명 문자열 변경 없음",
+    "일반 문자열 변경 없음",
+    "씬·프리팹 자산 변경 없음"
+  ],
+  "selfTests": {
+    "status": "PASS",
+    "directory": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\SelfTest-20261019-091254-458",
+    "cases": [
+      "bool 지역변수·매개변수 선언과 참조",
+      "일반·제네릭 명명 인수",
+      "추론 람다·foreach·패턴",
+      "lifecycle·override 매개변수",
+      "공개 DTO·프로퍼티·문자열 보존",
+      "지역변수의 필드 가림 방지",
+      "직렬화 별칭·기존 자산·백업 보존",
+      "플랫폼 분기·충돌 차단·재실행 안정성"
+    ]
+  },
+  "informationalReview": [
+    {
+      "file": "Assets/Scripts/PauseGimmickObject.cs",
+      "line": 53,
+      "finding": "Unity Event Method 구역이 Property보다 앞에 있습니다.",
+      "disposition": "기능 오류가 아닌 실제 region 순서 검토 항목. 자동 재배치하지 않았습니다."
+    },
+    {
+      "file": "Assets/Scripts/PauseLevel.cs",
+      "finding": "파일 단위 region 순서 감사 경고",
+      "disposition": "여러 독립 형식의 구역을 연결해 생긴 오탐입니다. 각 형식의 순서는 확인했습니다."
+    },
+    {
+      "file": "Assets/Scripts/PauseReplayPlanner.cs",
+      "finding": "파일 단위 region 순서 감사 경고",
+      "disposition": "중첩·독립 형식의 구역을 연결해 생긴 오탐입니다. 각 형식의 순서는 확인했습니다."
+    }
+  ],
+  "evidencePaths": {
+    "firstFieldAndConstApply": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-090456-293\\migration-report.json",
+    "boolApply": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\migration-report.json",
+    "boolPostAudit": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091410-281\\migration-report.json",
+    "backupManifest": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup-manifest.json"
+  },
+  "applyRun": {
+    "status": "APPLIED",
+    "reportDirectory": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805",
+    "projectPath": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised",
+    "utc": "2026-10-19T09:13:50.8557443Z",
+    "renames": [
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseExpandedMapBuilder.cs:12952",
+        "kind": "LocalBool",
+        "oldName": "outer",
+        "newName": "isOuter",
+        "containingType": "PauseExpandedMapBuilder",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseExpandedMapBuilder.cs",
+        "line": 213,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs:1332",
+        "kind": "LocalBool",
+        "oldName": "connected",
+        "newName": "isConnected",
+        "containingType": "PauseMcpConnection",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs",
+        "line": 41,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseProjectTools.cs:11191",
+        "kind": "ParameterBool",
+        "oldName": "passed",
+        "newName": "isPassed",
+        "containingType": "PauseProjectTools",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseProjectTools.cs",
+        "line": 195,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs:967",
+        "kind": "ParameterBool",
+        "oldName": "held",
+        "newName": "isHeld",
+        "containingType": "PauseClimb.JumpInputRecorder",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs",
+        "line": 27,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:1991",
+        "kind": "ParameterBool",
+        "oldName": "frozen",
+        "newName": "isFrozen",
+        "containingType": "PauseClimb.PauseBatchCamera",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "line": 40,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:2004",
+        "kind": "ParameterBool",
+        "oldName": "ending",
+        "newName": "isEnding",
+        "containingType": "PauseClimb.PauseBatchCamera",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "line": 40,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1171",
+        "kind": "ParameterBool",
+        "oldName": "useSafeArea",
+        "newName": "isUseSafeArea",
+        "containingType": "PauseClimb.PauseCanvasLayout",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "line": 32,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1724",
+        "kind": "ParameterBool",
+        "oldName": "useSafeArea",
+        "newName": "isUseSafeArea",
+        "containingType": "PauseClimb.PauseCanvasLayout",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "line": 41,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10658",
+        "kind": "LocalBool",
+        "oldName": "held",
+        "newName": "isHeld",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 162,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10760",
+        "kind": "LocalBool",
+        "oldName": "pressed",
+        "newName": "isPressed",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 163,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10875",
+        "kind": "LocalBool",
+        "oldName": "toggle",
+        "newName": "isToggle",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 164,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:12561",
+        "kind": "ParameterBool",
+        "oldName": "held",
+        "newName": "isHeld",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 194,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+        "kind": "LocalBool",
+        "oldName": "frozen",
+        "newName": "isFrozen",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 275,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:21519",
+        "kind": "ParameterBool",
+        "oldName": "jump",
+        "newName": "isJump",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 309,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:22934",
+        "kind": "LocalBool",
+        "oldName": "hadHit",
+        "newName": "isHadHit",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 338,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:23389",
+        "kind": "ParameterBool",
+        "oldName": "warning",
+        "newName": "isWarning",
+        "containingType": "PauseClimb.PauseGame",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "line": 344,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs:2333",
+        "kind": "LocalBool",
+        "oldName": "wasEnabled",
+        "newName": "isWasEnabled",
+        "containingType": "PauseClimb.PauseHud",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs",
+        "line": 58,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:5020",
+        "kind": "ParameterBool",
+        "oldName": "quiet",
+        "newName": "isQuiet",
+        "containingType": "PauseClimb.PauseLevel",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 111,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:7619",
+        "kind": "ParameterBool",
+        "oldName": "quiet",
+        "newName": "isQuiet",
+        "containingType": "PauseClimb.PauseLevel",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 152,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs:5573",
+        "kind": "LocalBool",
+        "oldName": "held",
+        "newName": "isHeld",
+        "containingType": "PauseClimb.PauseReplayDriver",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs",
+        "line": 98,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseRuntimeChecks.cs:7787",
+        "kind": "ParameterBool",
+        "oldName": "condition",
+        "newName": "isCondition",
+        "containingType": "PauseClimb.PauseRuntimeChecks",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseRuntimeChecks.cs",
+        "line": 117,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:8060",
+        "kind": "LocalBool",
+        "oldName": "ice",
+        "newName": "isIce",
+        "containingType": "PauseClimb.PauseSimulation",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs",
+        "line": 131,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:11524",
+        "kind": "ParameterBool",
+        "oldName": "ice",
+        "newName": "isIce",
+        "containingType": "PauseClimb.PauseSimulation",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs",
+        "line": 202,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseTrajectory.cs:1612",
+        "kind": "ParameterBool",
+        "oldName": "keepQueue",
+        "newName": "isKeepQueue",
+        "containingType": "PauseClimb.PauseTrajectory",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseTrajectory.cs",
+        "line": 35,
+        "isSerialized": false
+      },
+      {
+        "key": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+        "kind": "ParameterBool",
+        "oldName": "frozen",
+        "newName": "isFrozen",
+        "containingType": "PauseClimb.PauseWorldView",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs",
+        "line": 89,
+        "isSerialized": false
+      }
+    ],
+    "problems": [
+      {
+        "kind": "ChangeMarkerAdded",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs",
+        "line": 1,
+        "message": "파일 상단에 수정 이유 표시를 추가했습니다.",
+        "isBlocking": false
+      },
+      {
+        "kind": "ChangeMarkerAdded",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "line": 1,
+        "message": "파일 상단에 수정 이유 표시를 추가했습니다.",
+        "isBlocking": false
+      },
+      {
+        "kind": "ChangeMarkerAdded",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "line": 1,
+        "message": "파일 상단에 수정 이유 표시를 추가했습니다.",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGimmickObject.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Reference → Unity Event Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Property → Custom Method → Property → Custom Method → Variables → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Property → Custom Method → Property → Custom Method → Variables → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      }
+    ],
+    "stringReferences": [],
+    "files": [
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseExpandedMapBuilder.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Editor\\PauseExpandedMapBuilder.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Editor\\PauseExpandedMapBuilder.cs",
+        "beforeHash": "618D4439B09FDDFD8E3A71424B8CBB2C038B26E420AE12358B2AA74C17E0A974",
+        "afterHash": "2B27238A7126ABAF1AF9E7D6D51BA76527FF291B1788B7AE361BA96E5E86C0C2",
+        "edits": [
+          {
+            "start": 12952,
+            "length": 5,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseExpandedMapBuilder.cs:12952",
+            "replacement": "isOuter"
+          },
+          {
+            "start": 13021,
+            "length": 5,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseExpandedMapBuilder.cs:12952",
+            "replacement": "isOuter"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Editor\\PauseMcpConnection.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Editor\\PauseMcpConnection.cs",
+        "beforeHash": "E7C185AE76D5903430BBF1757B7136813ADF4091F53CCF57BA63A0DCC18FF70D",
+        "afterHash": "B5AC64536D4C1A4A333176D7512D60F192A27F4D9FBF0EBD74494BB701DBF160",
+        "edits": [
+          {
+            "start": 1332,
+            "length": 9,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs:1332",
+            "replacement": "isConnected"
+          },
+          {
+            "start": 1473,
+            "length": 9,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs:1332",
+            "replacement": "isConnected"
+          },
+          {
+            "start": 1501,
+            "length": 9,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseMcpConnection.cs:1332",
+            "replacement": "isConnected"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseProjectTools.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Editor\\PauseProjectTools.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Editor\\PauseProjectTools.cs",
+        "beforeHash": "ECB1CE43FC9C76FE305A69A8F312A3A9CBF5EF1796F920175CA558422D085BA6",
+        "afterHash": "4AD9CC9361F0BB49EBFFD8020B58FB89D55700BC85D2610539EB70CA7AEAD976",
+        "edits": [
+          {
+            "start": 11191,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseProjectTools.cs:11191",
+            "replacement": "isPassed"
+          },
+          {
+            "start": 11240,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Editor\\PauseProjectTools.cs:11191",
+            "replacement": "isPassed"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\JumpInputRecorder.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\JumpInputRecorder.cs",
+        "beforeHash": "B982F989ACE1D266FE1CE1D1C98049CA59222B37727D48725B62F7A6964AC6FD",
+        "afterHash": "A9F0E0C4A166F3151A3E30AB66E81D28622CCFF61256D56C109780C2D2D07A40",
+        "edits": [
+          {
+            "start": 0,
+            "length": 0,
+            "reason": "ChangeMarker",
+            "replacement": "// [수정됨: 의미 분석으로 필드·상수·bool 변수 이름을 정리하고 직렬화 이전 이름을 보존했습니다.]\r\n"
+          },
+          {
+            "start": 967,
+            "length": 4,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs:967",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 1094,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs:967",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 1161,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\JumpInputRecorder.cs:967",
+            "replacement": "isHeld"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseBatchCamera.cs",
+        "beforeHash": "8B74C23555D57D4D170ED8E8F0FAB053E599DA7D0D60168437EA749D82E165C9",
+        "afterHash": "49E43DEF89BB9F02873AC9A2A532B02131FB6415E0D537D284FCAD69D47BFFAD",
+        "edits": [
+          {
+            "start": 0,
+            "length": 0,
+            "reason": "ChangeMarker",
+            "replacement": "// [수정됨: 의미 분석으로 필드·상수·bool 변수 이름을 정리하고 직렬화 이전 이름을 보존했습니다.]\r\n"
+          },
+          {
+            "start": 1991,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:1991",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 2004,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:2004",
+            "replacement": "isEnding"
+          },
+          {
+            "start": 2143,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:1991",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 2153,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseBatchCamera.cs:2004",
+            "replacement": "isEnding"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseCanvasLayout.cs",
+        "beforeHash": "A52BDA3CF07609AC315A373591CCD3AA747F6891BECB16857DE2D96B1F447972",
+        "afterHash": "6694182895DDD2B120B0F85607CEA215A9676AF950E5E6BA88AEA8F7611BBB8B",
+        "edits": [
+          {
+            "start": 0,
+            "length": 0,
+            "reason": "ChangeMarker",
+            "replacement": "// [수정됨: 의미 분석으로 필드·상수·bool 변수 이름을 정리하고 직렬화 이전 이름을 보존했습니다.]\r\n"
+          },
+          {
+            "start": 1171,
+            "length": 11,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1171",
+            "replacement": "isUseSafeArea"
+          },
+          {
+            "start": 1257,
+            "length": 11,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1171",
+            "replacement": "isUseSafeArea"
+          },
+          {
+            "start": 1724,
+            "length": 11,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1724",
+            "replacement": "isUseSafeArea"
+          },
+          {
+            "start": 1771,
+            "length": 11,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseCanvasLayout.cs:1724",
+            "replacement": "isUseSafeArea"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseGame.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseGame.cs",
+        "beforeHash": "7E936F4910366DAAC4335B25831C58298F9870FC61BCA143F36E2929ECAC47F5",
+        "afterHash": "771D987B49FB5A43415BC870BB58BA97922BAFE3544A75A80806D997BDBD5A7F",
+        "edits": [
+          {
+            "start": 10658,
+            "length": 4,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10658",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 10760,
+            "length": 7,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10760",
+            "replacement": "isPressed"
+          },
+          {
+            "start": 10875,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10875",
+            "replacement": "isToggle"
+          },
+          {
+            "start": 11073,
+            "length": 7,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10760",
+            "replacement": "isPressed"
+          },
+          {
+            "start": 11173,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10658",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 11201,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:10875",
+            "replacement": "isToggle"
+          },
+          {
+            "start": 12561,
+            "length": 4,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:12561",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 12640,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:12561",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 18725,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19222,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19487,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19562,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19606,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19633,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 19663,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:18725",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 21519,
+            "length": 4,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:21519",
+            "replacement": "isJump"
+          },
+          {
+            "start": 21544,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:21519",
+            "replacement": "isJump"
+          },
+          {
+            "start": 21568,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:21519",
+            "replacement": "isJump"
+          },
+          {
+            "start": 22934,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:22934",
+            "replacement": "isHadHit"
+          },
+          {
+            "start": 23011,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:22934",
+            "replacement": "isHadHit"
+          },
+          {
+            "start": 23389,
+            "length": 7,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:23389",
+            "replacement": "isWarning"
+          },
+          {
+            "start": 23443,
+            "length": 7,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGame.cs:23389",
+            "replacement": "isWarning"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseHud.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseHud.cs",
+        "beforeHash": "9A58F78255496957724F3E8B914473540AC566F2E59FACB09981C85B0D541A02",
+        "afterHash": "3482D408B3D25BDD488A8884D5AD79FF6BC8E5724FDD5270929C865F88FC7959",
+        "edits": [
+          {
+            "start": 2333,
+            "length": 10,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs:2333",
+            "replacement": "isWasEnabled"
+          },
+          {
+            "start": 2466,
+            "length": 10,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs:2333",
+            "replacement": "isWasEnabled"
+          },
+          {
+            "start": 2701,
+            "length": 10,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs:2333",
+            "replacement": "isWasEnabled"
+          },
+          {
+            "start": 2860,
+            "length": 10,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseHud.cs:2333",
+            "replacement": "isWasEnabled"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseLevel.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseLevel.cs",
+        "beforeHash": "65583C2DEA744DAD9347240CF7E7EE09ED649933857EBD7E38C70B32035EC1D4",
+        "afterHash": "FAFEE666074A4B3CF407AB31E7A79FA8A6A8E6800FA6EA0559AD0D1EFAC217DF",
+        "edits": [
+          {
+            "start": 5020,
+            "length": 5,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:5020",
+            "replacement": "isQuiet"
+          },
+          {
+            "start": 7282,
+            "length": 5,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:5020",
+            "replacement": "isQuiet"
+          },
+          {
+            "start": 7619,
+            "length": 5,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:7619",
+            "replacement": "isQuiet"
+          },
+          {
+            "start": 12085,
+            "length": 5,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs:7619",
+            "replacement": "isQuiet"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseReplayDriver.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseReplayDriver.cs",
+        "beforeHash": "BCEDDF67EAB817D86403CD8972A72D4FAACC5098A15BD0258494B8BE67D8D483",
+        "afterHash": "ED9B109C3A88C0C402DE4B66F0F4699E880A57C1FDA97036E5161EE18C654638",
+        "edits": [
+          {
+            "start": 5573,
+            "length": 4,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs:5573",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 5810,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs:5573",
+            "replacement": "isHeld"
+          },
+          {
+            "start": 5918,
+            "length": 4,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayDriver.cs:5573",
+            "replacement": "isHeld"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseRuntimeChecks.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseRuntimeChecks.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseRuntimeChecks.cs",
+        "beforeHash": "08749EC615672684D49CB5E1A2639E1FE1E58E8E7962721808063882006A03FE",
+        "afterHash": "B2A2A6916C9F056693F63B5397C129F71EF576916B2E029E86768F4B73DE19A4",
+        "edits": [
+          {
+            "start": 7787,
+            "length": 9,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseRuntimeChecks.cs:7787",
+            "replacement": "isCondition"
+          },
+          {
+            "start": 7825,
+            "length": 9,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseRuntimeChecks.cs:7787",
+            "replacement": "isCondition"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseSimulation.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseSimulation.cs",
+        "beforeHash": "284CED459D50C53F43E19CDF9F4E6A3973038A984E79B8F9A6935B53E62C9D78",
+        "afterHash": "B3DB020F3C2E85EE96DEBEA8EEB95998B84EBD93EBED99EC8375B89011248C4F",
+        "edits": [
+          {
+            "start": 8060,
+            "length": 3,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:8060",
+            "replacement": "isIce"
+          },
+          {
+            "start": 8266,
+            "length": 3,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:8060",
+            "replacement": "isIce"
+          },
+          {
+            "start": 8340,
+            "length": 3,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:8060",
+            "replacement": "isIce"
+          },
+          {
+            "start": 8441,
+            "length": 3,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:8060",
+            "replacement": "isIce"
+          },
+          {
+            "start": 11524,
+            "length": 3,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:11524",
+            "replacement": "isIce"
+          },
+          {
+            "start": 11721,
+            "length": 3,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseSimulation.cs:11524",
+            "replacement": "isIce"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseTrajectory.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseTrajectory.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseTrajectory.cs",
+        "beforeHash": "2CD81463FFED6AAB417918760FB2A10CD2DEDC13C811AC04B5CEA51A143789DC",
+        "afterHash": "E68B80BE5EC3C0779EFFB62A098D3C3F29723BE50D8F347CBABA6E9C2B7CE4B9",
+        "edits": [
+          {
+            "start": 1612,
+            "length": 9,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseTrajectory.cs:1612",
+            "replacement": "isKeepQueue"
+          },
+          {
+            "start": 1826,
+            "length": 9,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseTrajectory.cs:1612",
+            "replacement": "isKeepQueue"
+          }
+        ]
+      },
+      {
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs",
+        "backup": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\backup\\Assets\\Scripts\\PauseWorldView.cs",
+        "preview": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091350-805\\preview\\Assets\\Scripts\\PauseWorldView.cs",
+        "beforeHash": "2ABBF7179E7DF3C2A2E0C3B7C2FB18943AAFA6EF9216F5394821194F9E824FDF",
+        "afterHash": "BD1903536D3D3E3242617DE1C747EBBA04308E6B214AC3EC47A3574AC94BEAF4",
+        "edits": [
+          {
+            "start": 3258,
+            "length": 6,
+            "reason": "Declaration:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 3562,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 3778,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 3826,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+            "replacement": "isFrozen"
+          },
+          {
+            "start": 3864,
+            "length": 6,
+            "reason": "Reference:C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseWorldView.cs:3258",
+            "replacement": "isFrozen"
+          }
+        ]
+      }
+    ],
+    "diagnostics": [
+      {
+        "variant": "EditorWindows",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "PlayerWindows",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "PlayerAndroid",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "EditorWindows",
+        "stage": "after",
+        "errors": []
+      },
+      {
+        "variant": "PlayerWindows",
+        "stage": "after",
+        "errors": []
+      },
+      {
+        "variant": "PlayerAndroid",
+        "stage": "after",
+        "errors": []
+      }
+    ],
+    "addedSummaries": 0,
+    "addedSerializationAliases": 0,
+    "referenceCount": 41,
+    "metadataReferenceCount": 334
+  },
+  "postAudit": {
+    "status": "PREVIEW",
+    "reportDirectory": "C:\\Users\\MBC\\Documents\\GitHub\\PauseClimb-Tools\\CodeRulesMigration\\Artifacts\\20261019-091410-281",
+    "projectPath": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised",
+    "utc": "2026-10-19T09:14:10.3330778Z",
+    "renames": [],
+    "problems": [
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseGimmickObject.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Reference → Unity Event Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Property → Custom Method → Property → Custom Method → Variables → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseLevel.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Property → Custom Method → Property → Custom Method → Variables → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      },
+      {
+        "kind": "RegionOrderReview",
+        "file": "C:\\Users\\MBC\\Documents\\Codex\\2026-10-15\\files-mentioned-by-the-user-docx\\PauseClimbUnity-Revised\\Assets\\Scripts\\PauseReplayPlanner.cs",
+        "line": 0,
+        "message": "중첩 형식까지 포함한 region 순서를 검토하세요: Variables → Custom Method → Property → Custom Method → Property → Property → Custom Method → Property → Custom Method",
+        "isBlocking": false
+      }
+    ],
+    "stringReferences": [],
+    "files": [],
+    "diagnostics": [
+      {
+        "variant": "EditorWindows",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "PlayerWindows",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "PlayerAndroid",
+        "stage": "before",
+        "errors": []
+      },
+      {
+        "variant": "EditorWindows",
+        "stage": "after",
+        "errors": []
+      },
+      {
+        "variant": "PlayerWindows",
+        "stage": "after",
+        "errors": []
+      },
+      {
+        "variant": "PlayerAndroid",
+        "stage": "after",
+        "errors": []
+      }
+    ],
+    "addedSummaries": 0,
+    "addedSerializationAliases": 0,
+    "referenceCount": 0,
+    "metadataReferenceCount": 334
+  },
+  "rootFollowUp": {
+    "gimmickPropertyRegionMovedBeforeUnityEvents": true,
+    "legacyReplayNestedIfExtracted": true,
+    "collisionAndPredictionLimitsExposedInInspector": true,
+    "animationFrameTimingsExposedInInspector": true,
+    "bellyThresholdInSavedScene": 3.5,
+    "ownCodeWhitespaceCheckPassed": true,
+    "unityCompilationErrors": 0,
+    "editorRuntimeStatus": "PASS",
+    "windowsRuntimeStatus": "PASS",
+    "androidBuildStatus": "Succeeded",
+    "androidBuildErrors": 0,
+    "deviceRuntimeVerified": false,
+    "entire175mCourseClearVerified": false
+  }
+}

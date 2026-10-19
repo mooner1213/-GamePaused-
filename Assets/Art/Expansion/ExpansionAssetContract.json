@@ -1,0 +1,174 @@
+{
+  "portal": {
+    "path": "Assets\\Art\\Expansion\\portal.png",
+    "size": [
+      96,
+      128
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "rope_anchor": {
+    "path": "Assets\\Art\\Expansion\\rope_anchor.png",
+    "size": [
+      40,
+      128
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "ladder": {
+    "path": "Assets\\Art\\Expansion\\ladder.png",
+    "size": [
+      48,
+      128
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "trampoline": {
+    "path": "Assets\\Art\\Expansion\\trampoline.png",
+    "size": [
+      128,
+      64
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "wind": {
+    "path": "Assets\\Art\\Expansion\\wind.png",
+    "size": [
+      128,
+      96
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "window_dark": {
+    "path": "Assets\\Art\\Expansion\\window_dark.png",
+    "size": [
+      64,
+      112
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "chandelier_dark": {
+    "path": "Assets\\Art\\Expansion\\chandelier_dark.png",
+    "size": [
+      96,
+      112
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "platform_stone": {
+    "path": "Assets\\Art\\Expansion\\platform_stone.png",
+    "size": [
+      128,
+      48
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "platform_ice": {
+    "path": "Assets\\Art\\Expansion\\platform_ice.png",
+    "size": [
+      128,
+      48
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "platform_crumble": {
+    "path": "Assets\\Art\\Expansion\\platform_crumble.png",
+    "size": [
+      128,
+      48
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point"
+  },
+  "sky_lower": {
+    "path": "Assets\\Art\\Expansion\\sky_lower.png",
+    "size": [
+      512,
+      256
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point",
+    "seamless": false
+  },
+  "sky_middle": {
+    "path": "Assets\\Art\\Expansion\\sky_middle.png",
+    "size": [
+      512,
+      256
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point",
+    "seamless": false
+  },
+  "sky_upper": {
+    "path": "Assets\\Art\\Expansion\\sky_upper.png",
+    "size": [
+      512,
+      256
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "pixelsPerUnit": 32,
+    "filter": "Point",
+    "seamless": false
+  }
+}
