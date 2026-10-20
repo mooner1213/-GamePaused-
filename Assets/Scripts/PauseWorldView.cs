@@ -38,6 +38,7 @@ namespace PauseClimb
         private MovementTuning _tuning;
         private Camera _worldCamera;
         private PauseFrozenPalette _palette;
+        private PauseSkyBackdrop _skyBackdrop;
 
         #endregion
 
@@ -79,6 +80,8 @@ namespace PauseClimb
             _worldCamera = sourceCamera;
             _distantOrigin = _distantRoot == null ? Vector3.zero : _distantRoot.localPosition;
             CachePlatformViews();
+            _skyBackdrop = _visualRoot.GetComponentInChildren<PauseSkyBackdrop>();
+            if (_skyBackdrop != null) _skyBackdrop.Initialize();
             _palette = new PauseFrozenPalette(_visualRoot, _worldCamera);
             _isInitialized = true;
             DrawWorld(false);
@@ -93,10 +96,13 @@ namespace PauseClimb
             foreach (PausePlatformVisual visual in _platformVisuals) visual.Draw(fullSeconds);
             if (!isFrozen && _distantRoot != null)
                 _distantRoot.localPosition = _distantOrigin + Vector3.up * (_worldCamera.transform.position.y * _parallaxAmount);
-            if (_hasFrozenState && _isLastFrozen == isFrozen) return;
-            _palette.SetFrozen(isFrozen);
-            _isLastFrozen = isFrozen;
-            _hasFrozenState = true;
+            if (!_hasFrozenState || _isLastFrozen != isFrozen)
+            {
+                _palette.SetFrozen(isFrozen);
+                _isLastFrozen = isFrozen;
+                _hasFrozenState = true;
+            }
+            if (_skyBackdrop != null) _skyBackdrop.Draw(isFrozen);
         }
 
 

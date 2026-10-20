@@ -338,8 +338,11 @@ public static class PauseExpansionChecks
             Require(sceneLevel.Platforms.Any(platform => platform.Id == id), "최종 구간 번호 " + id + "의 실제 발판이 있어야 합니다.");
         Require(sceneLevel.Platforms.First(platform => platform.Id == sceneLevel.FinalStepIds.Last()).Kind == PlatformKind.Goal,
             "네 번째 최종 도약의 발판이 정상이어야 합니다.");
+        PauseGimmickObject[] definitions = map.MapRoot.GetComponentsInChildren<PauseGimmickObject>(true);
         foreach (GimmickKind kind in Enum.GetValues(typeof(GimmickKind)))
-            Require(sceneLevel.Gimmicks.Any(gimmick => gimmick.Kind == kind), "실제 씬에 " + kind + " 기믹이 있어야 합니다.");
+            Require(definitions.Any(gimmick => gimmick.Kind == kind), "실제 씬에 비활성으로 보관한 장치를 포함해 " + kind + " 정의가 있어야 합니다.");
+        Require(definitions.Where(gimmick => gimmick.gameObject.activeInHierarchy).Select(gimmick => gimmick.Id).OrderBy(id => id)
+            .SequenceEqual(sceneLevel.Gimmicks.Select(gimmick => gimmick.Id).OrderBy(id => id)), "사용자가 비활성화한 장치는 실제 물리에 포함하지 않아야 합니다.");
         foreach (ClimbGimmick portal in sceneLevel.Gimmicks.Where(gimmick => gimmick.Kind == GimmickKind.Portal))
             Require(sceneLevel.Gimmicks.Any(other => other.Id == portal.TargetId && other.Kind == GimmickKind.Portal && other.TargetId == portal.Id),
                 "포탈 " + portal.Id + "은 존재하는 양방향 짝을 가져야 합니다.");
@@ -347,10 +350,15 @@ public static class PauseExpansionChecks
         SpriteRenderer[] renderers = map.GetComponentsInChildren<SpriteRenderer>(true)
             .Where(renderer => renderer.gameObject.activeInHierarchy).ToArray();
         Require(renderers.Length > 30, "편집 가능한 씬 렌더러가 실제로 존재해야 합니다.");
-        Require(renderers.Any(renderer => renderer.sortingOrder <= -90) &&
-            renderers.Any(renderer => renderer.sortingOrder >= -70 && renderer.sortingOrder <= -60) &&
-            renderers.Any(renderer => renderer.sortingOrder >= -40 && renderer.sortingOrder <= -30),
-            "하늘·원경·성벽의 명시적인 렌더링 순서가 구분되어야 합니다.");
+        PauseSkyBackdrop sky = map.MapRoot.GetComponentInChildren<PauseSkyBackdrop>();
+        if (sky != null)
+            Require(sky.PanelCount > 3 && sky.GetComponentsInChildren<SpriteRenderer>().All(renderer =>
+                renderer.sprite != null && renderer.sortingOrder <= -90 && AssetDatabase.GetAssetPath(renderer.sprite).Contains("Art/DesktopSky/") &&
+                renderer.sharedMaterial != null && renderer.sharedMaterial.shader.name == PauseSkyBackdrop.SHADER_NAME),
+                "맵 전체의 고정 들판·구름은 월드 높이 그라데이션 재질로 발판 뒤에 배치되어야 합니다.");
+        else
+            Require(renderers.Any(renderer => renderer.sortingOrder <= -90) && renderers.Any(renderer => renderer.sortingOrder >= -70 && renderer.sortingOrder <= -60) &&
+                renderers.Any(renderer => renderer.sortingOrder >= -40 && renderer.sortingOrder <= -30), "이전 성 배경의 하늘·원경·성벽 표시 순서를 유지해야 합니다.");
         SerializedObject serializedGame = new SerializedObject(game);
         SpriteRenderer player = serializedGame.FindProperty("_playerRenderer").objectReferenceValue as SpriteRenderer;
         Require(player != null && player.sprite != null && player.gameObject.scene == game.gameObject.scene,

@@ -77,6 +77,7 @@ namespace PauseClimb
         #region Property
         public bool HasStarted => _hasStarted;
         public bool CameraBatchLocked => _batchCamera != null && _batchCamera.IsLocked;
+        public bool CameraFollowingFall => _batchCamera != null && _batchCamera.IsFollowingFall;
         public bool EndingImpactTriggered => _endingSequence.HasHit;
         public bool IsRecording => _state.Phase == PlayPhase.Recording;
         public bool IsPaused => _state.IsPaused;
@@ -247,7 +248,7 @@ namespace PauseClimb
             {
                 case ClimbEvent.Jump: PlayEffect(PauseSoundCue.Jump); Announce($"도약 {_simulation.LaunchedCount}번 · {(_simulation.Facing > 0 ? "오른쪽" : "왼쪽")}을 향해 점프합니다."); break;
                 case ClimbEvent.WallBounce: PlayEffect(PauseSoundCue.Bounce); Announce("벽 박치기 · 바라보는 방향과 남은 수평 힘이 반사됐습니다."); break;
-                case ClimbEvent.LongFall: _isFinalBatch = false; _finalChain = 0; _isSummitReached = false; Announce("아래로 추락했습니다. 낮은 구간에서는 궤도가 다시 보입니다."); break;
+                case ClimbEvent.LongFall: _batchCamera.NotifyFallContact(_simulation.FallDistance); _isFinalBatch = false; _finalChain = 0; _isSummitReached = false; Announce("아래로 추락했습니다. 낮은 구간에서는 궤도가 다시 보입니다."); break;
                 case ClimbEvent.BellyBounce: PlayEffect(PauseSoundCue.Bounce); Announce($"배 반동 {_simulation.BellyBounceCount}회 · 앞구르기로 다시 공중에 뜹니다."); break;
                 case ClimbEvent.BellyRest: Announce("마지막 반동 · 엎드렸다가 일어납니다. 남은 예약 점프는 보존합니다."); break;
                 case ClimbEvent.Recovered: Announce("일어나기 완료 · 다음 예약 점프를 이어갑니다."); break;
@@ -276,7 +277,9 @@ namespace PauseClimb
             _modeLabel = _simulation.Recovering ? "엎드림 · 회복 중" : _simulation.OnRope ? "로프 · 자동 매달림" : _simulation.OnLadder ? "사다리 · 자동 등반" : _simulation.BellyBouncing ? "배 반동 · 앞구르기" : IsFinished ? "저주 해제" : IsEndingJump ? "글자 박치기" : _isSettingsOpen ? "설정" : !_hasStarted ? "등반 준비" : IsPaused ? IsInputLocked ? "일시정지 · 입력 잠금" : "일시정지 · 도약 설계" : IsPlayingBack ? "연속 도약 · 화면 고정" : "관찰 · 다음 계획 준비";
             _characterView.Draw(_simulation, isFrozen, IsEndingJump, _endingSequence.Elapsed, dt);
             _playerRenderer.transform.position = new Vector3(_simulation.Position.x, _simulation.Position.y + _endingSequence.Offset, -1f);
-            _batchCamera.Draw(_simulation.Position, _level.GoalHeight, isFrozen, IsEndingJump || IsFinished, dt);
+            _batchCamera.Draw(_simulation, _level.GoalHeight, isFrozen, IsEndingJump || IsFinished, dt);
+            if (CameraFollowingFall && !isFrozen)
+                _modeLabel = _modeLabel.Replace(" · 화면 고정", string.Empty) + " · 낙하 화면 추적";
             _worldView.DrawWorld(isFrozen);
             if (_isSoundFrozen != isFrozen) { _isSoundFrozen = isFrozen; AudioListener.pause = isFrozen; }
         }

@@ -110,7 +110,9 @@ namespace PauseClimb
             _characterView = _game == null ? null : _game.GetComponent<PauseCharacterView>();
             Require(_game != null && _characterView != null, "실제 게임과 캐릭터 표시 연결");
             _gimmickRenderers = FindObjectsByType<PauseGimmickObject>(FindObjectsSortMode.None)
-                .SelectMany(gimmick => gimmick.GetComponentsInChildren<SpriteRenderer>(true)).ToArray();
+                .SelectMany(gimmick => gimmick.GetComponentsInChildren<SpriteRenderer>(true))
+                .Concat(FindObjectsByType<PauseSkyBackdrop>(FindObjectsSortMode.None)
+                    .SelectMany(sky => sky.GetComponentsInChildren<SpriteRenderer>(true))).ToArray();
             _game.Simulation.EventRaised += ObserveEvent;
             _game.DriverEnabled = true;
             _game.DriverDelta = PauseSimulation.STEP;
@@ -159,6 +161,8 @@ namespace PauseClimb
             // [NOTE] 아래 상태 검사는 시작 위치만 Reset으로 준비합니다. 전체 코스 완주 증거로 사용하지 않습니다.
             foreach (ProbeKind kind in Enum.GetValues(typeof(ProbeKind)))
             {
+                if (kind == ProbeKind.Ladder && !_game.Level.Gimmicks.Any(gimmick => gimmick.Kind == GimmickKind.Ladder))
+                { _checks.Add("건너뜀 · 사용자가 씬에서 비활성화한 사다리의 실행 표시 검사. 사다리 물리는 독립 모델 검사로 확인합니다."); continue; }
                 Func<bool> reached = PrepareProbe(kind);
                 remainingFrames = STATE_FRAME_LIMIT;
                 while (!reached() && remainingFrames-- > 0) yield return null;
@@ -178,7 +182,7 @@ namespace PauseClimb
                 Require(_game.PlayerPosition == position && _game.Level.WorldTime == worldTime && _game.Simulation.MotionTime == motionTime,
                     kind + " 정지 중 모델과 월드 및 동작 시간 불변");
                 Require(_characterView.FrameIndex == frameIndex && IsSameRenderer(character), kind + " 정지 중 캐릭터 PNG 프레임과 표시 위치 불변");
-                Require(gimmicks.All(IsSameRenderer), kind + " 정지 중 모든 장치 스프라이트와 Transform 불변");
+                Require(gimmicks.All(IsSameRenderer), kind + " 정지 중 모든 장치와 하늘의 스프라이트·투명도·Transform 불변");
                 string captureName = "frozen-" + kind.ToString().ToLowerInvariant();
                 Capture(captureName);
                 yield return new WaitForSecondsRealtime(CAPTURE_SECONDS);

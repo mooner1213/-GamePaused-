@@ -24,7 +24,11 @@ namespace PauseClimb
             _camera = camera;
             _cameraColor = camera.backgroundColor;
             foreach (SpriteRenderer renderer in root.GetComponentsInChildren<SpriteRenderer>(true))
+            {
+                // [NOTE] 고정 하늘은 원본 그림으로 색을 계산하고 자체 셰이더에서 흑백으로 전환합니다.
+                if (renderer.sharedMaterial != null && renderer.sharedMaterial.shader.name == PauseSkyBackdrop.SHADER_NAME) continue;
                 _renderers.Add(new RendererColor(renderer));
+            }
         }
 
         // [수정됨: 붉은 하늘과 기믹의 유색 PNG도 회색 사본을 사용하여 색이 남지 않게 합니다.]

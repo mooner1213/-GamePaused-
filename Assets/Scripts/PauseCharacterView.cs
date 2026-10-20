@@ -36,6 +36,10 @@ namespace PauseClimb
         [Header("사람 도트 표시 설정")]
         [SerializeField, Tooltip("벽에 닿은 뒤 반동 자세를 표시하는 시간입니다. 실제 물리 반사 시간은 바꾸지 않습니다.")]
         private float _wallPoseSeconds = 0.68f;
+        [SerializeField, Range(0, 11), Tooltip("상승 벽 반동 원화가 자체적으로 방향을 바꾸는 첫 프레임입니다. 이 뒤의 원화를 반대로 선택해 충돌 직후 방향을 끝까지 유지합니다.")]
+        private int _wallUpTurnFrame = 7;
+        [SerializeField, Range(0, 11), Tooltip("하강 벽 반동 원화가 자체적으로 방향을 바꾸는 첫 프레임입니다. 이 뒤의 원화를 반대로 선택해 다시 벽 쪽을 보지 않게 합니다.")]
+        private int _wallDownTurnFrame = 5;
         [SerializeField, Tooltip("일반 착지 뒤 압축 자세를 표시하는 시간입니다. 다음 예약 점프가 실행되면 즉시 도약 자세로 바뀝니다.")]
         private float _landingPoseSeconds = 0.24f;
         [SerializeField, Tooltip("정지했을 때 사람 도트를 실제 회색 픽셀로 바꿉니다. 다시 흐르면 원색으로 돌아옵니다.")]
@@ -59,7 +63,6 @@ namespace PauseClimb
 
         private bool _isLoaded, _hasDisplayed, _isWallDescending;
         private float _wallClock = INACTIVE_POSE_CLOCK, _landingClock = INACTIVE_POSE_CLOCK;
-        private int _wallEntryFacing = 1;
         #endregion
 
         #region Reference
@@ -149,7 +152,7 @@ namespace PauseClimb
                 ShowFrame(ClipKind.Jump, LADDER_POSE_FRAME, sim.Facing, "사다리 · 매달려 오르기");
             else if (!sim.Grounded && _wallClock < Mathf.Max(0.1f, _wallPoseSeconds))
                 ShowTimed(_isWallDescending ? ClipKind.WallDown : ClipKind.WallUp, _wallClock,
-                    _wallEntryFacing, _isWallDescending ? "벽 반동 · 하강" : "벽 반동 · 상승", false);
+                    sim.Facing, _isWallDescending ? "벽 반동 · 하강" : "벽 반동 · 상승", false);
             else if (!sim.Grounded && sim.FallDistance >= _highFallPoseHeight)
                 ShowFrame(ClipKind.BellyLoop, Mathf.Clamp(Mathf.FloorToInt((sim.FallDistance - _highFallPoseHeight) * _highFallFramesPerMetre), 0, HIGH_FALL_LAST_FRAME), sim.Facing, "높은 낙하 · 배 착지 준비");
             else if (!sim.Grounded)
@@ -166,7 +169,6 @@ namespace PauseClimb
         public void ResetView()
         {
             _wallClock = _landingClock = INACTIVE_POSE_CLOCK;
-            _wallEntryFacing = 1;
             _isWallDescending = false;
             _hasDisplayed = false;
             _motionLabel = "사람 도트 준비";
@@ -239,7 +241,6 @@ namespace PauseClimb
             if (kind == ClimbEvent.WallBounce)
             {
                 _wallClock = 0f;
-                _wallEntryFacing = -_simulation.Facing;
                 _isWallDescending = _simulation.LastWallBounceDescending;
             }
             else if (kind == ClimbEvent.Land)
@@ -273,11 +274,14 @@ namespace PauseClimb
             ShowTimed(key, _clips[key].TotalSeconds * Mathf.Clamp01(progress), facing, label, false);
         }
 
-        // 이미 좌우로 준비한 PNG 중 한쪽만 골라 중복 반전 없이 표시합니다.
+        // [수정됨: 벽 충돌 직후부터 새 방향을 보며 원화 내부의 후반 방향 전환도 보정합니다.]
         private void ShowFrame(ClipKind key, int index, int facing, string label)
         {
             SpriteClip clip = _clips[key];
-            Sprite[] frames = facing < 0 ? clip.Left : clip.Right;
+            bool hasAuthoredTurn = (key == ClipKind.WallUp && index >= _wallUpTurnFrame) ||
+                (key == ClipKind.WallDown && index >= _wallDownTurnFrame);
+            int spriteFacing = hasAuthoredTurn ? -facing : facing;
+            Sprite[] frames = spriteFacing < 0 ? clip.Left : clip.Right;
             if (frames.Length == 0) return;
             _frameIndex = Mathf.Clamp(index, 0, frames.Length - 1);
             _displayedSprite = frames[_frameIndex];

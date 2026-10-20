@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T06:18:22.709444+00:00",
+  "scope": "Saved scene vs checkpoint before world background revision. Component, GameObject active state, and Transform YAML blocks remain identical, including inactive legacy geometry.",
+  "checked": {
+    "PausePlatformObject": 131,
+    "PauseWallObject": 24,
+    "PauseGimmickObject": 14
+  },
+  "changes": [],
+  "backupSha256": "3a353e45b87f966a4532f5fc403394411d6548affef2877f8383168f3fefe3a2"
+}
