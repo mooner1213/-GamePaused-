@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "file": "Assets/Art/DesktopSky/meadow.png",
+      "prompt": "Use case: stylized-concept. Asset type: production background for a coarse 2D pixel platform game. Wide 16:9 image, deliberately VERY SIMPLE Windows XP era desktop wallpaper mood drawn as low resolution pixel art, roughly 320x180 logical pixels enlarged with crisp square pixel edges. Minimal flat color clusters, simple blocky clouds, no painterly brushwork, no photographic details, no noise, no grain, no dithering, no complicated textures, no text, no watermarks, no characters, no castle, no architecture, no platforms, no frame. Full bleed opaque sky. Calm cheerful readable background, much less detailed than foreground. LOWEST SECTION: clear medium bright blue sky fills upper 80 percent. Only two smooth simple bright green rolling grassy hills across bottom 20 percent, iconic generic early desktop wallpaper feel. Four widely separated fluffy white pixel cloud clusters. Flat green fields without grass blades, without flowers, without fences or trees. Soft blue distant hill silhouette optional just one. Bright daytime."
+    },
+    {
+      "file": "Assets/Art/DesktopSky/clouds.png",
+      "prompt": "Use case: stylized-concept. Asset type: production background for a coarse 2D pixel platform game. Wide 16:9 image, deliberately VERY SIMPLE Windows XP era desktop wallpaper mood drawn as low resolution pixel art, roughly 320x180 logical pixels enlarged with crisp square pixel edges. Minimal flat color clusters, simple blocky clouds, no painterly brushwork, no photographic details, no noise, no grain, no dithering, no complicated textures, no text, no watermarks, no characters, no castle, no architecture, no platforms, no frame. Full bleed opaque sky. Calm cheerful readable background, much less detailed than foreground. MIDDLE SECTION: ONLY clear soft blue sky and five widely separated white fluffy very simple pixel cloud clusters. Empty blue center for gameplay readability. Absolutely no ground, no hills, no mountains, no horizon silhouettes, no objects. Sky slightly lighter near bottom. Daytime, easy nostalgic desktop wallpaper, not a complex cloudscape."
+    },
+    {
+      "file": "Assets/Art/DesktopSky/sunset.png",
+      "prompt": "Use case: stylized-concept. Asset type: production background for a coarse 2D pixel platform game. Wide 16:9 image, deliberately VERY SIMPLE Windows XP era desktop wallpaper mood drawn as low resolution pixel art, roughly 320x180 logical pixels enlarged with crisp square pixel edges. Minimal flat color clusters, simple blocky clouds, no painterly brushwork, no photographic details, no noise, no grain, no dithering, no complicated textures, no text, no watermarks, no characters, no castle, no architecture, no platforms, no frame. Full bleed opaque sky. Calm cheerful readable background, much less detailed than foreground. HIGHEST SECTION: ONLY simple open sky at sunset with four or five sparse rounded pixel cloud clusters. Muted peach and pale warm orange at bottom slowly becoming dusty rose and soft purple at top. One small pale orange sun disk low near the right edge, partly covered by a simple cloud. Very restrained sunset details. No ground, no hills, no mountains, no city, no landscape silhouettes. Flat colors and very large quiet empty areas, not dramatic fantasy sky."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T05:53:07.181446+00:00",
+  "scope": "Saved MainScene compared with pre-task backup, including user ladder disable and wind move. Component, GameObject and Transform YAML blocks are identical.",
+  "checked": {
+    "PausePlatformObject": 131,
+    "PauseWallObject": 24,
+    "PauseGimmickObject": 14
+  },
+  "changes": [],
+  "backupSha256": "578c9411c18e0264369ec2e6bfdb6696823862bf7a3ff3f8e5465fdfa8d6c817"
+}
