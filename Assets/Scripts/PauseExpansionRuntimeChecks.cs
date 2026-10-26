@@ -30,6 +30,8 @@ namespace PauseClimb
         private const float TRAMPOLINE_DROP = 6f;
         private const float ROPE_GRAB_FRACTION = 0.55f;
         private const float LADDER_START_FRACTION = 0.25f;
+        private const float FEEDBACK_DROP_X = 10.8f;
+        private const float FEEDBACK_DROP_Y = 12f;
         // [TUNE] 첫 두 실제 발판을 통과하는 고정 입력이며 게임 밸런스 설정값이 아닙니다.
         private const int CHARGE_FRAMES = 25;
         private const int QUEUE_COUNT = 2;
@@ -188,6 +190,43 @@ namespace PauseClimb
                 yield return new WaitForSecondsRealtime(CAPTURE_SECONDS);
                 RequireVisibleCapture(captureName);
             }
+
+            // [NOTE] 낙하 검사는 빈 오른쪽 통로에서 Reset으로 준비하며 전체 코스 완주로 표기하지 않습니다.
+            _game.RestartGame(); _game.Simulation.Reset(new Vector2(FEEDBACK_DROP_X, FEEDBACK_DROP_Y));
+            _game.RequestPauseToggle();
+            for (int command = 0; command < QUEUE_COUNT; command++)
+            {
+                _game.DriverHeld = true;
+                for (int frame = 0; frame < CHARGE_FRAMES; frame++) yield return null;
+                _game.DriverHeld = false;
+                for (int frame = 0; frame < RELEASE_FRAMES; frame++) yield return null;
+            }
+            _game.RequestPauseToggle();
+            remainingFrames = STATE_FRAME_LIMIT;
+            while (!_game.Simulation.HasLongFall && remainingFrames-- > 0) yield return null;
+            Require(remainingFrames > 0 && _game.PlaybackRemaining == 0 && _game.RecordedCount == 0 && _game.IsInputLocked,
+                "실제 게임의 낙하 판정은 모델·HUD 예약을 모두 지우고 회복까지 재입력을 차단");
+            while (!_game.Simulation.BellyBouncing && remainingFrames-- > 0) yield return null;
+            Require(remainingFrames > 0 && _game.CameraFollowingFall, "실제 배 반동에서도 낙하 카메라 연속 추적");
+            PauseImpactEffects impact = _game.GetComponent<PauseImpactEffects>();
+            SpriteRenderer[] dust = impact.GetComponentsInChildren<SpriteRenderer>();
+            Require(dust.Any(renderer => renderer.enabled), "실제 배 접촉에 도트 충돌 효과 표시");
+            _game.RequestPauseToggle(); yield return null;
+            RendererProbe[] dustSnapshot = dust.Select(ReadRenderer).ToArray();
+            for (int frame = 0; frame < FROZEN_FRAMES; frame++) yield return null;
+            Require(dustSnapshot.All(IsSameRenderer), "실제 정지 중 도트 효과 위치·색·크기 불변");
+            Capture("feedback-frozen-impact");
+            yield return new WaitForSecondsRealtime(CAPTURE_SECONDS); RequireVisibleCapture("feedback-frozen-impact");
+            PauseBatchCamera cameraControl = _game.GetComponent<PauseBatchCamera>();
+            Vector3 automatic = _game.GameCamera.transform.position;
+            cameraControl.MovePreview(2f); yield return null;
+            Require(_game.GameCamera.transform.position.y > automatic.y, "실제 게임 정지 중 휠 둘러보기 적용");
+            _game.RequestPauseToggle();
+            Require(!cameraControl.IsPreviewing && _game.GameCamera.transform.position == automatic, "실제 ESC 재생 전환에서 자동 카메라 위치로 복귀");
+            while (_game.IsPlayingBack && remainingFrames-- > 0) yield return null;
+            yield return null;
+            Require(remainingFrames > 0 && _game.Simulation.Grounded && !_game.Simulation.Recovering && _characterView.MotionLabel.StartsWith("대기"),
+                "실제 낙하·회복 완료 후 착지 재생 없이 idle 연결");
         }
 
         // 기믹의 실제 씬 좌표에 독립 실험의 출발 위치를 설정하고 도달 조건을 반환합니다.
@@ -290,7 +329,7 @@ namespace PauseClimb
             _hasCompleted = true;
             Directory.CreateDirectory(_outputDirectory);
             RuntimeReport report = new RuntimeReport { status = isPassed ? "PASS" : "FAIL", utc = DateTime.UtcNow.ToString("o"),
-                scope = "실제 PauseGame의 시작점 두 도약 및 장치별 정지 화면 검사. 장치별 상태 준비에 Reset을 사용하며 전체 175m 코스 완주 증거는 아닙니다.",
+                scope = "실제 PauseGame의 시작점 두 도약·장치별 정지 표시·12m 낙하 예약 취소·회복 idle·충돌 효과 정지·휠/ESC 복귀 검사. 장치와 낙하 상태 준비에 Reset을 사용하며 전체 175m 코스 완주 증거는 아닙니다.",
                 checks = _checks.ToArray(), error = error };
             File.WriteAllText(Path.Combine(_outputDirectory, RESULT_FILE), JsonUtility.ToJson(report, true));
             Debug.Log("[확장 실행 검증] " + (isPassed ? "통과" : "실패") + " · " + error);

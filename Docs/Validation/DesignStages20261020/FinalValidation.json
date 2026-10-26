@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T10:38:12.0943372Z",
+  "sceneCount": 15,
+  "previewCount": 45,
+  "scenePhysics": "PASS",
+  "runtime": "PASS",
+  "runtimePassed": 15,
+  "assets": "PASS",
+  "navigation": "PASS",
+  "consoleErrors": 0,
+  "mainSceneUnchanged": true,
+  "mainSceneSha256": "02D3112EF29A0EFF6F4E64B374130CC80A8B0A69A050D99A3C5797E1A8406827",
+  "openedScene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+  "buildSceneCount": 16,
+  "scope": "실제 15씬 정지·재생·흑백/원색 복원·시작 두 도약, 전체 175m 완주와 Android 실기기 검사는 제외",
+  "gallery": "Docs/Art/StageThemes20261020/비교갤러리.html",
+  "galleryValidation": "JavaScript DOM 동작과 45장 경로 확인. 브라우저 UI 자동화 검증은 하지 않음"
+}

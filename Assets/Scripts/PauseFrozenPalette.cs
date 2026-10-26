@@ -25,8 +25,10 @@ namespace PauseClimb
             _cameraColor = camera.backgroundColor;
             foreach (SpriteRenderer renderer in root.GetComponentsInChildren<SpriteRenderer>(true))
             {
-                // [NOTE] 고정 하늘은 원본 그림으로 색을 계산하고 자체 셰이더에서 흑백으로 전환합니다.
-                if (renderer.sharedMaterial != null && renderer.sharedMaterial.shader.name == PauseSkyBackdrop.SHADER_NAME) continue;
+                // [NOTE] 기존 하늘과 비교 스테이지 배경은 원본 그림을 보존하고 자체 셰이더에서 흑백으로 전환합니다.
+                if (renderer.sharedMaterial != null && (renderer.sharedMaterial.shader.name == PauseSkyBackdrop.SHADER_NAME
+                    || renderer.sharedMaterial.shader.name == PauseSkyBackdrop.STAGE_SHADER_NAME
+                    || renderer.sharedMaterial.shader.name == PauseDesignWorldView.SHADER_NAME)) continue;
                 _renderers.Add(new RendererColor(renderer));
             }
         }

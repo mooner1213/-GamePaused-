@@ -1,0 +1,281 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-10-20",
+  "asset": "15 separate opaque vertically repeatable pixel-art distant background candidates",
+  "sourceThemeManifest": "Themes.json",
+  "constraints": "No ground, horizon, hills, foreground platforms or characters; top and bottom matching haze; original image pixels preserved.",
+  "prompts": [
+    {
+      "index": 1,
+      "id": "01_ClassicKeycap",
+      "title": "클린 키캡",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 클린 키캡.\nDistant world visual language: ivory ABS keycaps, charcoal switch housings, orange tracks, lime status lights; crisp clean chunky classic computer castle.\nAtmosphere: light cornflower blue sky, faint distant keyboard towers and airy soft pixel clouds.\nBase sky and matching edge mist color: #64a6e9; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #ff7b18 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-f11ee841-59e4-45cd-997b-3bed0aafcd32.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/01_ClassicKeycap/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 2.009,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 2,
+      "id": "02_SlimKeyrail",
+      "title": "슬림 키레일",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 슬림 키레일.\nDistant world visual language: slender graphite aluminum key rails, narrow elongated ivory keys, a few orange electrical tracks; vertical industrial precision.\nAtmosphere: cool pale blue fog, narrow distant vertical elevator shafts, steel blue atmospheric clouds.\nBase sky and matching edge mist color: #91afc3; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #ed8e40 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-1719a366-9224-4759-88a8-78bc22e9f8d7.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/02_SlimKeyrail/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.444,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 3,
+      "id": "03_FracturedKeycap",
+      "title": "파손 키캡",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 파손 키캡.\nDistant world visual language: fractured ivory PBT keys, broken square fragments, dark chassis reinforcement, orange cables; salvage computer castle but strong structural joints.\nAtmosphere: faded blue grey sky, abandoned computer citadel arches, faint hanging disconnected cables at side edges, dusty cloud haze.\nBase sky and matching edge mist color: #8396b0; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #dd6b2d may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-c23a8563-a531-410c-9960-c6fbec2b67c5.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/03_FracturedKeycap/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 0.993,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 4,
+      "id": "04_IvoryCastle",
+      "title": "아이보리 고성",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 아이보리 고성.\nDistant world visual language: warm rough beige limestone castle, narrow uncolored Gothic lancet niches, broad stone cornices, no gilding, no blue enamel.\nAtmosphere: warm luminous ivory arcade silhouettes, pale golden sky, soft warm cloud banks, quiet distant medieval towers.\nBase sky and matching edge mist color: #d6bda0; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #c6a477 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-5edc6bda-a904-4e33-848c-f6234c369a33.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/04_IvoryCastle/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.088,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 5,
+      "id": "05_VioletRuins",
+      "title": "자주빛 폐성",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 자주빛 폐성.\nDistant world visual language: weathered charcoal-purple rubble stone castle, chipped purple blocks, deep Gothic recesses, crumbly old masonry, no large metal clamps.\nAtmosphere: ashy lavender sky and fog, ruined pointed window silhouettes and jagged ruined castle spires, desaturated mauve clouds.\nBase sky and matching edge mist color: #9c91ad; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #8b759f may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-8facf362-8111-4202-8bb1-586193fe10e6.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/05_VioletRuins/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 0.758,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 6,
+      "id": "06_VermilionBrick",
+      "title": "주홍 벽돌",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 주홍 벽돌.\nDistant world visual language: large bright vermilion brick battlements, thick slate-grey mortar, big chunky rectangular bricks, simple square stone reinforcement.\nAtmosphere: pale apricot sky, big distant red brick crenellated silhouettes and chimney shapes, soft cream clouds.\nBase sky and matching edge mist color: #e6b79f; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #ec6b3c may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-fdd02ae7-be25-4477-a27e-7fc508f9b082.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/06_VermilionBrick/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.017,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 7,
+      "id": "07_BlueGranite",
+      "title": "청회색 석성",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 청회색 석성.\nDistant world visual language: cool blue grey granite fortress, broad irregular rectangular stone blocks with blocky cracks, dark navy narrow supports, no key symbols.\nAtmosphere: overcast blue grey clouds, faint distant granite ramparts and slit windows, cool mist layers.\nBase sky and matching edge mist color: #a9bdcc; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #9caab7 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-6d8d4e3f-e8c5-49b3-ae29-d8211ac29cf9.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/07_BlueGranite/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.128,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 8,
+      "id": "08_AntiqueTerminal",
+      "title": "앤티크 전산성",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 앤티크 전산성.\nDistant world visual language: aged beige keyboard keys in walnut-brown iron frame, dull amber indicators, burnt orange insulated wires, not gears; antique terminal castle.\nAtmosphere: sepia amber clouded sky, distant old terminal hall arches and copper pipe silhouettes, dusty warm haze.\nBase sky and matching edge mist color: #c0a17e; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #d48c39 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-b5468bb3-62f3-406b-98e0-33039d053cb7.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/08_AntiqueTerminal/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.276,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 9,
+      "id": "09_RGBKeyboard",
+      "title": "RGB 키보드",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: RGB 키보드.\nDistant world visual language: dark grey large mechanical keycaps, fuchsia and cyan RGB traces, strong square key silhouettes with few plus marks, keyboard castle not server panels.\nAtmosphere: midnight navy blue cloud sky, dark distant keyboard silhouettes and circuit board line structures, sparse tiny pink blue point lights.\nBase sky and matching edge mist color: #434c79; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #ed49ad may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-83c10992-613c-4fff-acd7-952e36f99ca2.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/09_RGBKeyboard/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.467,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 10,
+      "id": "10_PorcelainGothic",
+      "title": "백색 고딕",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 백색 고딕.\nDistant world visual language: ivory porcelain key cathedral, elegant fluted buttresses, cobalt pointed arch recesses, small antique gold trim and white ceramic keys; repeat BODY MUST have plain matching end sockets without turret caps.\nAtmosphere: pale cobalt cloud sky, shadowy low saturation blue cathedral arches, ivory towers in distant mist and tiny gold architectural accents.\nBase sky and matching edge mist color: #92acd5; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #d6ad4b may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-268de095-9927-4be4-a921-b3231c002096.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/10_PorcelainGothic/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.467,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 11,
+      "id": "11_ObsidianFortress",
+      "title": "흑요석 요새",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 흑요석 요새.\nDistant world visual language: massive angular charcoal-violet obsidian blocks, broad iron clamp bands, sharp fortress teeth, recessed square switch seats and restrained amethyst details, clean hard large facets not crumbly rubble.\nAtmosphere: stormy grey purple sky, monumental distant iron gates and brutalist obsidian tower silhouettes in layered mist.\nBase sky and matching edge mist color: #91889e; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #9271a3 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-94eb6128-62bc-4a73-9ed2-a8d63142d0ad.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/11_ObsidianFortress/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.09,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 12,
+      "id": "12_TerracottaBastion",
+      "title": "적갈 벽돌 보루",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 적갈 벽돌 보루.\nDistant world visual language: small staggered burnt terracotta brick courses, iron tie plates and worn reddish copper reinforcement, a few pale ceramic switch insets, stepped corbels; different from large vermilion bricks.\nAtmosphere: warm russet mist, distant brickworks and furnace towers without fire, muted dusty peach sky and smoke-like soft clouds.\nBase sky and matching edge mist color: #c39b8b; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #b96c4a may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-aa201aec-0f0e-4a6e-b258-9edfdd48c4dd.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/12_TerracottaBastion/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.672,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 13,
+      "id": "13_BronzeClockwork",
+      "title": "청동 기계",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 청동 기계.\nDistant world visual language: verdigris green keys, amber brass rails, large simple cog half-wheels, piston supports and bold rivets in dark chestnut structure; regular mechanical matching joints.\nAtmosphere: desaturated teal atmospheric sky, enormous faint distant gear silhouettes and factory arches, soft turquoise and bronze haze.\nBase sky and matching edge mist color: #8badad; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #d9a440 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-92882597-cf0d-44bd-bb57-ca7ab884e559.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/13_BronzeClockwork/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.167,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 14,
+      "id": "14_NeonData",
+      "title": "네온 데이터",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 네온 데이터.\nDistant world visual language: angular midnight server panels, cyan and magenta data buses, horizontal status display slots, broad blank dark screens and magnesium vents; server fortress rather than plus-key column.\nAtmosphere: violet blue sky with abstract soft data clouds, distant server rack arches and tiny cyan display slots, low saturation futuristic city haze.\nBase sky and matching edge mist color: #6d709e; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #33bfe9 may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-c0305c05-03cc-4b48-bd25-6fbfbbecf202.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/14_NeonData/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.551,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    },
+    {
+      "index": 15,
+      "id": "15_GlassCircuit",
+      "title": "유리 회로",
+      "prompt": "Use case: stylized-concept.\nAsset type: OPAQUE repeating distant environment background texture for a 2D pixel-art platformer in Unity. One complete landscape image, approximately 1536 x 1024.\nPrimary request: hand-crafted 1990s console pixel art, visible coarse square pixels, flat layered clustered pixel shading, limited palette, restrained dithering, crisp nearest-neighbor edges. A subtle, atmospheric distant background that can be stacked repeatedly along a tall vertical game course.\nComposition: front-facing orthographic background, quiet low-detail empty center across at least 60 percent of the width. Clouds and haze with very faint distant theme-specific architectural silhouettes mainly at outer edges and far depth. Architecture is darker than sky but low contrast and low saturation, clearly far behind future gameplay. No solid front wall. NO foreground artwork or playable surfaces.\nTile boundary requirement: TOP AND BOTTOM edges are the SAME uniform color of softly clouded mist for an easy vertical join. Keep the top and bottom 12 percent nearly featureless matching haze; silhouettes fade out well before those edges. Cloud layer may appear in the middle, neither a ground view nor a scenic horizon composition. The central fog is naturally soft using coarse pixel clusters rather than smooth digital blur.\nAvoid entirely: ground, horizon line, floor, soil, grass, hills, landscape terrain, large sun, sunset orb, foreground wall, foreground platforms, character, ladders, rope, weapons, text, symbols resembling letters, logos, watermark, diagrams, multiple panels, asset sheet, borders, photorealism, 3D rendering, smooth vector style. No black empty margins. The entire output must be fully opaque.\nTheme: 유리 회로.\nDistant world visual language: aqua mint glass keycaps, white enamel rails, dark green PCB plates and square chips, crisp glass facets and sparse copper connectors, hard pixel glass not snow or ice.\nAtmosphere: light mint turquoise sky, faint distant glass corridor arcades, translucent geometric towers and soft seafoam clouds.\nBase sky and matching edge mist color: #9bcfca; use related lighter fog colors and muted architecture. Keep the reference foreground material language as distant silhouettes only, never draw actual game tiles or keycap sheets. Theme-specific accent #6ae2cb may occur in tiny subdued remote accents occupying less than 1 percent of the image; the theme must remain readable behind a bright player sprite.",
+      "nativePath": "C:\\Users\\MBC\\.codex\\generated_images\\01a158b8-bd51-7fd0-a8f5-d72bdae7db1a\\exec-40a76d4a-589b-48bf-a991-233217200fc7.png",
+      "workspacePath": "C:/Users/MBC/Documents/GitHub/GamePaused/Assets/Art/StageThemes20261020/15_GlassCircuit/background.png",
+      "status": "validated",
+      "inspection": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "fullyOpaque": true,
+        "originalPixelsPreserved": true,
+        "topBottomMeanAbsRgbDifference": 1.178,
+        "joinGuidance": "Alternate flipY per placed panel, so identical top/top or bottom/bottom rows meet. Original file itself is not modified."
+      }
+    }
+  ],
+  "completedCount": 15,
+  "validation": "15/15 source copies byte-identical; all opaque 1536x1024 PNG; all outputs visually inspected, no ground/horizon/foreground/characters/text."
+}

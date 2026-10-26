@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T08:59:06.192387+00:00",
+  "scope": "Feedback revision changed game behavior and added the impact settings component. Existing platform, wall, gimmick component data, GameObject activation, and Transform YAML are identical to checkpoint.",
+  "checked": {
+    "PausePlatformObject": 131,
+    "PauseWallObject": 24,
+    "PauseGimmickObject": 14
+  },
+  "changes": [],
+  "backupSha256": "69e13725a161f403ca56f71408e8889d12019ad2d77f148aff29f10a800e4c63"
+}

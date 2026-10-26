@@ -1,0 +1,264 @@
+{
+  "count": 15,
+  "mergeReason": "17 sheets form 15 themes by merging A+team07 classic and C+team05 fractured; earliest reference is an additional classic source.",
+  "themes": [
+    {
+      "index": 1,
+      "id": "01_ClassicKeycap",
+      "title": "클린 키캡",
+      "normal": "무광 ABS 스페이스 키",
+      "slippery": "UV 코팅 광택 키캡",
+      "style": "ivory ABS keycaps, charcoal switch housings, orange tracks, lime status lights; crisp clean chunky classic computer castle",
+      "background": "light cornflower blue sky, gentle jade hills only near bottom, faint distant keyboard towers and airy soft pixel clouds",
+      "dark": "#343848",
+      "accent": "#ff7b18",
+      "sky": "#64a6e9",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020/a-keycap-block.png",
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_07.png",
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_180550229.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/01_ClassicKeycap",
+      "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity"
+    },
+    {
+      "index": 2,
+      "id": "02_SlimKeyrail",
+      "title": "슬림 키레일",
+      "normal": "홈 파인 알루미늄 키레일",
+      "slippery": "윤활된 크롬 슬라이드 레일",
+      "style": "slender graphite aluminum key rails, narrow elongated ivory keys, a few orange electrical tracks; vertical industrial precision",
+      "background": "cool pale blue fog, narrow distant vertical elevator shafts, steel blue atmospheric clouds",
+      "dark": "#424e60",
+      "accent": "#ed8e40",
+      "sky": "#91afc3",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020/b-slim-frame.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/02_SlimKeyrail",
+      "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity"
+    },
+    {
+      "index": 3,
+      "id": "03_FracturedKeycap",
+      "title": "파손 키캡",
+      "normal": "깨진 PBT 키캡과 검은 보강대",
+      "slippery": "매끈한 탈락 키캡판",
+      "style": "fractured ivory PBT keys, broken square fragments, dark chassis reinforcement, orange cables; salvage computer castle but strong structural joints",
+      "background": "faded blue grey sky, abandoned computer citadel arches, faint hanging disconnected cables at side edges, dusty cloud haze",
+      "dark": "#393544",
+      "accent": "#dd6b2d",
+      "sky": "#8396b0",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020/c-heavy-ruin.png",
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_05.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/03_FracturedKeycap",
+      "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity"
+    },
+    {
+      "index": 4,
+      "id": "04_IvoryCastle",
+      "title": "아이보리 고성",
+      "normal": "거친 베이지 석재 코니스",
+      "slippery": "닳아 반질한 상아 대리석",
+      "style": "warm rough beige limestone castle, narrow uncolored Gothic lancet niches, broad stone cornices, no gilding, no blue enamel",
+      "background": "warm luminous ivory arcade silhouettes, pale golden sky, soft warm cloud banks, quiet distant medieval towers",
+      "dark": "#796957",
+      "accent": "#c6a477",
+      "sky": "#d6bda0",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/04_IvoryCastle",
+      "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity"
+    },
+    {
+      "index": 5,
+      "id": "05_VioletRuins",
+      "title": "자주빛 폐성",
+      "normal": "금간 자주색 석판",
+      "slippery": "검은 유리질 슬레이트",
+      "style": "weathered charcoal-purple rubble stone castle, chipped purple blocks, deep Gothic recesses, crumbly old masonry, no large metal clamps",
+      "background": "ashy lavender sky and fog, ruined pointed window silhouettes and jagged ruined castle spires, desaturated mauve clouds",
+      "dark": "#3e354c",
+      "accent": "#8b759f",
+      "sky": "#9c91ad",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_01.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/05_VioletRuins",
+      "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity"
+    },
+    {
+      "index": 6,
+      "id": "06_VermilionBrick",
+      "title": "주홍 벽돌",
+      "normal": "큰 주홍 벽돌과 회색 모르타르",
+      "slippery": "유약 입힌 붉은 테라코타",
+      "style": "large bright vermilion brick battlements, thick slate-grey mortar, big chunky rectangular bricks, simple square stone reinforcement",
+      "background": "pale apricot sky, big distant red brick crenellated silhouettes and chimney shapes, soft cream clouds",
+      "dark": "#643a3d",
+      "accent": "#ec6b3c",
+      "sky": "#e6b79f",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_02.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/06_VermilionBrick",
+      "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity"
+    },
+    {
+      "index": 7,
+      "id": "07_BlueGranite",
+      "title": "청회색 석성",
+      "normal": "회청 화강석 절단면",
+      "slippery": "매끈한 젖은 점판암",
+      "style": "cool blue grey granite fortress, broad irregular rectangular stone blocks with blocky cracks, dark navy narrow supports, no key symbols",
+      "background": "overcast blue grey clouds, faint distant granite ramparts and slit windows, cool mist layers",
+      "dark": "#495b72",
+      "accent": "#9caab7",
+      "sky": "#a9bdcc",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_03.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/07_BlueGranite",
+      "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity"
+    },
+    {
+      "index": 8,
+      "id": "08_AntiqueTerminal",
+      "title": "앤티크 전산성",
+      "normal": "베이지 키캡과 갈색 철제 보강",
+      "slippery": "광택 베이클라이트 키캡",
+      "style": "aged beige keyboard keys in walnut-brown iron frame, dull amber indicators, burnt orange insulated wires, not gears; antique terminal castle",
+      "background": "sepia amber clouded sky, distant old terminal hall arches and copper pipe silhouettes, dusty warm haze",
+      "dark": "#564137",
+      "accent": "#d48c39",
+      "sky": "#c0a17e",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_04.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/08_AntiqueTerminal",
+      "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity"
+    },
+    {
+      "index": 9,
+      "id": "09_RGBKeyboard",
+      "title": "RGB 키보드",
+      "normal": "검은 키캡과 빗금 고무",
+      "slippery": "유광 검은 키캡",
+      "style": "dark grey large mechanical keycaps, fuchsia and cyan RGB traces, strong square key silhouettes with few plus marks, keyboard castle not server panels",
+      "background": "midnight navy blue cloud sky, dark distant keyboard silhouettes and circuit board line structures, sparse tiny pink blue point lights",
+      "dark": "#202840",
+      "accent": "#ed49ad",
+      "sky": "#434c79",
+      "sources": [
+        "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_06.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/09_RGBKeyboard",
+      "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity"
+    },
+    {
+      "index": 10,
+      "id": "10_PorcelainGothic",
+      "title": "백색 고딕",
+      "normal": "상아 부조석과 금 테두리",
+      "slippery": "푸른 유약 대리석",
+      "style": "ivory porcelain key cathedral, elegant fluted buttresses, cobalt pointed arch recesses, small antique gold trim and white ceramic keys; repeat BODY MUST have plain matching end sockets without turret caps",
+      "background": "pale cobalt cloud sky, shadowy low saturation blue cathedral arches, ivory towers in distant mist and tiny gold architectural accents",
+      "dark": "#394d76",
+      "accent": "#d6ad4b",
+      "sky": "#92acd5",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/01-porcelain-gothic.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/10_PorcelainGothic",
+      "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity"
+    },
+    {
+      "index": 11,
+      "id": "11_ObsidianFortress",
+      "title": "흑요석 요새",
+      "normal": "짙은 흑석과 굵은 철띠",
+      "slippery": "흑요석 거울판",
+      "style": "massive angular charcoal-violet obsidian blocks, broad iron clamp bands, sharp fortress teeth, recessed square switch seats and restrained amethyst details, clean hard large facets not crumbly rubble",
+      "background": "stormy grey purple sky, monumental distant iron gates and brutalist obsidian tower silhouettes in layered mist",
+      "dark": "#353041",
+      "accent": "#9271a3",
+      "sky": "#91889e",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/02-obsidian-fortress.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/11_ObsidianFortress",
+      "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity"
+    },
+    {
+      "index": 12,
+      "id": "12_TerracottaBastion",
+      "title": "적갈 벽돌 보루",
+      "normal": "작은 엇갈린 벽돌과 넓은 철지지",
+      "slippery": "닳은 적동 보강판",
+      "style": "small staggered burnt terracotta brick courses, iron tie plates and worn reddish copper reinforcement, a few pale ceramic switch insets, stepped corbels; different from large vermilion bricks",
+      "background": "warm russet mist, distant brickworks and furnace towers without fire, muted dusty peach sky and smoke-like soft clouds",
+      "dark": "#603a32",
+      "accent": "#b96c4a",
+      "sky": "#c39b8b",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/03-terracotta-bastion.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/12_TerracottaBastion",
+      "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity"
+    },
+    {
+      "index": 13,
+      "id": "13_BronzeClockwork",
+      "title": "청동 기계",
+      "normal": "녹청색 판과 황동 리벳",
+      "slippery": "윤활 황동 피스톤 레일",
+      "style": "verdigris green keys, amber brass rails, large simple cog half-wheels, piston supports and bold rivets in dark chestnut structure; regular mechanical matching joints",
+      "background": "desaturated teal atmospheric sky, enormous faint distant gear silhouettes and factory arches, soft turquoise and bronze haze",
+      "dark": "#4d4939",
+      "accent": "#d9a440",
+      "sky": "#8badad",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/04-bronze-clockwork.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/13_BronzeClockwork",
+      "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity"
+    },
+    {
+      "index": 14,
+      "id": "14_NeonData",
+      "title": "네온 데이터",
+      "normal": "서버 패널과 픽셀 LED",
+      "slippery": "청색 발광 유리 스크린",
+      "style": "angular midnight server panels, cyan and magenta data buses, horizontal status display slots, broad blank dark screens and magnesium vents; server fortress rather than plus-key column",
+      "background": "violet blue sky with abstract soft data clouds, distant server rack arches and tiny cyan display slots, low saturation futuristic city haze",
+      "dark": "#26334e",
+      "accent": "#33bfe9",
+      "sky": "#6d709e",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/05-neon-data-castle.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/14_NeonData",
+      "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity"
+    },
+    {
+      "index": 15,
+      "id": "15_GlassCircuit",
+      "title": "유리 회로",
+      "normal": "흰 프레임과 거친 녹색 PCB",
+      "slippery": "투명 민트 유리판",
+      "style": "aqua mint glass keycaps, white enamel rails, dark green PCB plates and square chips, crisp glass facets and sparse copper connectors, hard pixel glass not snow or ice",
+      "background": "light mint turquoise sky, faint distant glass corridor arcades, translucent geometric towers and soft seafoam clouds",
+      "dark": "#286664",
+      "accent": "#6ae2cb",
+      "sky": "#9bcfca",
+      "sources": [
+        "Assets/Art/KeyboardCastleConcepts/20261020-v2/06-aqua-glass-circuit.png"
+      ],
+      "directory": "Assets/Art/StageThemes20261020/15_GlassCircuit",
+      "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity"
+    }
+  ]
+}

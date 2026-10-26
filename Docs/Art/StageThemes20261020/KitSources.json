@@ -1,0 +1,92 @@
+[
+  {
+    "id": "01_ClassicKeycap",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-10c1594e-03dc-4047-bed1-f1827ea156b8.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\01_ClassicKeycap\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "02_SlimKeyrail",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-bd88b5b4-ae88-45e5-9778-2528797f467d.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\02_SlimKeyrail\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "03_FracturedKeycap",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-52c8fd3d-6760-45a5-8385-050187954c6a.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\03_FracturedKeycap\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "04_IvoryCastle",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-f4844565-7d1c-40cb-ba3f-6a2f6e00649b.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\04_IvoryCastle\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "05_VioletRuins",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-9e08add8-664c-4ca1-b411-fae064ad41d2.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\05_VioletRuins\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "06_VermilionBrick",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-4dd9fb98-4c29-40bd-938c-9ed7ecddba67.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\06_VermilionBrick\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "09_RGBKeyboard",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-b2e4d7af-9d30-4223-b493-13bf8b901ab6.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\09_RGBKeyboard\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "07_BlueGranite",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-fb74c03b-fb0d-4f38-98c3-fa443ebed000.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\07_BlueGranite\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "08_AntiqueTerminal",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-ea4621be-2d4f-4f27-a817-82d012192255.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\08_AntiqueTerminal\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "10_PorcelainGothic",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-a36b1628-5dce-4c09-8bae-2e1f0e640fa9.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\10_PorcelainGothic\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "11_ObsidianFortress",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-6bc97556-a728-4b21-bd71-e706256d0c92.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\11_ObsidianFortress\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "12_TerracottaBastion",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-bd12d034-d66c-4347-8a34-913f63277a97.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\12_TerracottaBastion\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "13_BronzeClockwork",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-81757cc5-e20d-45ad-b432-737d80292d37.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\13_BronzeClockwork\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "14_NeonData",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-a989deee-0e69-43b5-bb01-b9c85c64366d.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\14_NeonData\\kit.png",
+    "status": "generated"
+  },
+  {
+    "id": "15_GlassCircuit",
+    "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-847eb650-b85c-4f25-95b6-5944f179bf21.png",
+    "destination": "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Assets\\Art\\StageThemes20261020\\15_GlassCircuit\\kit.png",
+    "status": "generated"
+  }
+]

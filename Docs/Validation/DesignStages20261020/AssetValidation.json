@@ -1,0 +1,449 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T10:35:49.707049+00:00",
+  "sceneCount": 15,
+  "previewCount": 45,
+  "images": [
+    {
+      "theme": "01_ClassicKeycap",
+      "file": "Assets/Art/StageThemes20261020/01_ClassicKeycap/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "0b519629f94894758010e141216e485c6186278a34dcacc60852901128d4c1d0",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "01_ClassicKeycap",
+      "file": "Assets/Art/StageThemes20261020/01_ClassicKeycap/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "605e167c26d51de9fd16400d493066561ba2e40b6dd05a92bcbad9a15f24e768"
+    },
+    {
+      "theme": "02_SlimKeyrail",
+      "file": "Assets/Art/StageThemes20261020/02_SlimKeyrail/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "f2dba4d73b45425e51e5e2eaac2be5fe572066714de891d15af374ecc8e6a379",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "02_SlimKeyrail",
+      "file": "Assets/Art/StageThemes20261020/02_SlimKeyrail/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "4e342e0680e58957886d9bcfc647d58bda614b277caff5fc9bf247e7b3590b11"
+    },
+    {
+      "theme": "03_FracturedKeycap",
+      "file": "Assets/Art/StageThemes20261020/03_FracturedKeycap/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "eedf280015d5525726b14a8a344a34d335b9169a5ac40bc32a16a8f132f275e4",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "03_FracturedKeycap",
+      "file": "Assets/Art/StageThemes20261020/03_FracturedKeycap/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "d09493831ff55bd85de7cb48c3ac2a2e5526f8cb9bd254c3bb45610264976571"
+    },
+    {
+      "theme": "04_IvoryCastle",
+      "file": "Assets/Art/StageThemes20261020/04_IvoryCastle/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "c70f49721857f590647319d2047cf9864bf37b07fec6705ba1f01d7a75e91b79",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "04_IvoryCastle",
+      "file": "Assets/Art/StageThemes20261020/04_IvoryCastle/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "09ab6bcd58d71c7409d1ffc8306b1e01c38920092c1854a135d810d19c09b763"
+    },
+    {
+      "theme": "05_VioletRuins",
+      "file": "Assets/Art/StageThemes20261020/05_VioletRuins/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "0707e43197961e9ae1ea01ee07d1f4da73df66876361d2aee38f1f98a0ffa733",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "05_VioletRuins",
+      "file": "Assets/Art/StageThemes20261020/05_VioletRuins/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "8c150938191bfb74386925e59e9148b4adc90911a5af29cae102be22206c9214"
+    },
+    {
+      "theme": "06_VermilionBrick",
+      "file": "Assets/Art/StageThemes20261020/06_VermilionBrick/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "5b3f3a0283193f8069182a0644dd89a35c41c47e928e100f23a8247d2d05d572",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "06_VermilionBrick",
+      "file": "Assets/Art/StageThemes20261020/06_VermilionBrick/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "7915c5d7a565920b35f1046ed3f2751799cdd373f297e4f03f03f068f7cf50c8"
+    },
+    {
+      "theme": "07_BlueGranite",
+      "file": "Assets/Art/StageThemes20261020/07_BlueGranite/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "0a9df4e0aa59ad8703d62501d06127fbbc67c381597608f5d36654ee0559954f",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "07_BlueGranite",
+      "file": "Assets/Art/StageThemes20261020/07_BlueGranite/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "f5aa78a5c67e2c8cc3fd4c8ed40399b6171a68d516db6e20213d9831ad183c48"
+    },
+    {
+      "theme": "08_AntiqueTerminal",
+      "file": "Assets/Art/StageThemes20261020/08_AntiqueTerminal/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "cc865e444087ded2b727cc98ae71e7f949f38ba021a9b9cf4748c75117753c35",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "08_AntiqueTerminal",
+      "file": "Assets/Art/StageThemes20261020/08_AntiqueTerminal/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "b71aa65ad23ed2400e66bca6c3ca02c050e72a71666ece6567c974b22bc22a6e"
+    },
+    {
+      "theme": "09_RGBKeyboard",
+      "file": "Assets/Art/StageThemes20261020/09_RGBKeyboard/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "20376ba17f4754975a431106c687035b83f216f81365df554123da53ce0f81f0",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "09_RGBKeyboard",
+      "file": "Assets/Art/StageThemes20261020/09_RGBKeyboard/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "fd415e838f481e4cd9d859fed26b3618ef5e308278c293902de6a21b53e4ec28"
+    },
+    {
+      "theme": "10_PorcelainGothic",
+      "file": "Assets/Art/StageThemes20261020/10_PorcelainGothic/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "8d1690432a1474803fe0faf3f26031aa66404db3606fe40df905fd16e3e6810f",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "10_PorcelainGothic",
+      "file": "Assets/Art/StageThemes20261020/10_PorcelainGothic/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "ed2610d4574aef44d3de1f9e53bc42a5f000b3df138592c4910c3cc9f901b8d8"
+    },
+    {
+      "theme": "11_ObsidianFortress",
+      "file": "Assets/Art/StageThemes20261020/11_ObsidianFortress/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "bbf4ee476119746c737657e4f063642d2f76b38187336853c5061ded96b9318d",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "11_ObsidianFortress",
+      "file": "Assets/Art/StageThemes20261020/11_ObsidianFortress/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "b1555fbce7b53e2b39b515bed3bb1758a16dedc67b82ea27f705a8693d6d816e"
+    },
+    {
+      "theme": "12_TerracottaBastion",
+      "file": "Assets/Art/StageThemes20261020/12_TerracottaBastion/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "cabed76f093abd8e0e6b021730993d9510ad63467722961524c555f47537d9e4",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "12_TerracottaBastion",
+      "file": "Assets/Art/StageThemes20261020/12_TerracottaBastion/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "ea04667370afe01d2cb51b4d6341d5959e72c1fba42623e6abd062915c37ad38"
+    },
+    {
+      "theme": "13_BronzeClockwork",
+      "file": "Assets/Art/StageThemes20261020/13_BronzeClockwork/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "3152bc99a130bcc5cb62c172023d4b2e7ed19d01f42ff38215c2ce0b055a3772",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "13_BronzeClockwork",
+      "file": "Assets/Art/StageThemes20261020/13_BronzeClockwork/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "a814738ff986574ce604c27bbdca65e91062c39666f90246dc01e94f0b41250a"
+    },
+    {
+      "theme": "14_NeonData",
+      "file": "Assets/Art/StageThemes20261020/14_NeonData/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "f82d9c27a04515705fc07cb5b71895fcb16eec33a6ab14cddf801e88d71ccdf4",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "14_NeonData",
+      "file": "Assets/Art/StageThemes20261020/14_NeonData/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "766c75dd0d6deb2872d6e71f7ccc077d93fae0fdbe6f5908bc007530c81dcbd5"
+    },
+    {
+      "theme": "15_GlassCircuit",
+      "file": "Assets/Art/StageThemes20261020/15_GlassCircuit/kit.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "11fde5c2b3cb6e6c23733db83b70f9fc6759ed2dcd583150774e659031a5d1dd",
+      "nativeCopyUnchanged": true
+    },
+    {
+      "theme": "15_GlassCircuit",
+      "file": "Assets/Art/StageThemes20261020/15_GlassCircuit/background.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "sha256": "a9a964c64d0eee903f2be261eb3de33425e9ed1e801736015cbcd0c81346d995"
+    }
+  ],
+  "mainSceneUnchanged": true,
+  "mainSceneSha256": "02d3112ef29a0eff6f4e64b374130cc80a8b0a69a050d99a3c5797e1a8406827",
+  "duplicateGuidCount": 0,
+  "newCodeFiles": 11,
+  "newCodeWhitespaceErrors": [],
+  "errors": []
+}

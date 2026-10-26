@@ -1,0 +1,689 @@
+{
+  "method": "Non-destructive full-module SpriteRect metadata. Original pixels preserved; no connector repainting or repeat-edge guarantee.",
+  "atlases": [
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/01-porcelain-gothic.png",
+      "title": "백색 고딕",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 944850,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_01_L_Top",
+          "rect": {
+            "x": 96,
+            "y": 564,
+            "width": 291,
+            "height": 515
+          },
+          "pivot": {
+            "x": 0.09965635738831616,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_L_Middle",
+          "rect": {
+            "x": 500,
+            "y": 564,
+            "width": 142,
+            "height": 515
+          },
+          "pivot": {
+            "x": 0.13380281690140844,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_L_Bottom",
+          "rect": {
+            "x": 802,
+            "y": 564,
+            "width": 252,
+            "height": 515
+          },
+          "pivot": {
+            "x": 0.0992063492063492,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_L_Opening",
+          "rect": {
+            "x": 1171,
+            "y": 564,
+            "width": 212,
+            "height": 515
+          },
+          "pivot": {
+            "x": 0.10377358490566038,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_R_Top",
+          "rect": {
+            "x": 69,
+            "y": 23,
+            "width": 276,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.9202898550724637,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_R_Middle",
+          "rect": {
+            "x": 497,
+            "y": 24,
+            "width": 140,
+            "height": 509
+          },
+          "pivot": {
+            "x": 0.85,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_R_Bottom",
+          "rect": {
+            "x": 751,
+            "y": 23,
+            "width": 262,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.9007633587786259,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_01_R_Opening",
+          "rect": {
+            "x": 1166,
+            "y": 23,
+            "width": 217,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.8847926267281107,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/02-obsidian-fortress.png",
+      "title": "흑요석 요새",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 835672,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_02_L_Top",
+          "rect": {
+            "x": 82,
+            "y": 564,
+            "width": 264,
+            "height": 508
+          },
+          "pivot": {
+            "x": 0.08333333333333333,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_L_Middle",
+          "rect": {
+            "x": 474,
+            "y": 564,
+            "width": 168,
+            "height": 492
+          },
+          "pivot": {
+            "x": 0.10119047619047619,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_L_Bottom",
+          "rect": {
+            "x": 786,
+            "y": 564,
+            "width": 284,
+            "height": 492
+          },
+          "pivot": {
+            "x": 0.0880281690140845,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_L_Opening",
+          "rect": {
+            "x": 1148,
+            "y": 564,
+            "width": 242,
+            "height": 492
+          },
+          "pivot": {
+            "x": 0.3140495867768595,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_R_Top",
+          "rect": {
+            "x": 69,
+            "y": 30,
+            "width": 268,
+            "height": 511
+          },
+          "pivot": {
+            "x": 0.8992537313432836,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_R_Middle",
+          "rect": {
+            "x": 456,
+            "y": 30,
+            "width": 179,
+            "height": 494
+          },
+          "pivot": {
+            "x": 0.888268156424581,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_R_Bottom",
+          "rect": {
+            "x": 733,
+            "y": 30,
+            "width": 282,
+            "height": 494
+          },
+          "pivot": {
+            "x": 0.9290780141843972,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_02_R_Opening",
+          "rect": {
+            "x": 1130,
+            "y": 30,
+            "width": 259,
+            "height": 506
+          },
+          "pivot": {
+            "x": 0.9034749034749034,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/03-terracotta-bastion.png",
+      "title": "붉은 벽돌 보루",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 837478,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_03_L_Top",
+          "rect": {
+            "x": 105,
+            "y": 572,
+            "width": 303,
+            "height": 484
+          },
+          "pivot": {
+            "x": 0.04950495049504951,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_L_Middle",
+          "rect": {
+            "x": 483,
+            "y": 572,
+            "width": 156,
+            "height": 485
+          },
+          "pivot": {
+            "x": 0.07051282051282051,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_L_Bottom",
+          "rect": {
+            "x": 774,
+            "y": 572,
+            "width": 260,
+            "height": 484
+          },
+          "pivot": {
+            "x": 0.046153846153846156,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_L_Opening",
+          "rect": {
+            "x": 1136,
+            "y": 571,
+            "width": 269,
+            "height": 485
+          },
+          "pivot": {
+            "x": 0.026022304832713755,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_R_Top",
+          "rect": {
+            "x": 76,
+            "y": 35,
+            "width": 295,
+            "height": 485
+          },
+          "pivot": {
+            "x": 0.9593220338983051,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_R_Middle",
+          "rect": {
+            "x": 485,
+            "y": 35,
+            "width": 161,
+            "height": 491
+          },
+          "pivot": {
+            "x": 0.9440993788819876,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_R_Bottom",
+          "rect": {
+            "x": 732,
+            "y": 35,
+            "width": 259,
+            "height": 490
+          },
+          "pivot": {
+            "x": 0.9691119691119691,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_03_R_Opening",
+          "rect": {
+            "x": 1124,
+            "y": 35,
+            "width": 261,
+            "height": 489
+          },
+          "pivot": {
+            "x": 0.9578544061302682,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/04-bronze-clockwork.png",
+      "title": "청동 기계 성벽",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 951181,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_04_L_Top",
+          "rect": {
+            "x": 91,
+            "y": 564,
+            "width": 274,
+            "height": 481
+          },
+          "pivot": {
+            "x": 0.029197080291970802,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_L_Middle",
+          "rect": {
+            "x": 473,
+            "y": 564,
+            "width": 141,
+            "height": 481
+          },
+          "pivot": {
+            "x": 0.0425531914893617,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_L_Bottom",
+          "rect": {
+            "x": 793,
+            "y": 564,
+            "width": 268,
+            "height": 481
+          },
+          "pivot": {
+            "x": 0.05223880597014925,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_L_Opening",
+          "rect": {
+            "x": 1191,
+            "y": 564,
+            "width": 199,
+            "height": 481
+          },
+          "pivot": {
+            "x": 0.09045226130653267,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_R_Top",
+          "rect": {
+            "x": 52,
+            "y": 49,
+            "width": 276,
+            "height": 475
+          },
+          "pivot": {
+            "x": 0.9710144927536232,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_R_Middle",
+          "rect": {
+            "x": 482,
+            "y": 49,
+            "width": 137,
+            "height": 474
+          },
+          "pivot": {
+            "x": 0.9635036496350365,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_R_Bottom",
+          "rect": {
+            "x": 725,
+            "y": 48,
+            "width": 285,
+            "height": 475
+          },
+          "pivot": {
+            "x": 0.9438596491228071,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_04_R_Opening",
+          "rect": {
+            "x": 1188,
+            "y": 49,
+            "width": 197,
+            "height": 475
+          },
+          "pivot": {
+            "x": 0.9644670050761421,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/05-neon-data-castle.png",
+      "title": "네온 데이터 성",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 835915,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_05_L_Top",
+          "rect": {
+            "x": 110,
+            "y": 564,
+            "width": 305,
+            "height": 512
+          },
+          "pivot": {
+            "x": 0.05901639344262295,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_L_Middle",
+          "rect": {
+            "x": 489,
+            "y": 564,
+            "width": 153,
+            "height": 479
+          },
+          "pivot": {
+            "x": 0.0196078431372549,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_L_Bottom",
+          "rect": {
+            "x": 771,
+            "y": 564,
+            "width": 266,
+            "height": 483
+          },
+          "pivot": {
+            "x": 0.03383458646616541,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_L_Opening",
+          "rect": {
+            "x": 1086,
+            "y": 563,
+            "width": 302,
+            "height": 513
+          },
+          "pivot": {
+            "x": 0.09271523178807947,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_R_Top",
+          "rect": {
+            "x": 78,
+            "y": 30,
+            "width": 316,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.9620253164556962,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_R_Middle",
+          "rect": {
+            "x": 485,
+            "y": 30,
+            "width": 153,
+            "height": 486
+          },
+          "pivot": {
+            "x": 0.9509803921568627,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_R_Bottom",
+          "rect": {
+            "x": 700,
+            "y": 30,
+            "width": 321,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.9595015576323987,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_05_R_Opening",
+          "rect": {
+            "x": 1097,
+            "y": 30,
+            "width": 291,
+            "height": 510
+          },
+          "pivot": {
+            "x": 0.9484536082474226,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/KeyboardCastleConcepts/20261020-v2/06-aqua-glass-circuit.png",
+      "title": "유리 회로 첨탑",
+      "width": 1448,
+      "height": 1086,
+      "transparentPixels": 920380,
+      "pixelsPerUnit": 120.66666666666667,
+      "sprites": [
+        {
+          "name": "V2_06_L_Top",
+          "rect": {
+            "x": 87,
+            "y": 574,
+            "width": 326,
+            "height": 470
+          },
+          "pivot": {
+            "x": 0.04754601226993865,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_L_Middle",
+          "rect": {
+            "x": 469,
+            "y": 574,
+            "width": 153,
+            "height": 470
+          },
+          "pivot": {
+            "x": 0.1111111111111111,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_L_Bottom",
+          "rect": {
+            "x": 788,
+            "y": 574,
+            "width": 268,
+            "height": 470
+          },
+          "pivot": {
+            "x": 0.06343283582089553,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_L_Opening",
+          "rect": {
+            "x": 1165,
+            "y": 574,
+            "width": 213,
+            "height": 470
+          },
+          "pivot": {
+            "x": 0.11971830985915492,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_R_Top",
+          "rect": {
+            "x": 71,
+            "y": 60,
+            "width": 273,
+            "height": 465
+          },
+          "pivot": {
+            "x": 0.945054945054945,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_R_Middle",
+          "rect": {
+            "x": 486,
+            "y": 60,
+            "width": 144,
+            "height": 465
+          },
+          "pivot": {
+            "x": 0.8819444444444444,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_R_Bottom",
+          "rect": {
+            "x": 746,
+            "y": 60,
+            "width": 273,
+            "height": 465
+          },
+          "pivot": {
+            "x": 0.9413919413919414,
+            "y": 0
+          }
+        },
+        {
+          "name": "V2_06_R_Opening",
+          "rect": {
+            "x": 1166,
+            "y": 60,
+            "width": 202,
+            "height": 465
+          },
+          "pivot": {
+            "x": 0.9207920792079208,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ]
+}

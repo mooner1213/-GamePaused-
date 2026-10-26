@@ -31,11 +31,11 @@ namespace PauseClimb
         [Header("벽 반사와 착지 관성")]
         [SerializeField, Tooltip("중력입니다. 점프가 그리는 포물선의 높이와 체공 시간을 정합니다.")] private float _gravity = 22f;
         [UnityEngine.Serialization.FormerlySerializedAs("wallBounce")]
-        [SerializeField, Range(0.1f, 1f), Tooltip("벽 충돌 후 남는 수평 속도의 비율입니다. 충돌할 때만 바라보는 방향이 바뀝니다.")] private float _wallBounce = 0.82f;
+        [SerializeField, Range(0.1f, 1f), Tooltip("벽 충돌 후 남는 수평 속도의 비율입니다. 낙하 회복 후의 자동 방향 선택은 아래 설정에서 별도로 조절합니다.")] private float _wallBounce = 0.82f;
         [UnityEngine.Serialization.FormerlySerializedAs("friction")]
         [SerializeField, Tooltip("일반 발판에서 착지 속도를 줄이는 힘입니다.")] private float _friction = 32f;
         [UnityEngine.Serialization.FormerlySerializedAs("iceFriction")]
-        [SerializeField, Tooltip("얼음의 마찰력입니다. 작을수록 오래 미끄러지며 경사와 벽 반사의 영향을 받습니다.")] private float _iceFriction = 0.65f;
+        [SerializeField, Tooltip("기름의 마찰력입니다. 작을수록 오래 미끄러지며 경사와 벽 반사의 영향을 받습니다.")] private float _iceFriction = 0.65f;
         [UnityEngine.Serialization.FormerlySerializedAs("bellyThreshold")]
         [Header("높은 낙하 · 배 반동과 회복")]
         [SerializeField, Min(0.1f), Tooltip("확장 코스의 발판 두 칸 약 3.46m를 기준으로 한 배 반동 시작 높이입니다. 낙하 정점과 접촉면의 실제 높이 차이를 사용합니다.")] private float _bellyThreshold = 3.5f;
@@ -51,7 +51,7 @@ namespace PauseClimb
         [SerializeField, Range(0.03f, 0.4f), Tooltip("배가 눌려 있는 짧은 접촉 시간입니다.")] private float _contactSeconds = 0.12f;
         [UnityEngine.Serialization.FormerlySerializedAs("windOnIce")]
         [Header("특수 기믹")]
-        [SerializeField, Min(1f), Tooltip("얼음 위에서 바람이 수평 가속도에 더해지는 배율입니다.")] private float _windOnIce = 1.8f;
+        [SerializeField, Min(1f), Tooltip("기름 위에서 바람이 수평 가속도에 더해지는 배율입니다.")] private float _windOnIce = 1.8f;
         [UnityEngine.Serialization.FormerlySerializedAs("portalCooldown")]
         [SerializeField, Min(0.05f), Tooltip("포탈을 나온 직후 재진입을 막는 실제 플레이 시간입니다. 정지 중에는 줄어들지 않습니다.")] private float _portalCooldown = 0.4f;
         // [수정됨: 물리 조절값 노출] 시뮬레이션 내부의 기존 수치를 Inspector로 옮겼으며 기본 동작은 유지합니다.
@@ -80,11 +80,16 @@ namespace PauseClimb
         [SerializeField, Range(0f, 1f), Tooltip("이미 움직이는 배 반동에서 다음 반동으로 남기는 수평 속도 비율입니다.")] private float _bellyHorizontalRetention = 0.8f;
         [Header("트램펄린과 발판 소멸")]
         [SerializeField, Min(0f), Tooltip("낙하가 매우 작아도 트램펄린에서 되튀는 최소 높이입니다.")] private float _trampolineMinimumBounceHeight = 0.03f;
-        [SerializeField, Min(0f), Tooltip("붕괴 발판을 밟은 뒤 사라지기까지의 시간입니다. 일시정지 중에도 줄어듭니다.")] private float _crumbleBreakSeconds = 3f;
-        [SerializeField, Min(0f), Tooltip("구름 발판을 밟은 뒤 사라지기까지의 월드 시간입니다. 일시정지 중에는 멈춥니다.")] private float _cloudBreakSeconds = 0.3f;
+        [SerializeField, Min(0.01f), Tooltip("다음 반동이 이 높이보다 작으면 트램펄린 위에 멈춰 새 점프를 예약할 수 있습니다.")] private float _trampolineSettleHeight = 0.12f;
+        [Header("낙하 후 다음 발판 자동 방향")]
+        [SerializeField, Tooltip("낙하 후 일어나면 점프로 닿을 수 있는 위 발판 쪽을 자동으로 바라봅니다.")] private bool _isAutoFaceAfterFall = true;
+        [SerializeField, Min(0f), Tooltip("자동 방향 선택에서 위아래 거리의 우선순위입니다. 높을수록 바로 위의 낮은 발판을 우선합니다.")] private float _autoFaceHeightWeight = 2f;
+        [Header("발판 소멸 시간")]
+        [SerializeField, Min(0f), Tooltip("타이머 발판을 밟은 뒤 사라지기까지의 시간입니다. 일시정지 중에도 줄어듭니다.")] private float _crumbleBreakSeconds = 3f;
+        [SerializeField, Min(0f), Tooltip("금간 발판을 밟은 뒤 사라지기까지의 월드 시간입니다. 일시정지 중에는 멈춥니다.")] private float _cloudBreakSeconds = 0.3f;
         [Header("예상 궤도 계산")]
         [SerializeField, Min(1), Tooltip("한 번의 예상 궤도를 계산할 최대 고정 시간 단계 수입니다. 늘리면 긴 예약을 끝까지 보지만 계산량도 늘어납니다.")] private int _predictionMaxSteps = 1800;
-        [SerializeField, Min(1), Tooltip("몇 단계마다 예상 경로 점을 저장할지 정합니다. 값이 작으면 선이 촘촘해지고 점 개수가 늘어납니다.")] private int _predictionSampleStride = 3;
+        [SerializeField, Min(1), Tooltip("몇 물리 프레임마다 사람 잔상을 표시할지 정합니다. 기본 3은 60Hz 기준 0.05초 간격입니다.")] private int _predictionSampleStride = 3;
         #endregion
         #region Property
         public float CollisionHalfWidth => Mathf.Max(MINIMUM_COLLISION_SIZE, _collisionHalfWidth);
@@ -126,6 +131,9 @@ namespace PauseClimb
         public float BellyMinimumForward => Mathf.Max(0f, _bellyMinimumForward);
         public float BellyHorizontalRetention => Mathf.Clamp01(_bellyHorizontalRetention);
         public float TrampolineMinimumBounceHeight => Mathf.Max(0f, _trampolineMinimumBounceHeight);
+        public float TrampolineSettleHeight => Mathf.Max(TrampolineMinimumBounceHeight, _trampolineSettleHeight);
+        public bool AutoFaceAfterFall => _isAutoFaceAfterFall;
+        public float AutoFaceHeightWeight => Mathf.Max(0f, _autoFaceHeightWeight);
         public float CrumbleBreakSeconds => Mathf.Max(0f, _crumbleBreakSeconds);
         public float CloudBreakSeconds => Mathf.Max(0f, _cloudBreakSeconds);
         public int PredictionMaxSteps => Mathf.Max(1, _predictionMaxSteps);

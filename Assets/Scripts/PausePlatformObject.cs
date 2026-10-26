@@ -15,7 +15,9 @@ namespace PauseClimb
         [Header("발판 역할")]
         [SerializeField, Tooltip("기존 코스 식별자입니다. 마지막 연속 도약은 20~24번이므로 해당 번호는 유지하세요.")] private int _id;
         [UnityEngine.Serialization.FormerlySerializedAs("kind")]
-        [SerializeField, Tooltip("돌·얼음·이동·붕괴·구름·정상 역할을 결정합니다.")] private PlatformKind _kind;
+        [SerializeField, Tooltip("돌·기름·이동·타이머·금간·정상 역할을 결정합니다.")] private PlatformKind _kind;
+        [Header("발이 서는 입체 윗면")]
+        [SerializeField, Min(0f), Tooltip("발판 그림의 윗부분이 실제 발보다 올라오는 거리입니다. 0.2이면 윗면 안쪽에 서 보입니다. 실제 충돌 좌표는 유지합니다.")] private float _visualSurfaceInset = 0.2f;
         [UnityEngine.Serialization.FormerlySerializedAs("amplitude")]
         [Header("왕복 이동")]
         [SerializeField, Min(0), Tooltip("기준 위치에서 좌우로 이동하는 거리입니다.")] private float _amplitude;
@@ -28,9 +30,13 @@ namespace PauseClimb
         [UnityEngine.Serialization.FormerlySerializedAs("surface")]
         [Header("착지 표면 연결")]
         [SerializeField, Tooltip("상단 표면입니다. 이 오브젝트의 가로 길이와 기울기가 실제 충돌 판정입니다.")] private SpriteRenderer _surface;
+        [Header("팔레트 디자인 교체")]
+        [SerializeField, Tooltip("다른 테마의 발판 타일을 넣으면 편집기에서 모양과 재질을 바꿉니다. 기존 위치·크기·경사는 유지합니다.")] private PauseDesignTile _designTile;
         #endregion
         #region Property
         public int Id => _id;
+        public PauseDesignTile DesignTile => _designTile;
+        public float VisualSurfaceInset => Mathf.Max(0f, _visualSurfaceInset);
         #endregion
         #region Unity Event Method
         // 선택한 발판의 실제 착지 구간을 녹색 선으로 표시합니다.

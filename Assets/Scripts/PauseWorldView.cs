@@ -39,6 +39,8 @@ namespace PauseClimb
         private Camera _worldCamera;
         private PauseFrozenPalette _palette;
         private PauseSkyBackdrop _skyBackdrop;
+        private PauseDesignWorldView _designWorld;
+        private PausePaintedCourse _paintedCourse;
 
         #endregion
 
@@ -82,6 +84,10 @@ namespace PauseClimb
             CachePlatformViews();
             _skyBackdrop = _visualRoot.GetComponentInChildren<PauseSkyBackdrop>();
             if (_skyBackdrop != null) _skyBackdrop.Initialize();
+            _paintedCourse = _visualRoot.GetComponentInChildren<PausePaintedCourse>();
+            if (_paintedCourse != null) _paintedCourse.Bind(_level);
+            _designWorld = _visualRoot.GetComponentInChildren<PauseDesignWorldView>();
+            if (_designWorld != null) _designWorld.Initialize(_worldCamera);
             _palette = new PauseFrozenPalette(_visualRoot, _worldCamera);
             _isInitialized = true;
             DrawWorld(false);
@@ -103,6 +109,8 @@ namespace PauseClimb
                 _hasFrozenState = true;
             }
             if (_skyBackdrop != null) _skyBackdrop.Draw(isFrozen);
+            if (_designWorld != null) _designWorld.Draw(_worldCamera.transform.position, isFrozen);
+            if (_paintedCourse != null) _paintedCourse.Draw();
         }
 
 

@@ -14,7 +14,7 @@ namespace PauseClimb
 
         // [TUNE] 원화 PNG 순서와 배열 개수를 유지하고 각 값은 양수의 초 단위로 조절합니다.
         [Header("대기와 점프")]
-        [SerializeField, Tooltip("대기 1프레임의 표시 시간입니다. 원화 1개를 유지하며 값이 클수록 한 주기가 길어집니다.")]
+        [SerializeField, Tooltip("서 있는 네 자세를 순환하는 대기 시간의 기준입니다. 값이 클수록 숨 고르기 주기가 길어집니다. 배열 길이는 1개를 유지합니다.")]
         private float[] _idle = { 1f };
         [SerializeField, Tooltip("점프·상승·정점·하강·착지 12프레임의 시간입니다. 원화 순서와 12개 길이를 유지하세요. 값이 클수록 해당 자세를 오래 표시합니다.")]
         private float[] _jump = { .13f, .09f, .11f, .07f, .09f, .10f, .09f, .09f, .07f, .10f, .10f, .18f };

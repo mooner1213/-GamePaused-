@@ -1,0 +1,3905 @@
+{
+  "method": "SpriteRect metadata only. Original PNG pixel data preserved. Interior repeat crops plus scene joint collars conceal joins.",
+  "atlases": [
+    {
+      "id": "01_ClassicKeycap",
+      "asset": "Assets/Art/StageThemes20261020/01_ClassicKeycap/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          428,
+          534,
+          848,
+          1086
+        ],
+        [
+          0,
+          428,
+          534,
+          800,
+          1086
+        ],
+        [
+          0,
+          428,
+          545,
+          838,
+          1086
+        ],
+        [
+          0,
+          428,
+          534,
+          864,
+          1086
+        ]
+      ],
+      "transparentPixels": 983032,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 116,
+            "y": 722,
+            "width": 181,
+            "height": 346
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 482,
+            "y": 724,
+            "width": 113,
+            "height": 344
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 822,
+            "y": 726,
+            "width": 195,
+            "height": 342
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1189,
+            "y": 727,
+            "width": 148,
+            "height": 341
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 25,
+            "y": 552,
+            "width": 314,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 390,
+            "y": 552,
+            "width": 310,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 747,
+            "y": 541,
+            "width": 315,
+            "height": 117
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1108,
+            "y": 552,
+            "width": 320,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 24,
+            "y": 305,
+            "width": 315,
+            "height": 135
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 391,
+            "y": 315,
+            "width": 310,
+            "height": 115
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 793,
+            "y": 264,
+            "width": 225,
+            "height": 262
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1193,
+            "y": 273,
+            "width": 151,
+            "height": 246
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 33,
+            "y": 84,
+            "width": 300,
+            "height": 86
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 465,
+            "y": 32,
+            "width": 167,
+            "height": 225
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 833,
+            "y": 17,
+            "width": 138,
+            "height": 214
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1107,
+            "y": 65,
+            "width": 322,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 482,
+            "y": 813,
+            "width": 113,
+            "height": 130
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "02_SlimKeyrail",
+      "asset": "Assets/Art/StageThemes20261020/02_SlimKeyrail/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          442,
+          531,
+          824,
+          1086
+        ],
+        [
+          0,
+          439,
+          531,
+          765,
+          1086
+        ],
+        [
+          0,
+          441,
+          530,
+          835,
+          1086
+        ],
+        [
+          0,
+          443,
+          531,
+          852,
+          1086
+        ]
+      ],
+      "transparentPixels": 1056910,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 134,
+            "y": 699,
+            "width": 169,
+            "height": 363
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 495,
+            "y": 699,
+            "width": 84,
+            "height": 365
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 828,
+            "y": 701,
+            "width": 143,
+            "height": 363
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1179,
+            "y": 699,
+            "width": 128,
+            "height": 365
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 46,
+            "y": 555,
+            "width": 313,
+            "height": 89
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 396,
+            "y": 555,
+            "width": 314,
+            "height": 92
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 744,
+            "y": 556,
+            "width": 315,
+            "height": 89
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1095,
+            "y": 555,
+            "width": 309,
+            "height": 88
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 46,
+            "y": 328,
+            "width": 313,
+            "height": 112
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 396,
+            "y": 350,
+            "width": 314,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 795,
+            "y": 265,
+            "width": 198,
+            "height": 268
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1184,
+            "y": 272,
+            "width": 136,
+            "height": 244
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 64,
+            "y": 104,
+            "width": 260,
+            "height": 92
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 450,
+            "y": 33,
+            "width": 185,
+            "height": 259
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 795,
+            "y": 26,
+            "width": 169,
+            "height": 210
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1095,
+            "y": 106,
+            "width": 309,
+            "height": 89
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 495,
+            "y": 779,
+            "width": 84,
+            "height": 174
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "03_FracturedKeycap",
+      "asset": "Assets/Art/StageThemes20261020/03_FracturedKeycap/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          406,
+          516,
+          835,
+          1086
+        ],
+        [
+          0,
+          405,
+          516,
+          779,
+          1086
+        ],
+        [
+          0,
+          405,
+          516,
+          815,
+          1086
+        ],
+        [
+          0,
+          405,
+          516,
+          847,
+          1086
+        ]
+      ],
+      "transparentPixels": 996153,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 177,
+            "y": 725,
+            "width": 185,
+            "height": 344
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 509,
+            "y": 728,
+            "width": 110,
+            "height": 341
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 814,
+            "y": 730,
+            "width": 177,
+            "height": 339
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1131,
+            "y": 727,
+            "width": 163,
+            "height": 342
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 35,
+            "y": 570,
+            "width": 318,
+            "height": 110
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 389,
+            "y": 570,
+            "width": 321,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 740,
+            "y": 570,
+            "width": 320,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1094,
+            "y": 570,
+            "width": 321,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 41,
+            "y": 313,
+            "width": 321,
+            "height": 133
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 389,
+            "y": 333,
+            "width": 324,
+            "height": 126
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 794,
+            "y": 285,
+            "width": 222,
+            "height": 259
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1191,
+            "y": 284,
+            "width": 135,
+            "height": 247
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 78,
+            "y": 93,
+            "width": 256,
+            "height": 95
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 469,
+            "y": 30,
+            "width": 170,
+            "height": 250
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 814,
+            "y": 30,
+            "width": 157,
+            "height": 226
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 80,
+            "width": 328,
+            "height": 113
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 509,
+            "y": 807,
+            "width": 110,
+            "height": 163
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "04_IvoryCastle",
+      "asset": "Assets/Art/StageThemes20261020/04_IvoryCastle/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          474,
+          575,
+          870,
+          1086
+        ],
+        [
+          0,
+          471,
+          576,
+          833,
+          1086
+        ],
+        [
+          0,
+          470,
+          577,
+          871,
+          1086
+        ],
+        [
+          0,
+          470,
+          589,
+          885,
+          1086
+        ]
+      ],
+      "transparentPixels": 951703,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 109,
+            "y": 665,
+            "width": 234,
+            "height": 407
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 477,
+            "y": 665,
+            "width": 117,
+            "height": 379
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 795,
+            "y": 664,
+            "width": 206,
+            "height": 409
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1182,
+            "y": 665,
+            "width": 153,
+            "height": 408
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 35,
+            "y": 511,
+            "width": 327,
+            "height": 101
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 362,
+            "y": 510,
+            "width": 346,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 737,
+            "y": 509,
+            "width": 315,
+            "height": 107
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1087,
+            "y": 497,
+            "width": 327,
+            "height": 119
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 35,
+            "y": 275,
+            "width": 327,
+            "height": 112
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 277,
+            "width": 344,
+            "height": 110
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 795,
+            "y": 226,
+            "width": 209,
+            "height": 272
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1185,
+            "y": 219,
+            "width": 141,
+            "height": 267
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 85,
+            "y": 70,
+            "width": 251,
+            "height": 86
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 478,
+            "y": 22,
+            "width": 133,
+            "height": 206
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 808,
+            "y": 19,
+            "width": 278,
+            "height": 185
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 30,
+            "width": 333,
+            "height": 152
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 477,
+            "y": 796,
+            "width": 117,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "05_VioletRuins",
+      "asset": "Assets/Art/StageThemes20261020/05_VioletRuins/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          481,
+          589,
+          875,
+          1086
+        ],
+        [
+          0,
+          494,
+          589,
+          840,
+          1086
+        ],
+        [
+          0,
+          493,
+          594,
+          881,
+          1086
+        ],
+        [
+          0,
+          496,
+          601,
+          900,
+          1086
+        ]
+      ],
+      "transparentPixels": 992366,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 113,
+            "y": 669,
+            "width": 203,
+            "height": 383
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 478,
+            "y": 669,
+            "width": 127,
+            "height": 383
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 820,
+            "y": 669,
+            "width": 210,
+            "height": 384
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1164,
+            "y": 669,
+            "width": 173,
+            "height": 383
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 39,
+            "y": 497,
+            "width": 323,
+            "height": 108
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 393,
+            "y": 497,
+            "width": 323,
+            "height": 95
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 748,
+            "y": 492,
+            "width": 322,
+            "height": 101
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1105,
+            "y": 485,
+            "width": 308,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 34,
+            "y": 268,
+            "width": 328,
+            "height": 118
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 273,
+            "width": 354,
+            "height": 114
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 790,
+            "y": 217,
+            "width": 240,
+            "height": 264
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1200,
+            "y": 214,
+            "width": 119,
+            "height": 252
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 55,
+            "y": 57,
+            "width": 299,
+            "height": 96
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 488,
+            "y": 30,
+            "width": 139,
+            "height": 188
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 800,
+            "y": 22,
+            "width": 286,
+            "height": 171
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 39,
+            "width": 336,
+            "height": 119
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 478,
+            "y": 747,
+            "width": 127,
+            "height": 211
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "06_VermilionBrick",
+      "asset": "Assets/Art/StageThemes20261020/06_VermilionBrick/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          468,
+          554,
+          866,
+          1086
+        ],
+        [
+          0,
+          465,
+          554,
+          822,
+          1086
+        ],
+        [
+          0,
+          466,
+          554,
+          861,
+          1086
+        ],
+        [
+          0,
+          465,
+          576,
+          886,
+          1086
+        ]
+      ],
+      "transparentPixels": 998181,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 104,
+            "y": 690,
+            "width": 207,
+            "height": 354
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 473,
+            "y": 689,
+            "width": 130,
+            "height": 355
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 817,
+            "y": 691,
+            "width": 195,
+            "height": 354
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1193,
+            "y": 690,
+            "width": 182,
+            "height": 354
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 25,
+            "y": 532,
+            "width": 318,
+            "height": 86
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 383,
+            "y": 532,
+            "width": 322,
+            "height": 89
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 746,
+            "y": 532,
+            "width": 321,
+            "height": 88
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1107,
+            "y": 510,
+            "width": 321,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 21,
+            "y": 283,
+            "width": 325,
+            "height": 121
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 383,
+            "y": 288,
+            "width": 323,
+            "height": 124
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 791,
+            "y": 240,
+            "width": 233,
+            "height": 266
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1197,
+            "y": 234,
+            "width": 144,
+            "height": 257
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 43,
+            "y": 73,
+            "width": 286,
+            "height": 83
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 450,
+            "y": 31,
+            "width": 184,
+            "height": 209
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 803,
+            "y": 28,
+            "width": 193,
+            "height": 181
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1104,
+            "y": 52,
+            "width": 323,
+            "height": 113
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 473,
+            "y": 768,
+            "width": 130,
+            "height": 155
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "07_BlueGranite",
+      "asset": "Assets/Art/StageThemes20261020/07_BlueGranite/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          474,
+          567,
+          865,
+          1086
+        ],
+        [
+          0,
+          474,
+          567,
+          841,
+          1086
+        ],
+        [
+          0,
+          475,
+          580,
+          853,
+          1086
+        ],
+        [
+          0,
+          475,
+          578,
+          886,
+          1086
+        ]
+      ],
+      "transparentPixels": 1008892,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 122,
+            "y": 681,
+            "width": 154,
+            "height": 362
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 483,
+            "y": 681,
+            "width": 112,
+            "height": 362
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 816,
+            "y": 681,
+            "width": 197,
+            "height": 361
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1178,
+            "y": 681,
+            "width": 174,
+            "height": 362
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 38,
+            "y": 519,
+            "width": 315,
+            "height": 93
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 396,
+            "y": 519,
+            "width": 313,
+            "height": 93
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 752,
+            "y": 506,
+            "width": 312,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1107,
+            "y": 508,
+            "width": 309,
+            "height": 103
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 48,
+            "y": 284,
+            "width": 302,
+            "height": 115
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 432,
+            "y": 259,
+            "width": 254,
+            "height": 141
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 808,
+            "y": 246,
+            "width": 205,
+            "height": 235
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1192,
+            "y": 238,
+            "width": 144,
+            "height": 231
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 48,
+            "y": 67,
+            "width": 286,
+            "height": 91
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 497,
+            "y": 34,
+            "width": 139,
+            "height": 197
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 851,
+            "y": 30,
+            "width": 122,
+            "height": 189
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1092,
+            "y": 44,
+            "width": 327,
+            "height": 118
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 483,
+            "y": 756,
+            "width": 112,
+            "height": 192
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "08_AntiqueTerminal",
+      "asset": "Assets/Art/StageThemes20261020/08_AntiqueTerminal/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          444,
+          542,
+          832,
+          1086
+        ],
+        [
+          0,
+          442,
+          543,
+          810,
+          1086
+        ],
+        [
+          0,
+          440,
+          543,
+          840,
+          1086
+        ],
+        [
+          0,
+          441,
+          564,
+          840,
+          1086
+        ]
+      ],
+      "transparentPixels": 1057359,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 114,
+            "y": 716,
+            "width": 124,
+            "height": 328
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 483,
+            "y": 717,
+            "width": 89,
+            "height": 306
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 802,
+            "y": 716,
+            "width": 161,
+            "height": 329
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1188,
+            "y": 716,
+            "width": 139,
+            "height": 329
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 33,
+            "y": 544,
+            "width": 324,
+            "height": 98
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 396,
+            "y": 543,
+            "width": 301,
+            "height": 101
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 736,
+            "y": 543,
+            "width": 316,
+            "height": 103
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1091,
+            "y": 522,
+            "width": 324,
+            "height": 123
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 38,
+            "y": 314,
+            "width": 324,
+            "height": 90
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 296,
+            "width": 347,
+            "height": 124
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 814,
+            "y": 267,
+            "width": 182,
+            "height": 236
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1190,
+            "y": 269,
+            "width": 130,
+            "height": 221
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 75,
+            "y": 94,
+            "width": 271,
+            "height": 100
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 463,
+            "y": 34,
+            "width": 160,
+            "height": 221
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 834,
+            "y": 37,
+            "width": 252,
+            "height": 187
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 66,
+            "width": 318,
+            "height": 157
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 483,
+            "y": 790,
+            "width": 89,
+            "height": 139
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "09_RGBKeyboard",
+      "asset": "Assets/Art/StageThemes20261020/09_RGBKeyboard/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          445,
+          563,
+          836,
+          1086
+        ],
+        [
+          0,
+          445,
+          564,
+          800,
+          1086
+        ],
+        [
+          0,
+          445,
+          560,
+          836,
+          1086
+        ],
+        [
+          0,
+          446,
+          576,
+          872,
+          1086
+        ]
+      ],
+      "transparentPixels": 1007672,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 178,
+            "y": 712,
+            "width": 164,
+            "height": 334
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 528,
+            "y": 712,
+            "width": 113,
+            "height": 335
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 821,
+            "y": 712,
+            "width": 174,
+            "height": 335
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1116,
+            "y": 712,
+            "width": 174,
+            "height": 335
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 43,
+            "y": 523,
+            "width": 319,
+            "height": 118
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 362,
+            "y": 522,
+            "width": 356,
+            "height": 119
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 740,
+            "y": 526,
+            "width": 320,
+            "height": 115
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1086,
+            "y": 510,
+            "width": 313,
+            "height": 130
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 43,
+            "y": 315,
+            "width": 319,
+            "height": 91
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 307,
+            "width": 362,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 793,
+            "y": 267,
+            "width": 255,
+            "height": 257
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1185,
+            "y": 262,
+            "width": 125,
+            "height": 220
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 79,
+            "y": 86,
+            "width": 272,
+            "height": 99
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 473,
+            "y": 35,
+            "width": 181,
+            "height": 230
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 807,
+            "y": 42,
+            "width": 279,
+            "height": 190
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 55,
+            "width": 319,
+            "height": 110
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 528,
+            "y": 812,
+            "width": 113,
+            "height": 173
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "10_PorcelainGothic",
+      "asset": "Assets/Art/StageThemes20261020/10_PorcelainGothic/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          502,
+          603,
+          868,
+          1086
+        ],
+        [
+          0,
+          499,
+          604,
+          828,
+          1086
+        ],
+        [
+          0,
+          499,
+          604,
+          874,
+          1086
+        ],
+        [
+          0,
+          498,
+          604,
+          880,
+          1086
+        ]
+      ],
+      "transparentPixels": 947024,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 112,
+            "y": 623,
+            "width": 185,
+            "height": 451
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 503,
+            "y": 623,
+            "width": 126,
+            "height": 391
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 812,
+            "y": 623,
+            "width": 225,
+            "height": 391
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1179,
+            "y": 623,
+            "width": 191,
+            "height": 450
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 32,
+            "y": 483,
+            "width": 324,
+            "height": 101
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 399,
+            "y": 482,
+            "width": 315,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 754,
+            "y": 482,
+            "width": 313,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1113,
+            "y": 482,
+            "width": 305,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 32,
+            "y": 275,
+            "width": 322,
+            "height": 104
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 400,
+            "y": 273,
+            "width": 313,
+            "height": 112
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 808,
+            "y": 228,
+            "width": 211,
+            "height": 241
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1208,
+            "y": 228,
+            "width": 123,
+            "height": 234
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 56,
+            "y": 70,
+            "width": 267,
+            "height": 91
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 474,
+            "y": 20,
+            "width": 158,
+            "height": 223
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 829,
+            "y": 19,
+            "width": 166,
+            "height": 176
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1110,
+            "y": 42,
+            "width": 317,
+            "height": 141
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 503,
+            "y": 733,
+            "width": 126,
+            "height": 142
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "11_ObsidianFortress",
+      "asset": "Assets/Art/StageThemes20261020/11_ObsidianFortress/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          458,
+          582,
+          860,
+          1086
+        ],
+        [
+          0,
+          461,
+          582,
+          804,
+          1086
+        ],
+        [
+          0,
+          462,
+          581,
+          873,
+          1086
+        ],
+        [
+          0,
+          462,
+          593,
+          889,
+          1086
+        ]
+      ],
+      "transparentPixels": 871099,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 90,
+            "y": 660,
+            "width": 204,
+            "height": 413
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 472,
+            "y": 660,
+            "width": 146,
+            "height": 408
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 798,
+            "y": 660,
+            "width": 252,
+            "height": 407
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1167,
+            "y": 660,
+            "width": 197,
+            "height": 409
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 28,
+            "y": 504,
+            "width": 316,
+            "height": 124
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 385,
+            "y": 504,
+            "width": 323,
+            "height": 121
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 748,
+            "y": 505,
+            "width": 323,
+            "height": 119
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1113,
+            "y": 493,
+            "width": 307,
+            "height": 131
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 28,
+            "y": 282,
+            "width": 316,
+            "height": 148
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 398,
+            "y": 291,
+            "width": 320,
+            "height": 136
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 799,
+            "y": 222,
+            "width": 236,
+            "height": 273
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1182,
+            "y": 217,
+            "width": 167,
+            "height": 253
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 40,
+            "y": 66,
+            "width": 291,
+            "height": 103
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 456,
+            "y": 22,
+            "width": 204,
+            "height": 250
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 808,
+            "y": 10,
+            "width": 171,
+            "height": 194
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1090,
+            "y": 42,
+            "width": 319,
+            "height": 135
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 472,
+            "y": 770,
+            "width": 146,
+            "height": 208
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "12_TerracottaBastion",
+      "asset": "Assets/Art/StageThemes20261020/12_TerracottaBastion/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          452,
+          556,
+          835,
+          1086
+        ],
+        [
+          0,
+          452,
+          556,
+          788,
+          1086
+        ],
+        [
+          0,
+          453,
+          556,
+          852,
+          1086
+        ],
+        [
+          0,
+          453,
+          561,
+          877,
+          1086
+        ]
+      ],
+      "transparentPixels": 889837,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 121,
+            "y": 683,
+            "width": 205,
+            "height": 392
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 488,
+            "y": 683,
+            "width": 133,
+            "height": 392
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 807,
+            "y": 683,
+            "width": 222,
+            "height": 392
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1142,
+            "y": 683,
+            "width": 251,
+            "height": 392
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 39,
+            "y": 530,
+            "width": 323,
+            "height": 104
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 362,
+            "y": 530,
+            "width": 354,
+            "height": 104
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 743,
+            "y": 530,
+            "width": 315,
+            "height": 103
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1089,
+            "y": 525,
+            "width": 321,
+            "height": 108
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 39,
+            "y": 316,
+            "width": 323,
+            "height": 118
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 319,
+            "width": 358,
+            "height": 110
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 775,
+            "y": 252,
+            "width": 256,
+            "height": 263
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1174,
+            "y": 241,
+            "width": 152,
+            "height": 262
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 85,
+            "y": 75,
+            "width": 237,
+            "height": 111
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 460,
+            "y": 29,
+            "width": 167,
+            "height": 247
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 765,
+            "y": 23,
+            "width": 321,
+            "height": 193
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 65,
+            "width": 323,
+            "height": 112
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 488,
+            "y": 817,
+            "width": 133,
+            "height": 132
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "13_BronzeClockwork",
+      "asset": "Assets/Art/StageThemes20261020/13_BronzeClockwork/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          480,
+          582,
+          876,
+          1086
+        ],
+        [
+          0,
+          476,
+          582,
+          837,
+          1086
+        ],
+        [
+          0,
+          474,
+          582,
+          859,
+          1086
+        ],
+        [
+          0,
+          478,
+          573,
+          895,
+          1086
+        ]
+      ],
+      "transparentPixels": 934038,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 94,
+            "y": 665,
+            "width": 241,
+            "height": 409
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 482,
+            "y": 666,
+            "width": 121,
+            "height": 409
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 818,
+            "y": 663,
+            "width": 230,
+            "height": 412
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1197,
+            "y": 663,
+            "width": 166,
+            "height": 414
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 15,
+            "y": 504,
+            "width": 341,
+            "height": 102
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 377,
+            "y": 504,
+            "width": 336,
+            "height": 106
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 737,
+            "y": 504,
+            "width": 334,
+            "height": 108
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1098,
+            "y": 513,
+            "width": 336,
+            "height": 95
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 15,
+            "y": 267,
+            "width": 341,
+            "height": 110
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 378,
+            "y": 267,
+            "width": 336,
+            "height": 113
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 786,
+            "y": 238,
+            "width": 236,
+            "height": 237
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1182,
+            "y": 227,
+            "width": 153,
+            "height": 254
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 57,
+            "y": 65,
+            "width": 257,
+            "height": 87
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 469,
+            "y": 12,
+            "width": 159,
+            "height": 218
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 819,
+            "y": 16,
+            "width": 156,
+            "height": 200
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1090,
+            "y": 17,
+            "width": 343,
+            "height": 137
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 482,
+            "y": 794,
+            "width": 121,
+            "height": 139
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "14_NeonData",
+      "asset": "Assets/Art/StageThemes20261020/14_NeonData/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          468,
+          559,
+          858,
+          1086
+        ],
+        [
+          0,
+          465,
+          559,
+          809,
+          1086
+        ],
+        [
+          0,
+          443,
+          559,
+          834,
+          1086
+        ],
+        [
+          0,
+          465,
+          558,
+          873,
+          1086
+        ]
+      ],
+      "transparentPixels": 949155,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 174,
+            "y": 683,
+            "width": 116,
+            "height": 394
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 485,
+            "y": 683,
+            "width": 120,
+            "height": 363
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 807,
+            "y": 683,
+            "width": 219,
+            "height": 363
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1135,
+            "y": 683,
+            "width": 190,
+            "height": 391
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 37,
+            "y": 527,
+            "width": 325,
+            "height": 91
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 362,
+            "y": 527,
+            "width": 362,
+            "height": 94
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 724,
+            "y": 527,
+            "width": 347,
+            "height": 116
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1091,
+            "y": 528,
+            "width": 334,
+            "height": 93
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 37,
+            "y": 292,
+            "width": 325,
+            "height": 131
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 362,
+            "y": 291,
+            "width": 362,
+            "height": 138
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 724,
+            "y": 265,
+            "width": 309,
+            "height": 248
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1182,
+            "y": 261,
+            "width": 176,
+            "height": 242
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 57,
+            "y": 60,
+            "width": 305,
+            "height": 103
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 362,
+            "y": 26,
+            "width": 283,
+            "height": 236
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 799,
+            "y": 26,
+            "width": 287,
+            "height": 213
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1086,
+            "y": 41,
+            "width": 327,
+            "height": 123
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 485,
+            "y": 774,
+            "width": 120,
+            "height": 211
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "15_GlassCircuit",
+      "asset": "Assets/Art/StageThemes20261020/15_GlassCircuit/kit.png",
+      "width": 1448,
+      "height": 1086,
+      "columnRowCuts": [
+        [
+          0,
+          465,
+          563,
+          860,
+          1086
+        ],
+        [
+          0,
+          463,
+          564,
+          813,
+          1086
+        ],
+        [
+          0,
+          457,
+          564,
+          841,
+          1086
+        ],
+        [
+          0,
+          463,
+          568,
+          878,
+          1086
+        ]
+      ],
+      "transparentPixels": 1036834,
+      "sprites": [
+        {
+          "name": "WallTop",
+          "rect": {
+            "x": 146,
+            "y": 701,
+            "width": 124,
+            "height": 337
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBody",
+          "rect": {
+            "x": 494,
+            "y": 701,
+            "width": 107,
+            "height": 328
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallFoot",
+          "rect": {
+            "x": 831,
+            "y": 701,
+            "width": 132,
+            "height": 338
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "WallBroken",
+          "rect": {
+            "x": 1191,
+            "y": 701,
+            "width": 153,
+            "height": 338
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Normal",
+          "rect": {
+            "x": 35,
+            "y": 523,
+            "width": 320,
+            "height": 98
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Slippery",
+          "rect": {
+            "x": 396,
+            "y": 522,
+            "width": 317,
+            "height": 101
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Crumble",
+          "rect": {
+            "x": 747,
+            "y": 522,
+            "width": 313,
+            "height": 107
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Cloud",
+          "rect": {
+            "x": 1116,
+            "y": 518,
+            "width": 295,
+            "height": 105
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Moving",
+          "rect": {
+            "x": 35,
+            "y": 287,
+            "width": 319,
+            "height": 112
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Trampoline",
+          "rect": {
+            "x": 409,
+            "y": 286,
+            "width": 290,
+            "height": 113
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Portal",
+          "rect": {
+            "x": 791,
+            "y": 256,
+            "width": 227,
+            "height": 251
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Ladder",
+          "rect": {
+            "x": 1197,
+            "y": 251,
+            "width": 147,
+            "height": 234
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Joint",
+          "rect": {
+            "x": 51,
+            "y": 67,
+            "width": 288,
+            "height": 97
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Window",
+          "rect": {
+            "x": 474,
+            "y": 43,
+            "width": 161,
+            "height": 217
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "RopeAnchor",
+          "rect": {
+            "x": 831,
+            "y": 43,
+            "width": 131,
+            "height": 191
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Goal",
+          "rect": {
+            "x": 1097,
+            "y": 44,
+            "width": 318,
+            "height": 120
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "Repeat",
+          "rect": {
+            "x": 494,
+            "y": 793,
+            "width": 107,
+            "height": 140
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    }
+  ]
+}

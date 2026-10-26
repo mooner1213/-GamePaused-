@@ -122,7 +122,7 @@ public static class PauseSkyRevisionChecks
         PauseSimulation sim = new PauseSimulation(level, new MovementTuning());
         controller.Initialize(camera); camera.transform.position = new Vector3(0f, DEEP_START_HEIGHT + CAMERA_HEADROOM, CAMERA_DEPTH); controller.LockBatch();
         sim.EventRaised += (kind, platform) => { if (kind == ClimbEvent.LongFall) controller.NotifyFallContact(sim.FallDistance); };
-        bool hasFollowed = false, hasRisen = false;
+        bool hasFollowed = false, hasRisen = false, hasCameraRisen = false;
         for (int tick = 0; tick < FRAME_LIMIT && !sim.Recovering; tick++)
         {
             Vector3 before = camera.transform.position;
@@ -138,9 +138,10 @@ public static class PauseSkyRevisionChecks
                 Require(camera.transform.position == frozen, "낙하 추적 중 ESC 정지는 화면도 완전히 정지");
             }
             if (hasFollowed && sim.Velocity.y > 0f)
-            { hasRisen = true; Require(camera.transform.position == before && !controller.IsFollowingFall, "배 반동 상승 때 내려온 위치에서 고정하며 이전 높은 화면으로 돌아가지 않음"); }
+            { hasRisen = true; hasCameraRisen |= camera.transform.position.y > before.y; Require(controller.IsFollowingFall, "낙하 이후 배 반동 상승에도 추적을 끊지 않음"); }
         }
         Require(hasFollowed && hasRisen, "큰 낙하 추적과 반동 상승을 실제 물리로 모두 실행");
+        Require(hasCameraRisen, "반동 상승 중 실제 카메라도 연속해서 위로 이동");
     }
 
     // 새 배경과 이전 배경 비활성, 원본 그림, 편집값 보존 증거를 확인합니다.

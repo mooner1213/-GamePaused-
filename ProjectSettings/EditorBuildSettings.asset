@@ -8,5 +8,50 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: a3a308d1d2631b1489edfaf198083809
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity
+    guid: 91202dcecce58c742a444a70853cc1ad
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity
+    guid: 524fed7a3d4e325408d4676f50fc95f4
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity
+    guid: 6a3e962e4d56a6c42a3b8020c9983a41
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity
+    guid: 88a4d632f4e3be34c889e1125fe4b640
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage05_VioletRuins.unity
+    guid: dbea56e4ab9e36847ab65e92440d7fdc
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity
+    guid: 5683150203e905e44bfc803cdef0df78
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage07_BlueGranite.unity
+    guid: 5afecc9888fe104489ac89b80bf562e8
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity
+    guid: b4920f80a4a62b147968a5eb45f379b1
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity
+    guid: 7d0f6e265a5862f45ab90d944967ab96
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity
+    guid: 3d98fbd9c879c724aba5ba82543b7459
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity
+    guid: ab9b4c20834c2024eadae8e305d8bbfd
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity
+    guid: 43c0773830316cf4ba8b1d51ec416b48
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity
+    guid: 62c153cfe3799044db0d575d27dac6b8
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage14_NeonData.unity
+    guid: 92d578d7c3d51a041972f22dc68d54ed
+  - enabled: 1
+    path: Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity
+    guid: 3ca5fcf8df94ee043bf8b4142007254c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -20,6 +20,7 @@ namespace PauseClimb
         private readonly Transform _root;
         private readonly ClimbPlatform _platform;
         private readonly SpriteRenderer _gaugeBackground, _gaugeFill;
+        private readonly PauseTimerPlatformView _timer;
         #endregion
 
         #region Custom Method
@@ -28,6 +29,7 @@ namespace PauseClimb
         {
             _root = root;
             _platform = platform;
+            _timer = root.GetComponentInChildren<PauseTimerPlatformView>(true);
             _gaugeBackground = root.Find(GAUGE_BACKGROUND_NAME)?.GetComponent<SpriteRenderer>();
             _gaugeFill = root.Find(GAUGE_FILL_NAME)?.GetComponent<SpriteRenderer>();
             if (_gaugeBackground == null || _gaugeFill == null) return;
@@ -41,12 +43,19 @@ namespace PauseClimb
             if (_root == null) return;
             _root.position = new Vector3(_platform.X, _platform.Y, _root.position.z);
             _root.gameObject.SetActive(!_platform.Broken);
+            if (_timer != null) _timer.Draw(_platform.BreakRemaining, _platform.Broken);
             UpdateCrumbleGauge(fullSeconds);
         }
 
         // [NOTE] 초기 로컬 좌표를 유지하여 편집한 게이지의 높이와 깊이를 덮어쓰지 않습니다.
         private void UpdateCrumbleGauge(float fullSeconds)
         {
+            if (_timer != null)
+            {
+                if (_gaugeBackground != null) _gaugeBackground.gameObject.SetActive(false);
+                if (_gaugeFill != null) _gaugeFill.gameObject.SetActive(false);
+                return;
+            }
             if (_gaugeFill == null || _gaugeBackground == null) return;
             bool isVisible = _platform.BreakRemaining >= 0f && !_platform.Broken;
             _gaugeBackground.gameObject.SetActive(isVisible);

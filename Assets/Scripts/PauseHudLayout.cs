@@ -47,7 +47,7 @@ namespace PauseClimb
         private Rect _pauseHeading = new Rect(450f, 24f, 380f, 58f);
         [SerializeField, Tooltip("정지 중 입력 상태 안내입니다.")]
         private Rect _pauseDetail = new Rect(400f, 80f, 480f, 38f);
-        [SerializeField, Tooltip("붕괴 제한 시간 안내입니다.")]
+        [SerializeField, Tooltip("타이머 제한 시간 안내입니다.")]
         private Rect _crumbleNotice = new Rect(300f, 123f, 680f, 32f);
         [SerializeField, Tooltip("하단 점프 계획 띠입니다.")]
         private Rect _planPanel = new Rect(282f, 608f, 716f, 90f);

@@ -19,13 +19,13 @@ namespace PauseClimb
         private float _planBarSpacing = 30f;
         [SerializeField, Tooltip("최대 세기 예약 막대의 높이입니다.")]
         private float _planBarHeight = 24f;
-        [SerializeField, Tooltip("궤도 점의 월드 좌표 보정입니다.")]
+        [SerializeField, HideInInspector, Tooltip("이전 점선 데이터의 호환 저장값입니다. 현재 사람 잔상에는 사용하지 않습니다.")]
         private Vector2 _guideWorldOffset = new Vector2(0f, 0.36f);
-        [SerializeField, Tooltip("점선과 반사점이 보이는 세로 범위입니다.")]
+        [SerializeField, HideInInspector, Tooltip("이전 점선 데이터의 호환 저장값입니다. 현재 사람 잔상에는 사용하지 않습니다.")]
         private Vector2 _guideVisibleY = new Vector2(105f, 605f);
-        [SerializeField, Tooltip("착지 순서가 보이는 세로 범위입니다.")]
+        [SerializeField, HideInInspector, Tooltip("이전 착지 번호의 호환 저장값입니다. 현재 사람 잔상에는 사용하지 않습니다.")]
         private Vector2 _landingVisibleY = new Vector2(120f, 595f);
-        [SerializeField, Tooltip("예상 궤도 점의 픽셀 크기입니다.")]
+        [SerializeField, HideInInspector, Tooltip("이전 점선 데이터의 호환 저장값입니다. 현재 사람 잔상에는 사용하지 않습니다.")]
         private float _guideMarkerPixels = 4f;
         [SerializeField, Tooltip("패널 윗선 두께입니다.")]
         private float _panelLinePixels = 2f;
@@ -61,17 +61,17 @@ namespace PauseClimb
         private float _creditSpeed = 96f;
         [SerializeField, Tooltip("재도전 버튼이 나타나기 전 시간입니다.")]
         private float _restartDelay = 4f;
-        [SerializeField, Tooltip("붕괴 안내 표시 범위입니다.")]
+        [SerializeField, Tooltip("타이머 안내 표시 범위입니다.")]
         private float _crumbleHintSeconds = 3f;
-        [SerializeField, Tooltip("연속 구름 진입 안내를 표시할 발판 번호입니다.")]
+        [SerializeField, Tooltip("연속 금간 진입 안내를 표시할 발판 번호입니다.")]
         private int _cloudHintPlatformId = 8;
         [SerializeField, Tooltip("첫 점프 학습 안내의 끝 높이입니다.")]
         private float _firstHintHeight = 3f;
         [SerializeField, Tooltip("벽 반사 학습 안내의 끝 높이입니다.")]
         private float _wallHintHeight = 6f;
-        [SerializeField, Tooltip("얼음 학습 안내의 끝 높이입니다.")]
+        [SerializeField, Tooltip("기름 학습 안내의 끝 높이입니다.")]
         private float _iceHintHeight = 10f;
-        [SerializeField, Tooltip("붕괴와 구름 학습 안내의 끝 높이입니다.")]
+        [SerializeField, Tooltip("타이머와 금간 학습 안내의 끝 높이입니다.")]
         private float _crumbleHintHeight = 16f;
         #endregion
 
