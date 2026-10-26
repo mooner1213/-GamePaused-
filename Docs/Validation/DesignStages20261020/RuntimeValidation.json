@@ -1,0 +1,279 @@
+{
+    "status": "PASS",
+    "utc": "2026-10-20T10:35:47.9994635Z",
+    "scope": "실제 비교 씬 15개의 테마 전경 회색 픽셀·고정 배경 정지 셰이더·정지 중 Transform과 모델 시간·재생 원색 복원·첫 두 도약 착지를 검사합니다. 전체 175m 코스 완주, Android 실기기, 성능 검사는 포함하지 않습니다.",
+    "passedCount": 15,
+    "cases": [
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage01_ClassicKeycap-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage01_ClassicKeycap-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage02_SlimKeyrail-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage02_SlimKeyrail-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage03_FracturedKeycap-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage03_FracturedKeycap-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage04_IvoryCastle-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage04_IvoryCastle-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage05_VioletRuins-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage05_VioletRuins-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage06_VermilionBrick-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage06_VermilionBrick-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage07_BlueGranite-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage07_BlueGranite-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage08_AntiqueTerminal-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage08_AntiqueTerminal-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage09_RGBKeyboard-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage09_RGBKeyboard-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage10_PorcelainGothic-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage10_PorcelainGothic-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage11_ObsidianFortress-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage11_ObsidianFortress-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage12_TerracottaBastion-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage12_TerracottaBastion-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage13_BronzeClockwork-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage13_BronzeClockwork-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage14_NeonData-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage14_NeonData-normal.png"
+            ]
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity",
+            "isPassed": true,
+            "foregroundCount": 558,
+            "backgroundCount": 6,
+            "launchedCount": 2,
+            "supportId": 2,
+            "checks": [
+                "정지 중 캐릭터·월드 시간·모든 테마 렌더러·장치 Transform 유지, 전경 회색 및 배경 _Frozen=1",
+                "재생 후 원본 전경 스프라이트·색 복구 및 배경 _Frozen=0",
+                "25프레임 충전·2프레임 해제 두 번을 실제 게임에 입력해 발판 2번 착지"
+            ],
+            "errors": [],
+            "captures": [
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage15_GlassCircuit-frozen.png",
+                "C:\\Users\\MBC\\Documents\\GitHub\\GamePaused\\Docs\\Validation\\DesignStages20261020\\Stage15_GlassCircuit-normal.png"
+            ]
+        }
+    ],
+    "errors": []
+}

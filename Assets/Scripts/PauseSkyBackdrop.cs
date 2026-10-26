@@ -11,6 +11,7 @@ namespace PauseClimb
     {
         #region Variables
         public const string SHADER_NAME = "PauseClimb/WorldSky";
+        public const string STAGE_SHADER_NAME = "PauseClimb/StageWorldSky";
         private static readonly int _sunsetStartId = Shader.PropertyToID("_SunsetStart");
         private static readonly int _sunsetEndId = Shader.PropertyToID("_SunsetEnd");
         private static readonly int _daySkyId = Shader.PropertyToID("_DaySky");

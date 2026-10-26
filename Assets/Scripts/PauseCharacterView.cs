@@ -28,6 +28,8 @@ namespace PauseClimb
         private const int BELLY_ROLL_FRAME_COUNT = 10;
         private const int EXPECTED_SPRITE_COUNT = 154;
         private const string RESOURCE_ROOT = "Characters/HumanPlayer/";
+        private const int IDLE_POSE_COUNT = 4;
+        private const float IDLE_POSE_TIME_RATIO = 0.5f;
         private enum ClipKind { Idle, Jump, WallUp, WallDown, BellyLoop, GetUp, Uppercut }
 
 
@@ -63,6 +65,7 @@ namespace PauseClimb
 
         private bool _isLoaded, _hasDisplayed, _isWallDescending;
         private float _wallClock = INACTIVE_POSE_CLOCK, _landingClock = INACTIVE_POSE_CLOCK;
+        private Vector3 _baseScale;
         #endregion
 
         #region Reference
@@ -77,6 +80,7 @@ namespace PauseClimb
         private Sprite _displayedSprite;
 
         private PauseSimulation _simulation;
+        private bool _isPreview;
 
         #endregion
 
@@ -118,17 +122,34 @@ namespace PauseClimb
                 return;
             }
             LoadClips();
+            _baseScale = _playerRenderer.transform.localScale;
             ResetView();
+        }
+
+        // 실제 캐릭터와 같은 자세 설정을 복사한 보이지 않는 예측 전용 뷰를 준비합니다.
+        public void InitializePreview(SpriteRenderer target, PauseCharacterView source)
+        {
+            _isPreview = true;
+            _wallPoseSeconds = source._wallPoseSeconds; _wallUpTurnFrame = source._wallUpTurnFrame; _wallDownTurnFrame = source._wallDownTurnFrame;
+            _landingPoseSeconds = source._landingPoseSeconds; _risingPoseVelocity = source._risingPoseVelocity; _fallingPoseVelocity = source._fallingPoseVelocity;
+            _highFallPoseHeight = source._highFallPoseHeight; _highFallFramesPerMetre = source._highFallFramesPerMetre; _timing = source._timing;
+            Initialize(target); target.enabled = false;
+        }
+        // 예측을 다시 만들 때 현재 실제 자세의 시계를 출발점으로 사용합니다.
+        public void SeedPreview(PauseCharacterView source)
+        {
+            _wallClock = source._wallClock; _landingClock = source._landingClock; _isWallDescending = source._isWallDescending;
+            _displayedSprite = source._displayedSprite; _hasDisplayed = source._hasDisplayed;
         }
 
         // [수정됨: 실제 물리 반동·회복 상태와 사람 PNG를 연결하고 정지 프레임을 보존합니다.]
         // [NOTE] 정지 중에는 회색만 바꾸고 뷰 시계·프레임·좌우를 모두 유지합니다.
-        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingElapsed, float dt)
+        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingProgress, float dt)
         {
             if (sim == null || _playerRenderer == null) return;
             LoadClips();
             BindSimulation(sim);
-            if (isFrozen && _hasDisplayed)
+            if (isFrozen && !isEnding && _hasDisplayed)
             {
                 ApplySprite(_displayedSprite, true);
                 return;
@@ -138,7 +159,7 @@ namespace PauseClimb
             _wallClock += elapsed;
             _landingClock += elapsed;
             if (isEnding)
-                ShowTimed(ClipKind.Uppercut, Mathf.Max(0f, endingElapsed), sim.Facing, "엔딩 · 어퍼컷", false);
+                ShowProgress(ClipKind.Uppercut, endingProgress, sim.Facing, "엔딩 · 슬로우 어퍼컷");
             else if (sim.Recovering)
                 ShowProgress(ClipKind.GetUp, sim.RecoveryProgress, sim.Facing, "마지막 착지 · 엎어져 일어나기");
             else if (sim.BellyBouncing)
@@ -161,9 +182,13 @@ namespace PauseClimb
             else if (_landingClock < Mathf.Max(0.05f, _landingPoseSeconds))
                 ShowFrame(ClipKind.Jump, LANDING_FIRST_FRAME + Mathf.Min(LANDING_FRAME_COUNT - 1, Mathf.FloorToInt(_landingClock / Mathf.Max(0.02f, _landingPoseSeconds / LANDING_FRAME_COUNT))), sim.Facing, "점프 · 일반 착지");
             else
-                ShowFrame(ClipKind.Idle, 0, sim.Facing, "대기 · 다음 점프 준비");
-            ApplySprite(_displayedSprite, isFrozen);
+                ShowTimed(ClipKind.Idle, sim.MotionTime, sim.Facing, "대기 · 숨 고르기", true);
+            ApplySprite(_displayedSprite, isFrozen && !isEnding);
         }
+
+        // 어퍼컷 확대는 발 기준 Transform에만 적용하며 물리 판정과 다른 캐릭터의 배율은 바꾸지 않습니다.
+        public void SetEndingScale(float multiplier)
+        { if (_playerRenderer != null) _playerRenderer.transform.localScale = _baseScale * Mathf.Max(1f, multiplier); }
 
         // 재시작 때 이전 벽 반동·착지 연출과 프레임을 초기화합니다. 물리 위치는 건드리지 않습니다.
         public void ResetView()
@@ -173,6 +198,7 @@ namespace PauseClimb
             _hasDisplayed = false;
             _motionLabel = "사람 도트 준비";
             _frameIndex = 0;
+            SetEndingScale(1f);
             if (_isLoaded && _playerRenderer != null)
             {
                 ShowFrame(ClipKind.Idle, 0, 1, "대기 · 다음 점프 준비");
@@ -202,7 +228,7 @@ namespace PauseClimb
             AddClip(ClipKind.GetUp, "BellyGetUp", _timing.GetUp, false);
             AddClip(ClipKind.Uppercut, "EndingUppercut", _timing.Uppercut, false);
             _isLoaded = true;
-            Debug.Log("[사람 캐릭터] 사람 도트 154개와 좌우 모션을 준비했습니다. 기존 거북이 자산은 보존합니다.", this);
+            if (!_isPreview) Debug.Log("[사람 캐릭터] 사람 도트 154개와 좌우 모션을 준비했습니다. 기존 거북이 자산은 보존합니다.", this);
         }
 
         // 대기와 동작의 리소스 경로를 구분하고 빠진 모션은 오류로 알립니다.
@@ -213,8 +239,9 @@ namespace PauseClimb
             Sprite[] left;
             if (key == ClipKind.Idle)
             {
-                right = new[] { Resources.Load<Sprite>(basePath + "Idle/Idle_Right") };
-                left = new[] { Resources.Load<Sprite>(basePath + "Idle/Idle_Left") };
+                // 서 있는 기존 원화만 순환해 착지·기립 뒤에는 다시 웅크리지 않는 독립 대기를 만듭니다.
+                right = LoadIdlePoses(basePath, "Right"); left = LoadIdlePoses(basePath, "Left");
+                durations = Enumerable.Repeat(Mathf.Max(0.1f, durations[0]) * IDLE_POSE_TIME_RATIO, IDLE_POSE_COUNT).ToArray();
             }
             else
             {
@@ -224,6 +251,14 @@ namespace PauseClimb
             _clips[key] = new SpriteClip(right, left, durations, isLooping);
             if (right.Length != durations.Length || left.Length != durations.Length || right.Any(sprite => sprite == null) || left.Any(sprite => sprite == null))
                 Debug.LogError("[사람 캐릭터] " + folder + " 모션 프레임 연결이 부족합니다. Resources의 좌우 PNG를 확인하세요.", this);
+        }
+
+        // 발 위치가 같은 대기·최종 착지·최종 기립의 선 자세를 재사용하며 원본 PNG는 변경하지 않습니다.
+        private static Sprite[] LoadIdlePoses(string root, string side)
+        {
+            Sprite idle = Resources.Load<Sprite>(root + "Idle/Idle_" + side);
+            return new[] { idle, Resources.Load<Sprite>(root + "Frames/Jump/" + side + "/Jump_" + side + "_11"),
+                idle, Resources.Load<Sprite>(root + "Frames/BellyGetUp/" + side + "/BellyGetUp_" + side + "_11") };
         }
 
         // 다른 물리 모델을 받으면 이전 구독을 해제해 사건이 중복 처리되지 않게 합니다.
@@ -248,7 +283,7 @@ namespace PauseClimb
                 _landingClock = 0f;
                 _wallClock = INACTIVE_POSE_CLOCK;
             }
-            else if (kind == ClimbEvent.Jump)
+            else if (kind == ClimbEvent.Jump || kind == ClimbEvent.Recovered || kind == ClimbEvent.TrampolineRest)
             {
                 _wallClock = _landingClock = INACTIVE_POSE_CLOCK;
             }
@@ -289,7 +324,7 @@ namespace PauseClimb
             if (_motionLabel != label)
             {
                 _motionLabel = label;
-                Debug.Log("[사람 캐릭터] " + label, this);
+                if (!_isPreview) Debug.Log("[사람 캐릭터] " + label, this);
             }
         }
 

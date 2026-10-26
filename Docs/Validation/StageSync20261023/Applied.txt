@@ -1,0 +1,15 @@
+01_ClassicKeycap : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+02_SlimKeyrail : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+03_FracturedKeycap : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+04_IvoryCastle : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+05_VioletRuins : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+06_VermilionBrick : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+07_BlueGranite : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+08_AntiqueTerminal : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+10_PorcelainGothic : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+11_ObsidianFortress : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+12_TerracottaBastion : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+13_BronzeClockwork : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+14_NeonData : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+15_GlassCircuit : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved
+09_RGBKeyboard : addedSideTiles=8, addedInteriorTiles=96, platforms=106, transforms/physics preserved

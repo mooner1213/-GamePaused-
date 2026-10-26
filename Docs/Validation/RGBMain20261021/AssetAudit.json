@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "missingMeta": [],
+  "duplicateGuids": {},
+  "guidCount": 1081,
+  "previewCount": 45,
+  "reports": {
+    "DesignValidation.json": "PASS",
+    "Runtime/RuntimeValidation.json": "PASS",
+    "ExpansionValidation.json": "MODEL_AND_SCENE_PASS",
+    "FeedbackValidation.json": "PASS"
+  },
+  "savedSceneSha256": {
+    "Assets/Scenes/MainScene.unity": "cced176de6163d7d61c49083d3390b01d85839351e5538571633f0be0f817094",
+    "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity": "fab0c588bc26c4c3c38f49e0aeb04abce13bf69bee04f391e0fd6a7c40f168fa",
+    "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity": "49dd271238f5119ed4a076b7a6ccce1e3c9d2c363df99e3286a9068b10b79ece",
+    "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity": "20480f6064f9370f0830ac4044df943ac58479037508bcf55b4c296cc2bedb75",
+    "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity": "ae1dd44b8da084c5300a06c4d27cd6b89c1f229c79d4025b93a15ae035348992",
+    "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity": "97f1f401ed3891ce637c406b074c449472a85ba857d0c9dfd6bd95c3712f9e12",
+    "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity": "8b47d98b4a4281bc53f4904fe1a169bdf5a493b5501e773b002df382fedcb694",
+    "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity": "0c1fc81eb9193f97fd99ff7510fb73f9ee7f95b97f660f7160f178dd23ee79c8",
+    "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity": "5b611bb0bc3fe49bd7209589755df1629d4d881bab9ab5f6aaa23b999761c749",
+    "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity": "48bef7a8fd88110203a28f138e22b42aa9b5d718afa4d4ee1692b09bae6e63b3",
+    "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity": "2db7b8613aff76f80edf3d94463dd775fa439517fd6b6459e3e7822f0dc64635",
+    "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity": "a22e34ebafc2ac6a293dd670e19462166d532fe904893c7c48955b685a92ae34",
+    "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity": "9c11b201e605238e1b5ebd5ebc554097fd8992ba2dc0326e6b9ad500fdfe97d2",
+    "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity": "10ef4721a9c217f39b5549b3d3566fdd8b4989d43dfc67eecd659f5aacfe77e0",
+    "Assets/Scenes/DesignStages/Stage14_NeonData.unity": "a60015180c8669937e25aa9385fc676fc81b2d68c51c8b3aa30608da91cd915c",
+    "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity": "3ed0d6d3dfa98d77ac14f5757265514d74a798c0949bd263e4c2499730a81151"
+  }
+}

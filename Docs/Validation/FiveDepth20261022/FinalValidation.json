@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "15 design scenes plus MainScene. Prepared camera heights in actual Editor Play; not full course completion or device testing.",
+  "verification": {
+    "Previews": {
+      "sceneCount": 16,
+      "checkCount": 240,
+      "status": "PASS"
+    },
+    "Runtime": {
+      "sceneCount": 16,
+      "checkCount": 240,
+      "status": "PASS"
+    }
+  },
+  "uniqueAtlases": 15,
+  "uniqueArchitectureImages": 75,
+  "tilemapPreservationScenes": 16,
+  "newArtMetaFiles": 105,
+  "duplicateNewArtGuids": 0
+}

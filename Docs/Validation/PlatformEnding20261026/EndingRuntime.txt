@@ -1,0 +1,2 @@
+paused=False, uppercutFrames=12, realSeconds=3.716667, maxScale=1.149997, hit/credits/restoredScale/frozenPhysics=PASS
+paused=True, uppercutFrames=12, realSeconds=3.716667, maxScale=1.149997, hit/credits/restoredScale/frozenPhysics=PASS

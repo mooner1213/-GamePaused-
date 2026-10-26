@@ -1,0 +1,186 @@
+{
+    "status": "PASS",
+    "utc": "2026-10-21T08:39:31.9301752Z",
+    "scope": "Unity Editor 실제 재생: 메인+15씬, 시차·정지·원색 복구·첫 두 도약. 메인의 3프레임 사람 잔상과 도트 3/2/1 카운트 포함. Android 실기기·175m 전체 완주·성능 검증은 포함하지 않습니다.",
+    "scenes": [
+        {
+            "scene": "Assets/Scenes/MainScene.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 정지 입력 중 세 프레임 간격의 사람 모션 잔상 9개 표시, 실제 위치·시계 불변",
+                "실제 게임 Tick에서 ESC 정지 중에도 도트 3→2→1→소멸, 중앙 아래 숫자와 남은 시간 일치",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        },
+        {
+            "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity",
+            "isPassed": true,
+            "supportId": 2,
+            "checks": [
+                "카메라 (4,10)m 이동에 네 레이어가 각 비율로 이동, 내부 성벽과 창문은 월드 고정",
+                "실제 정지 중 캐릭터·월드 시계·네 배경 위치 유지, 타일과 새 도트 흑백 셰이더 확인",
+                "실제 점프 기록·재생으로 두 번째 발판 착지, 타일·도트 원색 복구"
+            ],
+            "errors": []
+        }
+    ],
+    "errors": []
+}

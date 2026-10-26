@@ -1,0 +1,515 @@
+{
+  "generator": "built-in image_gen",
+  "atlases": [
+    {
+      "id": "01_ClassicKeycap",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-5e7f49da-7483-4bdd-81bd-f42dceaa6a5e.png",
+      "prompt": "Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: clean ivory ABS keyboard citadel on charcoal switch housings, neat orange traces and lime indicator lamps, friendly airy classic-computer architecture",
+      "rows": [
+        {
+          "top": 0,
+          "height": 211
+        },
+        {
+          "top": 211,
+          "height": 214
+        },
+        {
+          "top": 425,
+          "height": 204
+        },
+        {
+          "top": 629,
+          "height": 200
+        },
+        {
+          "top": 829,
+          "height": 195
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "76bb7b1f771f0d70698bfd1990b10c10b1989f14df7963400d14207ce7b0ff8a"
+    },
+    {
+      "id": "02_SlimKeyrail",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-517a39c9-3d12-48fd-93a5-7c082d266d1e.png",
+      "prompt": "Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: slender elongated ivory key rails, graphite aluminum vertical elevator pylons and narrow precision catwalks, cold steel-blue industrial linear architecture",
+      "rows": [
+        {
+          "top": 0,
+          "height": 199
+        },
+        {
+          "top": 199,
+          "height": 208
+        },
+        {
+          "top": 407,
+          "height": 203
+        },
+        {
+          "top": 610,
+          "height": 206
+        },
+        {
+          "top": 816,
+          "height": 208
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "054dde86ad75339a2ce64e243d444d729a11c3ff2bbc0bfa8bcb4869979fdc3d"
+    },
+    {
+      "id": "03_FracturedKeycap",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-6ffbb962-512b-4187-9998-7839f41db3cd.png",
+      "prompt": "Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: fractured cream PBT keyboard citadel, broken square-key arches, dangling disconnected burnt-orange cables and dark reinforced salvage chassis, dusty blue abandoned ruins",
+      "rows": [
+        {
+          "top": 0,
+          "height": 205
+        },
+        {
+          "top": 205,
+          "height": 205
+        },
+        {
+          "top": 410,
+          "height": 202
+        },
+        {
+          "top": 612,
+          "height": 204
+        },
+        {
+          "top": 816,
+          "height": 208
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "1eb67a525c878c210c3ff414e426c8ecddd665c8744b2af4a976e7b4175217ee"
+    },
+    {
+      "id": "04_IvoryCastle",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-3fa59bf7-45c9-4d68-8ac2-f349df251e8f.png",
+      "prompt": "Architecture theme MUST be unmistakable: warm beige limestone medieval castle, unpainted narrow lancet niches, broad worn stone cornices and quiet Romanesque arcades, pale golden ivory haze, no gold or blue enamel. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: warm beige limestone medieval castle, unpainted narrow lancet niches, broad worn stone cornices and quiet Romanesque arcades, pale golden ivory haze, no gold or blue enamel",
+      "rows": [
+        {
+          "top": 0,
+          "height": 195
+        },
+        {
+          "top": 195,
+          "height": 212
+        },
+        {
+          "top": 407,
+          "height": 184
+        },
+        {
+          "top": 591,
+          "height": 203
+        },
+        {
+          "top": 794,
+          "height": 230
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "6376d3b70d31baa54f2586450e43ebf0b601f1df27150bee88ca5f1babb56771"
+    },
+    {
+      "id": "05_VioletRuins",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-b777d6ea-b5c9-46f3-8b35-dca2cf8a8eaf.png",
+      "prompt": "Architecture theme MUST be unmistakable: crumbly charcoal-purple rubble castle ruins, crooked cracked Gothic windows and jagged broken spires, ashy lavender dusty mist, fragile weathered masonry. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: crumbly charcoal-purple rubble castle ruins, crooked cracked Gothic windows and jagged broken spires, ashy lavender dusty mist, fragile weathered masonry",
+      "rows": [
+        {
+          "top": 0,
+          "height": 202
+        },
+        {
+          "top": 202,
+          "height": 200
+        },
+        {
+          "top": 402,
+          "height": 193
+        },
+        {
+          "top": 595,
+          "height": 199
+        },
+        {
+          "top": 794,
+          "height": 230
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "df6ff2e79f8188fa2593bc1196d6af7ae33aa2d61d9ee5d114f24c759c8f7c1f"
+    },
+    {
+      "id": "06_VermilionBrick",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-5500b3ee-9cc0-4300-a18b-2b78cbe27a54.png",
+      "prompt": "Architecture theme MUST be unmistakable: large bright vermilion rectangular brick fortress with thick dark slate mortar, square crenellations and chunky square chimneys, warm apricot haze. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: large bright vermilion rectangular brick fortress with thick dark slate mortar, square crenellations and chunky square chimneys, warm apricot haze",
+      "rows": [
+        {
+          "top": 0,
+          "height": 199
+        },
+        {
+          "top": 199,
+          "height": 197
+        },
+        {
+          "top": 396,
+          "height": 194
+        },
+        {
+          "top": 590,
+          "height": 208
+        },
+        {
+          "top": 798,
+          "height": 226
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "00234156e8dac85ea843637de54c26bf12dca7171c340eb85ad8355e48ca0fb0"
+    },
+    {
+      "id": "07_BlueGranite",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-c38820ee-7ba1-4e1e-814b-37dbe94ae1df.png",
+      "prompt": "Architecture theme MUST be unmistakable: cold blue-grey granite fortress with broad irregular cracked stone blocks, slit windows and navy buttresses, cool overcast blue-grey mist. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: cold blue-grey granite fortress with broad irregular cracked stone blocks, slit windows and navy buttresses, cool overcast blue-grey mist",
+      "rows": [
+        {
+          "top": 0,
+          "height": 207
+        },
+        {
+          "top": 207,
+          "height": 212
+        },
+        {
+          "top": 419,
+          "height": 191
+        },
+        {
+          "top": 610,
+          "height": 207
+        },
+        {
+          "top": 817,
+          "height": 207
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "b4f10efcce11942b4d13283acefba40076e441887e7501b2d6b814de055d58bf"
+    },
+    {
+      "id": "08_AntiqueTerminal",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-6c3ef70c-cf49-46fa-9cb8-75aa1a43cd23.png",
+      "prompt": "Architecture theme MUST be unmistakable: vintage beige computer-key terminal halls, walnut-brown iron frames, orange insulated cables and dull amber lamps, dusty warm sepia industrial architecture, no cogwheels. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: vintage beige computer-key terminal halls, walnut-brown iron frames, orange insulated cables and dull amber lamps, dusty warm sepia industrial architecture, no cogwheels",
+      "rows": [
+        {
+          "top": 0,
+          "height": 198
+        },
+        {
+          "top": 198,
+          "height": 198
+        },
+        {
+          "top": 396,
+          "height": 198
+        },
+        {
+          "top": 594,
+          "height": 199
+        },
+        {
+          "top": 793,
+          "height": 231
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "a1aec152434d8165710385d0457ce64181ceb2c2f29061a6aec1fe76258e64cb"
+    },
+    {
+      "id": "09_RGBKeyboard",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-22b33846-1c78-4eb9-94d3-6319b8fa674c.png",
+      "prompt": "Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: dark graphite mechanical-keyboard castle made of large square keycaps and switch housings, magenta and cyan RGB circuits, midnight navy haze, sparse pink and blue indicator lights, strong key shapes, no generic server city",
+      "rows": [
+        {
+          "top": 0,
+          "height": 220
+        },
+        {
+          "top": 220,
+          "height": 211
+        },
+        {
+          "top": 431,
+          "height": 184
+        },
+        {
+          "top": 615,
+          "height": 194
+        },
+        {
+          "top": 809,
+          "height": 215
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "9fae07645586acb9fcc69666af2b13e2ab2e8b2d0b716c4b199642438d195bd1"
+    },
+    {
+      "id": "10_PorcelainGothic",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-46976194-916c-4e49-9776-1d6f5cde3b98.png",
+      "prompt": "Architecture theme MUST be unmistakable: elegant ivory porcelain keyboard cathedral, fluted buttresses, tall cobalt pointed arches, delicate antique gold edges, white ceramic-key towers in pale blue haze. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: elegant ivory porcelain keyboard cathedral, fluted buttresses, tall cobalt pointed arches, delicate antique gold edges, white ceramic-key towers in pale blue haze",
+      "rows": [
+        {
+          "top": 0,
+          "height": 197
+        },
+        {
+          "top": 197,
+          "height": 203
+        },
+        {
+          "top": 400,
+          "height": 202
+        },
+        {
+          "top": 602,
+          "height": 201
+        },
+        {
+          "top": 803,
+          "height": 221
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "d898cdffb3dacd62a894df136ac2caaca5bf33744da61edd32c010fd5c58616b"
+    },
+    {
+      "id": "11_ObsidianFortress",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-f26bd37d-6f0a-4bf9-9037-6a68e564df3a.png",
+      "prompt": "Architecture theme MUST be unmistakable: monumental angular charcoal-violet obsidian fortress, broad iron clamps, brutalist teeth, hard massive facets, deeply recessed square gates, restrained amethyst details in stormy grey-purple haze. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: monumental angular charcoal-violet obsidian fortress, broad iron clamps, brutalist teeth, hard massive facets, deeply recessed square gates, restrained amethyst details in stormy grey-purple haze",
+      "rows": [
+        {
+          "top": 0,
+          "height": 211
+        },
+        {
+          "top": 211,
+          "height": 196
+        },
+        {
+          "top": 407,
+          "height": 190
+        },
+        {
+          "top": 597,
+          "height": 193
+        },
+        {
+          "top": 790,
+          "height": 234
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "037f849f244202c01b4827e0f39acafef5cee7a6912d0d0d23667d1384a69c2d"
+    },
+    {
+      "id": "12_TerracottaBastion",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-7ed7053f-b8c7-4e45-a43c-deebe2de91cc.png",
+      "prompt": "Architecture theme MUST be unmistakable: small staggered burnt-terracotta brick bastions, reddish worn copper straps and iron tie plates, stepped corbels and furnace towers without flames, russet dusty peach haze. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: small staggered burnt-terracotta brick bastions, reddish worn copper straps and iron tie plates, stepped corbels and furnace towers without flames, russet dusty peach haze",
+      "rows": [
+        {
+          "top": 0,
+          "height": 191
+        },
+        {
+          "top": 191,
+          "height": 192
+        },
+        {
+          "top": 383,
+          "height": 193
+        },
+        {
+          "top": 576,
+          "height": 192
+        },
+        {
+          "top": 768,
+          "height": 256
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "1bdb71fa4a035118aedb5acfc0bb49e8dbe0b16157f082ce48e4367499bb388c"
+    },
+    {
+      "id": "13_BronzeClockwork",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-bc7ff8e4-725d-44b0-884f-69d58c7a8bc9.png",
+      "prompt": "Architecture theme MUST be unmistakable: verdigris green and amber-brass clockwork citadel, colossal gear half-wheels, pistons, riveted chestnut arches, teal patinated mechanical architecture in turquoise bronze haze. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: verdigris green and amber-brass clockwork citadel, colossal gear half-wheels, pistons, riveted chestnut arches, teal patinated mechanical architecture in turquoise bronze haze",
+      "rows": [
+        {
+          "top": 0,
+          "height": 199
+        },
+        {
+          "top": 199,
+          "height": 203
+        },
+        {
+          "top": 402,
+          "height": 196
+        },
+        {
+          "top": 598,
+          "height": 199
+        },
+        {
+          "top": 797,
+          "height": 227
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "d69ce5a706045ea342d83d7e0a160d36cc836ed39a1db90f93ceb18203e641cc"
+    },
+    {
+      "id": "14_NeonData",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-e0c1d003-0535-42a7-9362-d7b5ad164b4d.png",
+      "prompt": "Architecture theme MUST be unmistakable: midnight angular server-rack fortress, broad blank dark screens, cyan and magenta data buses, horizontal status-display slots and magnesium vents, purple futuristic data architecture, no plus-key columns. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: midnight angular server-rack fortress, broad blank dark screens, cyan and magenta data buses, horizontal status-display slots and magnesium vents, purple futuristic data architecture, no plus-key columns",
+      "rows": [
+        {
+          "top": 0,
+          "height": 195
+        },
+        {
+          "top": 195,
+          "height": 210
+        },
+        {
+          "top": 405,
+          "height": 204
+        },
+        {
+          "top": 609,
+          "height": 205
+        },
+        {
+          "top": 814,
+          "height": 210
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "2af2c74548742b08d7a455feb5df3a24c18b529eeb1a2fb1acc686006c20cf47"
+    },
+    {
+      "id": "15_GlassCircuit",
+      "source": "C:\\Users\\MBC\\.codex\\generated_images\\01a1393f-29a4-70f2-824c-64361530ed3a\\exec-ecf77a05-14cd-41b3-a666-646eaba68360.png",
+      "prompt": "Architecture theme MUST be unmistakable: aqua mint faceted glass-key corridors, white enamel beams, dark green printed-circuit boards, square chips and sparse copper connectors, seafoam geometric glass towers, no snow or ice. Use case: stylized-concept. Asset type: production Unity 2D pixel-art parallax sprite ATLAS. This is ONE coherent environment kit with exactly FIVE separate horizontal panoramic architecture silhouette strips, each with a UNIQUE skyline and different buildings, never repeated or recolored duplicates. Draw an RGBA transparent-background atlas, landscape 1536x1024 pixels. Five rows each 1536x192 pixels, with 16px fully transparent horizontal gutters between rows: top row y=0..191, row 2 y=208..399, row 3 y=416..607, row 4 y=624..815, bottom row y=832..1023. Each row is an independent continuous left-to-right skyline grounded at the bottom of its own row, with transparent empty space above rooflines. Never connect architecture between rows. No labels, text, numerals, grids, frame, sky, cloud, colored backdrop, characters, platforms, or UI. Authentic coarse visible pixel clusters, restrained 12-20 color palette, hard stepped pixel edges, flat hand-placed color blocks, no anti-aliasing or painterly gradients. Architecture fills entire row width. Pixel-art Jump King environment scale, simplified silhouettes rather than noisy detail. Depth rows top to bottom: (1) very distant faint low-contrast pale HAZY mountain-scale landmark silhouettes, tallest but sparse; (2) distant atmospheric monumental towers and long viaducts, different shapes; (3) middle-distance varied district rooftops and layered arches, medium low contrast; (4) closer massive side buildings, buttresses and decorative rooflines, darker and more detailed; (5) nearest low buildings, structural beams and parapets, darkest readable pixel edges. Give all FIVE rows distinctly different silhouette arrangements and motifs belonging to the SAME theme. Atmospheric haze in distant rows is via pale low-contrast colors and simplified detail while preserving crisp pixel edges and genuine transparency. Theme: aqua mint faceted glass-key corridors, white enamel beams, dark green printed-circuit boards, square chips and sparse copper connectors, seafoam geometric glass towers, no snow or ice",
+      "rows": [
+        {
+          "top": 0,
+          "height": 197
+        },
+        {
+          "top": 197,
+          "height": 202
+        },
+        {
+          "top": 399,
+          "height": 199
+        },
+        {
+          "top": 598,
+          "height": 200
+        },
+        {
+          "top": 798,
+          "height": 226
+        }
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "bd05ed0fb308367ea901151fad38a1cab87e9948ce45f958fbb3e19243e49b07"
+    }
+  ]
+}

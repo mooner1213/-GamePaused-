@@ -4,7 +4,18 @@ using UnityEngine;
 namespace PauseClimb
 {
     // 발판의 재질과 등반 구간을 렌더링과 실제 접촉 판정에서 함께 사용합니다.
-    public enum PlatformKind { Stone, Ice, Moving, Crumble, Cloud, SlopeIce, SummitStep, Goal }
+    // [NOTE] 저장된 숫자값을 유지하고 Inspector의 표시 이름만 현재 디자인 명칭으로 바꿉니다.
+    public enum PlatformKind
+    {
+        [InspectorName("일반 발판")] Stone = 0,
+        [InspectorName("기름 발판")] Ice = 1,
+        [InspectorName("이동 발판")] Moving = 2,
+        [InspectorName("타이머 발판")] Crumble = 3,
+        [InspectorName("금간 발판")] Cloud = 4,
+        [InspectorName("경사 기름 발판")] SlopeIce = 5,
+        [InspectorName("정상 계단")] SummitStep = 6,
+        [InspectorName("정상 발판")] Goal = 7
+    }
 
     /// <summary>
     /// 발판 표면과 시간 상태를 보관합니다.
@@ -36,7 +47,7 @@ namespace PauseClimb
         // 표면의 기준 좌표와 경사를 저장합니다.
         public ClimbPlatform(int id, PlatformKind kind, float x, float y, float width, float slope = 0f)
         { _id = id; _kind = kind; _baseX = X = x; _y = y; _width = width; _slope = slope; }
-        // 경사진 얼음에서 발이 닿는 정확한 높이를 구합니다.
+        // 경사진 기름에서 발이 닿는 정확한 높이를 구합니다.
         public float TopAt(float x) { return _y + _slope * (x - X); }
         #endregion
     }
@@ -107,7 +118,7 @@ namespace PauseClimb
             return result;
         }
 
-        // 넓은 연습 구간부터 벽 반사, 연속 구름, 마지막 네 번의 도약까지 연결합니다.
+        // 넓은 연습 구간부터 벽 반사, 연속 금간, 마지막 네 번의 도약까지 연결합니다.
         public static PauseLevel Create(bool isQuiet = false)
         {
             PauseLevel level = new PauseLevel();
@@ -144,7 +155,7 @@ namespace PauseClimb
             level._walls.Add(new ClimbWall(-5.25f, 25.2f, 28.2f));
             level._finalStepIds.AddRange(new[] { 21, 22, 23, 24 });
             level.UpdateWorld(0f);
-            if (!isQuiet) Debug.Log("[등반 맵] 점프 전용 35m 코스: 발판 25개, 반사 구조물 4개, 구름 연속 구간과 최종 4연속 구간을 준비했습니다.");
+            if (!isQuiet) Debug.Log("[등반 맵] 점프 전용 35m 코스: 발판 25개, 반사 구조물 4개, 금간 연속 구간과 최종 4연속 구간을 준비했습니다.");
             return level;
         }
         // [수정됨: 확장 씬 원본 추가] 생성기와 독립 검증이 폭 24m·높이 175m의 같은 코스를 사용합니다.
@@ -226,7 +237,7 @@ namespace PauseClimb
             copy._finalStepIds.AddRange(_finalStepIds);
             return copy;
         }
-        // 실행 시간에만 이동 발판과 구름을 갱신합니다. 구름은 0.3초 안에 다음 예약 도약이 필요합니다.
+        // 실행 시간에만 이동 발판과 금간을 갱신합니다. 금간은 0.3초 안에 다음 예약 도약이 필요합니다.
         public void UpdateWorld(float dt)
         {
             _worldTime += Mathf.Max(0f, dt);
@@ -237,7 +248,7 @@ namespace PauseClimb
                 if (p.Kind == PlatformKind.Cloud && dt > 0f) UpdateTimedPlatform(p, dt);
             }
         }
-        // ESC 정지 상태에서도 3초 붕괴 발판의 제한 시간과 복구 시간을 흘립니다.
+        // ESC 정지 상태에서도 3초 타이머 발판의 제한 시간과 복구 시간을 흘립니다.
         public void TickCrumble(float realDt)
         {
             if (realDt <= 0f) return;
@@ -263,7 +274,7 @@ namespace PauseClimb
             p.BreakRemaining = Mathf.Max(0f, p.BreakRemaining - dt);
             if (p.BreakRemaining > 0f) return;
             p.Broken = true; p.RestoreRemaining = _restoreDelay;
-            if (!_isPlanningCopy) Debug.Log("[발판] " + p.Id + "번 " + (p.Kind == PlatformKind.Crumble ? "붕괴" : "구름") + " 발판이 사라졌습니다.");
+            if (!_isPlanningCopy) Debug.Log("[발판] " + p.Id + "번 " + (p.Kind == PlatformKind.Crumble ? "타이머" : "금간") + " 발판이 사라졌습니다.");
         }
         // 순서대로 식별자를 부여해 최종 연속 착지를 추적합니다.
         private void Add(PlatformKind kind, float x, float y, float width, float slope = 0f)

@@ -139,10 +139,10 @@ public static class PauseExpansionChecks
         List<ClimbEvent> queuedEvents = new List<ClimbEvent>();
         queued.EventRaised += (kind, platform) => queuedEvents.Add(kind);
         Require(queued.LoadCommands(new[] { new JumpCommand(0.25f) }), "낙하 도중 다음 도약을 예약할 수 있어야 합니다.");
-        AdvanceUntil(queued, () => queued.LaunchedCount == 1, RECOVERY_FRAME_LIMIT, "회복 후 보존된 예약 도약");
-        Require(queuedEvents.IndexOf(ClimbEvent.Recovered) >= 0 &&
-            queuedEvents.IndexOf(ClimbEvent.Jump) > queuedEvents.IndexOf(ClimbEvent.Recovered), "기존 예약 명령은 회복 완료 전에는 소비하면 안 됩니다.");
-        return "짧은 낙하와 큰 낙하를 비교했습니다. 반동 " + recoveredBounces + "회, 회복 진입 진행률 " + progress.ToString("0.000") + ". 회복 전 명령 보존과 반동·회복 정지 및 복사도 확인했습니다.";
+        AdvanceUntil(queued, () => queuedEvents.Contains(ClimbEvent.Recovered), RECOVERY_FRAME_LIMIT, "예약 취소 뒤 회복 완료");
+        Require(queued.LaunchedCount == 0 && queued.Remaining == 0 && queued.Commands.Count == 0,
+            "낙하가 판정되면 기존 예약을 취소하고 회복 후에도 자동 재실행하면 안 됩니다.");
+        return "짧은 낙하와 큰 낙하를 비교했습니다. 반동 " + recoveredBounces + "회, 회복 진입 진행률 " + progress.ToString("0.000") + ". 낙하 시 예약 취소와 반동·회복 정지 및 복사도 확인했습니다.";
     }
 
     // 6m 실제 낙하의 첫 반동 최고점을 측정해 속도 비율과 높이 비율을 혼동한 구현을 잡습니다.
@@ -339,8 +339,15 @@ public static class PauseExpansionChecks
         Require(sceneLevel.Platforms.First(platform => platform.Id == sceneLevel.FinalStepIds.Last()).Kind == PlatformKind.Goal,
             "네 번째 최종 도약의 발판이 정상이어야 합니다.");
         PauseGimmickObject[] definitions = map.MapRoot.GetComponentsInChildren<PauseGimmickObject>(true);
+        PauseDesignWorldView design = map.MapRoot.GetComponent<PauseDesignWorldView>();
         foreach (GimmickKind kind in Enum.GetValues(typeof(GimmickKind)))
+        {
+            if (design != null && kind == GimmickKind.Portal) continue;
             Require(definitions.Any(gimmick => gimmick.Kind == kind), "실제 씬에 비활성으로 보관한 장치를 포함해 " + kind + " 정의가 있어야 합니다.");
+        }
+        if (design != null)
+            Require(!definitions.Any(item => item.Kind == GimmickKind.Portal) && map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>().Length == 1,
+                "중간 스킵 포탈은 제거하고 마지막 출구는 하나 유지해야 합니다.");
         Require(definitions.Where(gimmick => gimmick.gameObject.activeInHierarchy).Select(gimmick => gimmick.Id).OrderBy(id => id)
             .SequenceEqual(sceneLevel.Gimmicks.Select(gimmick => gimmick.Id).OrderBy(id => id)), "사용자가 비활성화한 장치는 실제 물리에 포함하지 않아야 합니다.");
         foreach (ClimbGimmick portal in sceneLevel.Gimmicks.Where(gimmick => gimmick.Kind == GimmickKind.Portal))
@@ -351,7 +358,12 @@ public static class PauseExpansionChecks
             .Where(renderer => renderer.gameObject.activeInHierarchy).ToArray();
         Require(renderers.Length > 30, "편집 가능한 씬 렌더러가 실제로 존재해야 합니다.");
         PauseSkyBackdrop sky = map.MapRoot.GetComponentInChildren<PauseSkyBackdrop>();
-        if (sky != null)
+        if (design != null)
+            Require(design.Layers.Count == 7 && design.HasTowerLayers && sky != null && sky.PanelCount > 0 &&
+                sky.GetComponentsInChildren<SpriteRenderer>().All(renderer => renderer.sprite != null && renderer.sharedMaterial != null &&
+                    renderer.sharedMaterial.shader.name == PauseSkyBackdrop.STAGE_SHADER_NAME) && map.MapRoot.GetComponentInChildren<PauseWindowLayer>() != null,
+                "네 깊이의 입체 배경·높이별 하늘색·별도 창문 레이어가 연결되어야 합니다.");
+        else if (sky != null)
             Require(sky.PanelCount > 3 && sky.GetComponentsInChildren<SpriteRenderer>().All(renderer =>
                 renderer.sprite != null && renderer.sortingOrder <= -90 && AssetDatabase.GetAssetPath(renderer.sprite).Contains("Art/DesktopSky/") &&
                 renderer.sharedMaterial != null && renderer.sharedMaterial.shader.name == PauseSkyBackdrop.SHADER_NAME),
@@ -450,6 +462,7 @@ public static class PauseExpansionChecks
             actual.Facing == predicted.Facing && actual.Grounded == predicted.Grounded && actual.Busy == predicted.Busy &&
             actual.Remaining == predicted.Remaining && actual.BellyBouncing == predicted.BellyBouncing &&
             actual.Recovering == predicted.Recovering && actual.BellyBounceCount == predicted.BellyBounceCount &&
+            actual.HasLongFall == predicted.HasLongFall && actual.OnTrampoline == predicted.OnTrampoline &&
             actual.OnRope == predicted.OnRope && actual.OnLadder == predicted.OnLadder &&
             (actual.AttachedGimmick?.Id ?? -1) == (predicted.AttachedGimmick?.Id ?? -1) &&
             Mathf.Abs(actual.MotionTime - predicted.MotionTime) < STATE_EPSILON &&

@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "uniqueAtlases": 15,
+  "uniqueArchitectureImages": 75,
+  "scenes": [
+    {
+      "scene": "Assets/Scenes/MainScene.unity",
+      "tilemapComponentsPreserved": 115
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity",
+      "tilemapComponentsPreserved": 3
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity",
+      "tilemapComponentsPreserved": 3
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "atlases": [
+    {
+      "asset": "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_07.png",
+      "sprites": [
+        {
+          "name": "SourceTop",
+          "rect": {
+            "x": 80,
+            "y": 573,
+            "width": 251,
+            "height": 463
+          }
+        },
+        {
+          "name": "SourceFoot",
+          "rect": {
+            "x": 776,
+            "y": 576,
+            "width": 244,
+            "height": 460
+          }
+        }
+      ]
+    },
+    {
+      "asset": "Assets/Art/StageThemes20261020/SourceReferences/KakaoTalk_20261020_182225568_05.png",
+      "sprites": [
+        {
+          "name": "SourceBroken",
+          "rect": {
+            "x": 1159,
+            "y": 586,
+            "width": 217,
+            "height": 458
+          }
+        }
+      ]
+    }
+  ]
+}

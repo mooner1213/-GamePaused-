@@ -1,0 +1,16 @@
+Stage01_ClassicKeycap PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage02_SlimKeyrail PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage03_FracturedKeycap PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage04_IvoryCastle PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage05_VioletRuins PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage06_VermilionBrick PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage07_BlueGranite PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage08_AntiqueTerminal PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage09_RGBKeyboard PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage10_PorcelainGothic PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage11_ObsidianFortress PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage12_TerracottaBastion PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage13_BronzeClockwork PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage14_NeonData PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+Stage15_GlassCircuit PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97
+MainScene PASS: themed feet, symmetric -7m, interior -8m, background Y, wheel 5.7-171.8, Shift0-97

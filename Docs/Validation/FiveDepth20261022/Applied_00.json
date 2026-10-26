@@ -1,0 +1,6 @@
+{
+    "scene": "Assets/Scenes/MainScene.unity",
+    "theme": "09_RGBKeyboard",
+    "physicsPreserved": true,
+    "architectureLayers": 5
+}

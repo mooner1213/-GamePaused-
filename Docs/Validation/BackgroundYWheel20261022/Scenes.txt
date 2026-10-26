@@ -1,0 +1,16 @@
+Assets/Scenes/DesignStages\Stage01_ClassicKeycap.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage02_SlimKeyrail.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage03_FracturedKeycap.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage04_IvoryCastle.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage05_VioletRuins.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage06_VermilionBrick.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage07_BlueGranite.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage08_AntiqueTerminal.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage09_RGBKeyboard.unity : 0 Y changes only
+Assets/Scenes/DesignStages\Stage10_PorcelainGothic.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage11_ObsidianFortress.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage12_TerracottaBastion.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage13_BronzeClockwork.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage14_NeonData.unity : 9 Y changes only
+Assets/Scenes/DesignStages\Stage15_GlassCircuit.unity : 9 Y changes only
+Assets/Scenes/MainScene.unity : 9 Y changes only

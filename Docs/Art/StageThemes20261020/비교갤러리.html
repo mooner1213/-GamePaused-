@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>일시정지! · 15종 스테이지 디자인 비교</title>
+<style>
+:root{color-scheme:dark;--bg:#10141c;--panel:#1a2130;--line:#344054;--text:#edf2fa;--muted:#b3bfd0;--pick:#9be7d0;--orange:#ffc68a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","Segoe UI",sans-serif;font-size:14px;line-height:1.65}button,input,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--pick);outline-offset:4px}button{border:1px solid var(--line);border-radius:9px;background:#242f43;color:var(--text);padding:9px 15px}button:hover{background:#35435c}button[aria-pressed="true"]{background:var(--pick);border-color:var(--pick);color:#12372d;font-weight:700}a{color:#a6d9ff;text-underline-offset:3px}header,main,footer{max-width:1640px;margin:auto;padding:0 30px}header{padding-top:36px;padding-bottom:24px}.eyebrow{font-size:12px;letter-spacing:.1em;color:var(--pick);margin:0 0 10px}h1{font-size:clamp(24px,3.1vw,38px);line-height:1.25;margin:0 0 12px;letter-spacing:-.04em}.intro{color:var(--muted);margin:0;max-width:900px}.badge{display:inline-block;color:#f7d9af;background:#483926;border:1px solid #6b5435;padding:3px 9px;border-radius:5px;font-size:12px;margin-top:16px}.toolbar-wrap{position:sticky;top:0;z-index:5;background:rgba(16,20,28,.96);border-top:1px solid #263246;border-bottom:1px solid #344054;backdrop-filter:blur(10px)}.toolbar{max-width:1640px;margin:auto;padding:13px 30px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}.group{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.group-label{color:var(--muted);font-size:12px;margin-right:6px}.count{color:var(--pick);font-variant-numeric:tabular-nums;font-weight:700;min-width:85px}.filter-label{display:flex;gap:7px;align-items:center;cursor:pointer;padding:8px 3px}.filter-label input,.candidate input{accent-color:var(--pick);width:17px;height:17px;cursor:pointer}.subline{display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:12px;margin:22px 0 16px;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.card{border:1px solid var(--line);border-radius:13px;background:var(--panel);overflow:hidden;min-width:0;transition:border-color .15s,box-shadow .15s}.card.selected{border-color:var(--pick);box-shadow:0 0 0 1px var(--pick)}.palette{height:6px;display:grid;grid-template-columns:2fr 1fr 2fr}.card-top{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:16px 17px 13px}.theme-heading{display:flex;gap:10px;align-items:center;min-width:0}.theme-no{font-size:13px;font-weight:700;color:var(--muted);border:1px solid #4b5870;border-radius:5px;padding:0 5px}.card h2{font-size:19px;letter-spacing:-.035em;margin:0}.candidate{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);white-space:nowrap;cursor:pointer}.selected .candidate{color:var(--pick)}figure{margin:0}.preview-open{display:block;position:relative;width:100%;padding:0;border:0;border-radius:0;aspect-ratio:16/9;background:#0b1018;overflow:hidden}.preview-open:hover{background:#0b1018}.preview-open img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.image-unavailable{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:var(--muted);font-size:13px}.preview-open.failed .image-unavailable{display:flex}.preview-open.failed img{visibility:hidden}.zoom-hint{position:absolute;right:10px;bottom:10px;border-radius:4px;background:rgba(9,14,23,.8);padding:3px 7px;font-size:11px;opacity:0;transition:opacity .15s}.preview-open:hover .zoom-hint,.preview-open:focus-visible .zoom-hint{opacity:1}figcaption{font-size:11px;padding:7px 17px;color:var(--muted);background:#151c29}.card-body{padding:13px 17px 16px}dl{display:grid;grid-template-columns:63px minmax(0,1fr);gap:9px 8px;margin:0}dt{font-size:11px;color:#d7e1f0;font-weight:700}dt span{display:inline-block;background:#2b374b;border:1px solid #42516a;padding:0 6px;border-radius:4px}dt.slippery span{color:#b2e8ed;border-color:#467882;background:#253f4a}dd{margin:0;color:var(--text);font-size:13px;overflow-wrap:anywhere}.scene-name{border-top:1px solid var(--line);margin:14px 0 0;padding-top:10px;color:#aebcd0;font-family:Consolas,monospace;font-size:11px;overflow-wrap:anywhere}.swatch-labels{display:flex;gap:11px;color:var(--muted);font-size:11px;margin-top:12px}.swatch-labels span{display:flex;align-items:center;gap:5px}.swatch-labels i{display:inline-block;width:9px;height:9px;border-radius:2px;border:1px solid #647089}footer{padding-top:26px;padding-bottom:32px;color:var(--muted);font-size:12px}footer p{margin:7px 0}.empty{display:none;text-align:center;border:1px dashed #52617b;border-radius:13px;padding:65px 20px;color:var(--muted)}.empty.visible{display:block}dialog{border:1px solid #66738c;border-radius:13px;padding:0;background:#121a27;color:var(--text);max-width:min(1500px,96vw);width:fit-content;max-height:96vh;box-shadow:0 20px 70px #0008}dialog::backdrop{background:#03070dde}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:12px 16px;border-bottom:1px solid var(--line)}.modal-head h2{font-size:17px;margin:0}.modal-head p{color:var(--muted);font-size:12px;margin:2px 0 0}.close{padding:5px 12px}.modal-image{display:block;width:auto;max-width:94vw;max-height:76vh;object-fit:contain;image-rendering:pixelated;background:#0b1018}.modal-foot{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--muted);font-size:12px;flex-wrap:wrap}.modal-arrows{display:flex;gap:7px}.modal-arrows button{padding:5px 12px}.hidden{display:none!important}@media(min-width:1900px){header,main,footer,.toolbar{max-width:1850px}}@media(max-width:1120px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{gap:8px 20px}}@media(max-width:700px){header,main,footer{padding-left:16px;padding-right:16px}.toolbar{padding:11px 16px}.grid{grid-template-columns:1fr}.toolbar .group-label{display:none}.toolbar button{padding:7px 12px}.card h2{font-size:20px}.subline{margin-top:16px}.modal-head{gap:12px}.modal-image{max-width:94vw}header{padding-top:25px}}
+</style>
+</head>
+<body>
+<header>
+<p class="eyebrow">일시정지! / STAGE DESIGN REVIEW</p>
+<h1>15종 스테이지 디자인 비교</h1>
+<p class="intro">현재 메인은 09 RGB 키보드입니다. 2026-10-21 수정한 성 내부 벽·별도 창문·기름·금간·타이머 발판을 같은 배치에서 비교하세요. 하층·중층·상층을 바꾸면 모든 카드가 같은 높이로 전환됩니다.</p>
+<span class="badge">Unity 편집 씬 미리보기 · 실제 플레이 녹화 아님</span>
+</header>
+<div class="toolbar-wrap">
+<div class="toolbar">
+<div class="group" role="group" aria-label="비교 높이">
+<span class="group-label">구간</span>
+<button type="button" class="height-button" data-height="lower" aria-pressed="true">하층 · 7m</button>
+<button type="button" class="height-button" data-height="middle" aria-pressed="false">중층 · 87m</button>
+<button type="button" class="height-button" data-height="upper" aria-pressed="false">상층 · 169m</button>
+</div>
+<div class="group">
+<span class="count" id="candidate-count" aria-live="polite">후보 0 / 15</span>
+<label class="filter-label"><input type="checkbox" id="only-candidates">후보만 보기</label>
+<button type="button" id="reset-candidates">후보 해제</button>
+</div>
+</div>
+</div>
+<main>
+<div class="subline"><span id="view-description">하층 · 월드 높이 7m · 15개 디자인</span><span>이미지를 누르면 원본 크기로 확대됩니다.</span></div>
+<section class="grid" id="theme-grid" aria-label="스테이지 디자인 15종"></section>
+<p class="empty" id="empty-state">선택한 후보가 없습니다. ‘후보만 보기’를 해제한 뒤 마음에 드는 디자인을 체크해 주세요.</p>
+</main>
+<footer>
+<p>일반 발판은 줄눈·요철, 미끄럼 발판은 매끈한 표면·긴 반사선으로 구분합니다. 미끄럼 발판의 게임 판정은 테마 간 동일합니다.</p>
+<p id="storage-note">후보 선택은 이 브라우저에만 저장됩니다. 외부로 전송되지 않습니다.</p>
+<p><a href="README.md">Unity에서 열기·편집 안내</a> · <a href="Themes.json">테마와 소재 목록</a></p>
+</footer>
+<dialog id="image-dialog" aria-labelledby="modal-title">
+<div class="modal-head"><div><h2 id="modal-title"></h2><p id="modal-material"></p></div><button type="button" class="close" id="close-dialog" aria-label="확대 이미지 닫기">닫기 ×</button></div>
+<img class="modal-image" id="modal-image" alt="">
+<div class="modal-foot"><span>Unity 편집 씬 미리보기 · 실제 플레이 녹화 아님</span><div class="modal-arrows"><button type="button" id="previous-image">← 이전 디자인</button><button type="button" id="next-image">다음 디자인 →</button><a id="original-image" href="#" target="_blank" rel="noopener">원본 PNG</a></div></div>
+</dialog>
+<script>
+"use strict";
+// 로컬 파일에서도 네트워크 요청 없이 열리도록 테마 목록을 문서 안에 보관합니다.
+const themes = [
+  {
+    "index": 1,
+    "id": "01_ClassicKeycap",
+    "title": "클린 키캡",
+    "normal": "무광 ABS 스페이스 키",
+    "slippery": "UV 코팅 광택 키캡",
+    "dark": "#343848",
+    "accent": "#ff7b18",
+    "sky": "#64a6e9",
+    "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity"
+  },
+  {
+    "index": 2,
+    "id": "02_SlimKeyrail",
+    "title": "슬림 키레일",
+    "normal": "홈 파인 알루미늄 키레일",
+    "slippery": "윤활된 크롬 슬라이드 레일",
+    "dark": "#424e60",
+    "accent": "#ed8e40",
+    "sky": "#91afc3",
+    "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity"
+  },
+  {
+    "index": 3,
+    "id": "03_FracturedKeycap",
+    "title": "파손 키캡",
+    "normal": "깨진 PBT 키캡과 검은 보강대",
+    "slippery": "매끈한 탈락 키캡판",
+    "dark": "#393544",
+    "accent": "#dd6b2d",
+    "sky": "#8396b0",
+    "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity"
+  },
+  {
+    "index": 4,
+    "id": "04_IvoryCastle",
+    "title": "아이보리 고성",
+    "normal": "거친 베이지 석재 코니스",
+    "slippery": "닳아 반질한 상아 대리석",
+    "dark": "#796957",
+    "accent": "#c6a477",
+    "sky": "#d6bda0",
+    "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity"
+  },
+  {
+    "index": 5,
+    "id": "05_VioletRuins",
+    "title": "자주빛 폐성",
+    "normal": "금간 자주색 석판",
+    "slippery": "검은 유리질 슬레이트",
+    "dark": "#3e354c",
+    "accent": "#8b759f",
+    "sky": "#9c91ad",
+    "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity"
+  },
+  {
+    "index": 6,
+    "id": "06_VermilionBrick",
+    "title": "주홍 벽돌",
+    "normal": "큰 주홍 벽돌과 회색 모르타르",
+    "slippery": "유약 입힌 붉은 테라코타",
+    "dark": "#643a3d",
+    "accent": "#ec6b3c",
+    "sky": "#e6b79f",
+    "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity"
+  },
+  {
+    "index": 7,
+    "id": "07_BlueGranite",
+    "title": "청회색 석성",
+    "normal": "회청 화강석 절단면",
+    "slippery": "매끈한 젖은 점판암",
+    "dark": "#495b72",
+    "accent": "#9caab7",
+    "sky": "#a9bdcc",
+    "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity"
+  },
+  {
+    "index": 8,
+    "id": "08_AntiqueTerminal",
+    "title": "앤티크 전산성",
+    "normal": "베이지 키캡과 갈색 철제 보강",
+    "slippery": "광택 베이클라이트 키캡",
+    "dark": "#564137",
+    "accent": "#d48c39",
+    "sky": "#c0a17e",
+    "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity"
+  },
+  {
+    "index": 9,
+    "id": "09_RGBKeyboard",
+    "title": "RGB 키보드",
+    "normal": "검은 키캡과 빗금 고무",
+    "slippery": "유광 검은 키캡",
+    "dark": "#202840",
+    "accent": "#ed49ad",
+    "sky": "#434c79",
+    "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity"
+  },
+  {
+    "index": 10,
+    "id": "10_PorcelainGothic",
+    "title": "백색 고딕",
+    "normal": "상아 부조석과 금 테두리",
+    "slippery": "푸른 유약 대리석",
+    "dark": "#394d76",
+    "accent": "#d6ad4b",
+    "sky": "#92acd5",
+    "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity"
+  },
+  {
+    "index": 11,
+    "id": "11_ObsidianFortress",
+    "title": "흑요석 요새",
+    "normal": "짙은 흑석과 굵은 철띠",
+    "slippery": "흑요석 거울판",
+    "dark": "#353041",
+    "accent": "#9271a3",
+    "sky": "#91889e",
+    "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity"
+  },
+  {
+    "index": 12,
+    "id": "12_TerracottaBastion",
+    "title": "적갈 벽돌 보루",
+    "normal": "작은 엇갈린 벽돌과 넓은 철지지",
+    "slippery": "닳은 적동 보강판",
+    "dark": "#603a32",
+    "accent": "#b96c4a",
+    "sky": "#c39b8b",
+    "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity"
+  },
+  {
+    "index": 13,
+    "id": "13_BronzeClockwork",
+    "title": "청동 기계",
+    "normal": "녹청색 판과 황동 리벳",
+    "slippery": "윤활 황동 피스톤 레일",
+    "dark": "#4d4939",
+    "accent": "#d9a440",
+    "sky": "#8badad",
+    "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity"
+  },
+  {
+    "index": 14,
+    "id": "14_NeonData",
+    "title": "네온 데이터",
+    "normal": "서버 패널과 픽셀 LED",
+    "slippery": "청색 발광 유리 스크린",
+    "dark": "#26334e",
+    "accent": "#33bfe9",
+    "sky": "#6d709e",
+    "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity"
+  },
+  {
+    "index": 15,
+    "id": "15_GlassCircuit",
+    "title": "유리 회로",
+    "normal": "흰 프레임과 거친 녹색 PCB",
+    "slippery": "투명 민트 유리판",
+    "dark": "#286664",
+    "accent": "#6ae2cb",
+    "sky": "#9bcfca",
+    "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity"
+  }
+];
+const storageKey = "gamepaused-stage-design-candidates-20261020";
+const heightLabels = { lower: "하층", middle: "중층", upper: "상층" };
+const heightMetres = { lower: 7, middle: 87, upper: 169 };
+const grid = document.getElementById("theme-grid");
+const dialog = document.getElementById("image-dialog");
+const onlyCandidates = document.getElementById("only-candidates");
+let height = "lower", modalTheme = null, candidates = new Set(), storageAvailable = true;
+
+// 저장된 후보 중 실제 15개 테마에 해당하는 식별자만 복원합니다.
+function readCandidates() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(storageKey) || "[]");
+    const validIds = new Set(themes.map(theme => theme.id));
+    candidates = new Set(Array.isArray(raw) ? raw.filter(id => validIds.has(id)) : []);
+  } catch (error) { storageAvailable = false; candidates = new Set(); }
+}
+
+// 저장이 제한된 브라우저에서도 이번 탭의 선택 기능은 그대로 유지합니다.
+function saveCandidates() {
+  try { localStorage.setItem(storageKey, JSON.stringify([...candidates])); }
+  catch (error) { storageAvailable = false; }
+  document.getElementById("storage-note").textContent = storageAvailable
+    ? "후보 선택은 이 브라우저에만 저장됩니다. 외부로 전송되지 않습니다."
+    : "이 브라우저는 로컬 저장을 허용하지 않아 이번 탭에서만 후보를 유지합니다. 외부 전송은 없습니다.";
+}
+
+// 테마 번호와 현재 구간을 실제 Unity 편집 씬 PNG 경로로 연결합니다.
+function previewPath(theme) { return "Previews/" + String(theme.index).padStart(2, "0") + "_" + height + ".png"; }
+
+// 외부 HTML을 삽입하지 않고 글자와 속성으로 카드 내용을 구성합니다.
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+// 카드의 소재·씬 파일·후보 체크와 확대 버튼을 각각 한 번 연결합니다.
+function createCard(theme) {
+  const card = element("article", "card"); card.dataset.theme = theme.id;
+  const palette = element("div", "palette"); palette.setAttribute("aria-hidden", "true");
+  [theme.dark, theme.accent, theme.sky].forEach(color => { const band = element("span"); band.style.background = color; palette.append(band); });
+  const top = element("div", "card-top"), heading = element("div", "theme-heading");
+  heading.append(element("span", "theme-no", String(theme.index).padStart(2, "0")), element("h2", "", theme.title));
+  const label = element("label", "candidate"), check = element("input"); check.type = "checkbox"; check.checked = candidates.has(theme.id);
+  check.setAttribute("aria-label", theme.title + " 메인 후보 선택");
+  check.addEventListener("change", () => { if (check.checked) candidates.add(theme.id); else candidates.delete(theme.id); saveCandidates(); updateFiltering(); });
+  label.append(check, document.createTextNode("메인 후보")); top.append(heading, label);
+  const figure = element("figure"), imageButton = element("button", "preview-open");
+  imageButton.type = "button"; imageButton.setAttribute("aria-label", theme.title + " 원본 이미지 확대");
+  const image = element("img"); image.loading = "lazy"; image.decoding = "async"; image.width = 1280; image.height = 720;
+  image.addEventListener("error", () => imageButton.classList.add("failed"));
+  image.addEventListener("load", () => imageButton.classList.remove("failed"));
+  imageButton.append(image, element("span", "image-unavailable", "미리보기 이미지 준비 중"), element("span", "zoom-hint", "원본 확대 ↗"));
+  imageButton.addEventListener("click", () => { if (!imageButton.classList.contains("failed")) openModal(theme); });
+  const caption = element("figcaption"); figure.append(imageButton, caption);
+  const body = element("div", "card-body"), materials = element("dl");
+  [["일반", theme.normal, ""], ["기름", "기름막이 덮인 " + theme.normal, "slippery"]].forEach(([name, material, kind]) => {
+    const term = element("dt", kind); term.append(element("span", "", name)); materials.append(term, element("dd", "", material));
+  });
+  const scene = element("p", "scene-name", "Stage" + theme.id + ".unity"); scene.title = theme.scene;
+  const swatches = element("div", "swatch-labels");
+  [[theme.dark, "벽·프레임"], [theme.accent, "강조"], [theme.sky, "하늘"]].forEach(([color, name]) => { const item = element("span"), dot = element("i"); dot.style.background = color; item.append(dot, document.createTextNode(name)); swatches.append(item); });
+  body.append(materials, swatches, scene); card.append(palette, top, figure, body); return card;
+}
+
+// 모든 카드가 같은 구간의 파일을 표시하도록 한꺼번에 바꿉니다.
+function updatePreviews() {
+  themes.forEach(theme => {
+    const card = grid.querySelector('[data-theme="' + theme.id + '"]'), image = card.querySelector("img");
+    card.querySelector(".preview-open").classList.remove("failed"); image.src = previewPath(theme);
+    image.alt = String(theme.index).padStart(2, "0") + " " + theme.title + " · " + heightLabels[height] + " Unity 편집 씬";
+    card.querySelector("figcaption").textContent = heightLabels[height] + " · " + heightMetres[height] + "m / Unity 편집 씬";
+  });
+  document.querySelectorAll(".height-button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.height === height)));
+  updateFiltering();
+  if (dialog.open && modalTheme) showModalTheme(modalTheme);
+}
+
+// 체크한 카드의 테두리·목록 필터·후보 수를 현재 선택과 동기화합니다.
+function updateFiltering() {
+  let visible = 0;
+  themes.forEach(theme => {
+    const card = grid.querySelector('[data-theme="' + theme.id + '"]'), selected = candidates.has(theme.id);
+    const hidden = onlyCandidates.checked && !selected;
+    card.classList.toggle("selected", selected); card.classList.toggle("hidden", hidden);
+    card.querySelector('input[type="checkbox"]').checked = selected;
+    if (!hidden) visible++;
+  });
+  document.getElementById("candidate-count").textContent = "후보 " + candidates.size + " / " + themes.length;
+  document.getElementById("view-description").textContent = heightLabels[height] + " · 월드 높이 " + heightMetres[height] + "m · " + visible + "개 디자인";
+  document.getElementById("empty-state").classList.toggle("visible", visible === 0);
+}
+
+// 현재 구간의 원본 PNG를 모달과 새 창 링크에 함께 연결합니다.
+function showModalTheme(theme) {
+  modalTheme = theme;
+  document.getElementById("modal-title").textContent = String(theme.index).padStart(2, "0") + " · " + theme.title + " / " + heightLabels[height];
+  document.getElementById("modal-material").textContent = "일반: " + theme.normal + " · 기름막이 덮인 " + theme.normal;
+  const image = document.getElementById("modal-image"); image.src = previewPath(theme); image.alt = theme.title + " " + heightLabels[height] + " 확대";
+  document.getElementById("original-image").href = previewPath(theme);
+}
+
+// 브라우저 기본 대화상자의 포커스 관리와 Escape 닫기를 사용합니다.
+function openModal(theme) { showModalTheme(theme); if (!dialog.open) dialog.showModal(); }
+function closeModal() { dialog.close(); }
+
+// 후보 필터가 켜져 있으면 확대 상태에서도 선택한 후보 사이에서만 이동합니다.
+function stepModal(direction) {
+  const visible = themes.filter(theme => !onlyCandidates.checked || candidates.has(theme.id));
+  if (!visible.length) return;
+  const current = visible.findIndex(theme => modalTheme && theme.id === modalTheme.id);
+  showModalTheme(visible[(current + direction + visible.length) % visible.length]);
+}
+
+readCandidates();
+themes.forEach(theme => grid.append(createCard(theme)));
+document.querySelectorAll(".height-button").forEach(button => button.addEventListener("click", () => { height = button.dataset.height; updatePreviews(); }));
+onlyCandidates.addEventListener("change", updateFiltering);
+document.getElementById("reset-candidates").addEventListener("click", () => { candidates.clear(); saveCandidates(); updateFiltering(); });
+document.getElementById("close-dialog").addEventListener("click", closeModal);
+document.getElementById("previous-image").addEventListener("click", () => stepModal(-1));
+document.getElementById("next-image").addEventListener("click", () => stepModal(1));
+dialog.addEventListener("click", event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeModal(); } });
+dialog.addEventListener("keydown", event => { if (event.key === "ArrowLeft") { event.preventDefault(); stepModal(-1); } else if (event.key === "ArrowRight") { event.preventDefault(); stepModal(1); } });
+saveCandidates();
+updatePreviews();
+</script>
+</body>
+</html>

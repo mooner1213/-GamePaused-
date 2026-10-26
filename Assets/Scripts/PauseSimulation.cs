@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PauseClimb
 {
-    public enum ClimbEvent { Jump, Land, WallBounce, LongFall, BellyBounce, BellyRest, Recovered, Portal, RopeGrab, RopeRelease, LadderGrab, LadderExit, Trampoline }
+    public enum ClimbEvent { Jump, Land, WallBounce, LongFall, BellyBounce, BellyRest, Recovered, Portal, RopeGrab, RopeRelease, LadderGrab, LadderExit, Trampoline, TrampolineRest, AutoFace }
 
     /// <summary>
     /// 실제 이동과 예상 궤도가 공유하는 고정 시간 물리와 장치 상태를 계산합니다.
@@ -28,11 +28,14 @@ namespace PauseClimb
         private const float ROPE_LINE_SQUARED_EPSILON = 0.01f;
         private const float ROPE_DIRECTION_SPEED_EPSILON = 0.01f;
         private const float SWEPT_AXIS_EPSILON = 0.000001f;
+        private const int NO_TRAMPOLINE = -1;
         private Vector2 _position, _velocity;
         private int _facing = 1, _commandIndex, _bellyBounceCount;
+        private int _supportTrampolineId = NO_TRAMPOLINE;
         private float _supportX, _peakHeight, _motionTime, _contactRemaining, _recoveryRemaining, _reboundHeight, _bellyFlightElapsed, _bellyFlightDuration;
         private float _portalCooldownRemaining, _attachmentCooldown, _ropeElapsed, _ropePhase, _ropeAmplitude, _ropeFrequency, _effectiveRopeLength, _ropeAngle;
         private bool _isActiveJump, _isBellyBouncing, _isLastWallBounceDescending;
+        private bool _hasLongFall;
         private readonly List<JumpCommand> _commands = new List<JumpCommand>();
         private readonly MovementTuning _tuning;
         #endregion
@@ -50,14 +53,16 @@ namespace PauseClimb
         public ClimbPlatform Support => _support;
         public bool Grounded => _support != null && !_support.Broken && !_isBellyBouncing;
         public int Facing => _facing;
-        public bool Busy => _commandIndex < _commands.Count || _isActiveJump || _isBellyBouncing || Recovering || OnLadder;
-        public int Remaining => _commands.Count - _commandIndex + (_isActiveJump ? 1 : 0);
+        public bool Busy => _commandIndex < _commands.Count || _isActiveJump || _isBellyBouncing || Recovering || OnLadder || _hasLongFall;
+        public int Remaining => _hasLongFall ? 0 : _commands.Count - _commandIndex + (_isActiveJump ? 1 : 0);
         public int LaunchedCount => _commandIndex;
         public IReadOnlyList<JumpCommand> Commands => _commands;
         public bool BellyBouncing => _isBellyBouncing;
         public bool BellyContact => _isBellyBouncing && _contactRemaining > 0f;
         public float BellyFlightProgress => _bellyFlightDuration > 0f ? Mathf.Clamp01(_bellyFlightElapsed / _bellyFlightDuration) : 0f;
         public bool Recovering => _recoveryRemaining > 0f;
+        public bool HasLongFall => _hasLongFall;
+        public bool OnTrampoline => Grounded && _supportTrampolineId != NO_TRAMPOLINE;
         public bool OnRope => _attachedGimmick != null && _attachedGimmick.Kind == GimmickKind.Rope;
         public bool OnLadder => _attachedGimmick != null && _attachedGimmick.Kind == GimmickKind.Ladder;
         public bool LastWallBounceDescending => _isLastWallBounceDescending;
@@ -81,6 +86,7 @@ namespace PauseClimb
         {
             _level = copiedLevel; _tuning = source._tuning; _position = source._position; _velocity = source._velocity;
             _facing = source._facing; _commandIndex = source._commandIndex; _isActiveJump = source._isActiveJump;
+            _hasLongFall = source._hasLongFall; _supportTrampolineId = source._supportTrampolineId;
             _supportX = source._supportX; _peakHeight = source._peakHeight; _motionTime = source._motionTime;
             _isBellyBouncing = source._isBellyBouncing; _bellyBounceCount = source._bellyBounceCount;
             _contactRemaining = source._contactRemaining; _recoveryRemaining = source._recoveryRemaining; _reboundHeight = source._reboundHeight;
@@ -88,7 +94,8 @@ namespace PauseClimb
             _ropeElapsed = source._ropeElapsed; _ropePhase = source._ropePhase; _ropeAmplitude = source._ropeAmplitude;
             _ropeFrequency = source._ropeFrequency; _effectiveRopeLength = source._effectiveRopeLength; _ropeAngle = source._ropeAngle;
             _isLastWallBounceDescending = source._isLastWallBounceDescending; _bellyFlightElapsed = source._bellyFlightElapsed; _bellyFlightDuration = source._bellyFlightDuration;
-            _support = source._support == null ? null : FindPlatform(source._support.Id);
+            _support = source._support == null ? null : source.OnTrampoline ?
+                new ClimbPlatform(source._support.Id, PlatformKind.Stone, source._support.X, source._support.Y, source._support.Width) : FindPlatform(source._support.Id);
             _attachedGimmick = source._attachedGimmick;
             _commands.AddRange(source._commands);
         }
@@ -100,6 +107,7 @@ namespace PauseClimb
         public void Reset(Vector2 feet)
         {
             _bellyFlightElapsed = _bellyFlightDuration = 0f;
+            _hasLongFall = false; _supportTrampolineId = NO_TRAMPOLINE;
             _position = feet; _velocity = Vector2.zero; _facing = 1; _isActiveJump = false; _commands.Clear(); _commandIndex = 0;
             _support = null; _attachedGimmick = null; _peakHeight = feet.y; _motionTime = 0f;
             _isBellyBouncing = false; _bellyBounceCount = 0; _contactRemaining = _recoveryRemaining = _portalCooldownRemaining = _attachmentCooldown = 0f;
@@ -112,6 +120,7 @@ namespace PauseClimb
         public bool LoadCommands(IReadOnlyList<JumpCommand> input)
         {
             if (Busy) return false;
+            _hasLongFall = false;
             _commands.Clear(); _commandIndex = 0;
             for (int i = 0; i < input.Count; i++) _commands.Add(input[i]);
             return true;
@@ -144,6 +153,7 @@ namespace PauseClimb
                 _support = null; _velocity.y -= _tuning.Gravity * dt; _position.y += _velocity.y * dt;
                 _peakHeight = Mathf.Max(_peakHeight, _position.y);
             }
+            DetectLongFall();
             if (TryPortal(old)) return;
             ResolveWalls(old);
             if (TryAttachment(old)) return;
@@ -157,7 +167,7 @@ namespace PauseClimb
             float horizontal = Mathf.Lerp(_tuning.MinimumForward, _tuning.MaximumForward, power);
             float vertical = Mathf.Lerp(_tuning.MinimumJump, _tuning.MaximumJump, power);
             _velocity = new Vector2(_facing * horizontal, vertical);
-            _support = null; _isActiveJump = true; _peakHeight = _position.y; _bellyBounceCount = 0; _motionTime = 0f;
+            _support = null; _supportTrampolineId = NO_TRAMPOLINE; _isActiveJump = true; _peakHeight = _position.y; _bellyBounceCount = 0; _motionTime = 0f;
             EventRaised?.Invoke(ClimbEvent.Jump, null);
         }
 
@@ -169,19 +179,51 @@ namespace PauseClimb
             _position.x += _support.X - _supportX; _supportX = _support.X;
         }
 
-        // 마지막 접촉 후 엎드려 회복하며 다음 예약 점프를 보존합니다.
+        // [수정됨: 회복 중에도 얼음 마찰·경사·바람·벽 반사를 적용하고 회복에서 대기로 바로 연결합니다.]
         private bool TickRecovery(float dt)
         {
             if (!Recovering) return false;
             if (_support == null) { _recoveryRemaining = 0f; return false; }
-            _position.y = _support.TopAt(_position.x); _velocity = Vector2.zero;
+            bool isIce = _support.Kind == PlatformKind.Ice || _support.Kind == PlatformKind.SlopeIce;
+            _velocity.x = Mathf.MoveTowards(_velocity.x, 0f, (isIce ? _tuning.IceFriction : _tuning.Friction) * dt);
+            if (isIce) _velocity.x -= _support.Slope * _tuning.Gravity * dt;
+            ApplyWind(dt, isIce);
+            Vector2 old = _position; _position.x += _velocity.x * dt; ResolveWalls(old);
+            if (!Contains(_support, _position.x))
+            {
+                _support = null; _recoveryRemaining = 0f; _isActiveJump = true;
+                _velocity.y -= _tuning.Gravity * dt; _position.y += _velocity.y * dt;
+                return true;
+            }
+            _position.y = _support.TopAt(_position.x); _velocity.y = 0f;
             _recoveryRemaining = Mathf.Max(0f, _recoveryRemaining - dt);
             if (!Recovering)
             {
                 _isActiveJump = false; _motionTime = 0f;
-                EventRaised?.Invoke(ClimbEvent.Recovered, _support); EventRaised?.Invoke(ClimbEvent.Land, _support);
+                FinishFall();
+                EventRaised?.Invoke(ClimbEvent.Recovered, _support);
             }
             return true;
+        }
+
+        // 낙하 판정이 시작되는 순간 이후 명령을 제거하므로 예상 궤도에서도 같은 점프가 취소됩니다.
+        private void DetectLongFall()
+        {
+            if (_hasLongFall || _velocity.y >= 0f || FallDistance < _tuning.BellyThreshold) return;
+            _hasLongFall = true;
+            if (_commandIndex < _commands.Count) _commands.RemoveRange(_commandIndex, _commands.Count - _commandIndex);
+            EventRaised?.Invoke(ClimbEvent.LongFall, null);
+        }
+
+        // 낙하 후 안정된 발판에서만 도달 가능한 위쪽 발판 방향을 자동 선택합니다.
+        private void FinishFall()
+        {
+            if (!_hasLongFall) return;
+            _hasLongFall = false;
+            if (!_tuning.AutoFaceAfterFall) return;
+            int direction = PausePlatformDirection.FindAbove(_level, _position, _tuning, _facing);
+            if (direction == _facing) return;
+            _facing = direction; EventRaised?.Invoke(ClimbEvent.AutoFace, _support);
         }
 
         // 배가 눌리는 짧은 접촉 뒤 저장한 높이에 맞는 속도로 자동 발사합니다.
@@ -244,7 +286,7 @@ namespace PauseClimb
                 _position = target.Position + exit * radius - Vector2.up * (CollisionHeight * 0.5f);
                 if (Mathf.Abs(exit.x) >= Mathf.Abs(exit.y)) { _facing = exit.x >= 0f ? 1 : -1; _velocity.x = _facing * Mathf.Max(_tuning.PortalMinimumExitHorizontal, Mathf.Abs(_velocity.x)); }
                 else _velocity.y = Mathf.Sign(exit.y) * Mathf.Max(_tuning.PortalMinimumExitVertical, _velocity.magnitude);
-                _support = null; _attachedGimmick = null; _isActiveJump = true;
+                _support = null; _supportTrampolineId = NO_TRAMPOLINE; _attachedGimmick = null; _isActiveJump = true;
                 _portalCooldownRemaining = _tuning.PortalCooldown; _motionTime = 0f;
                 _peakHeight = _position.y + (_velocity.y < 0f ? _velocity.y * _velocity.y / (2f * _tuning.Gravity) : 0f);
                 EventRaised?.Invoke(ClimbEvent.Portal, null); return true;
@@ -260,7 +302,7 @@ namespace PauseClimb
             {
                 if (g.Kind == GimmickKind.Ladder && SweptBodyOverlaps(g, old) && _position.y < g.Position.y + g.Size.y * 0.5f - _tuning.LadderTopGrabClearance)
                 {
-                    _attachedGimmick = g; _support = null; _isActiveJump = true; _velocity = Vector2.zero; _position.x = g.Position.x; _motionTime = 0f;
+                    _attachedGimmick = g; _support = null; _hasLongFall = false; _supportTrampolineId = NO_TRAMPOLINE; _isActiveJump = true; _velocity = Vector2.zero; _position.x = g.Position.x; _motionTime = 0f;
                     EventRaised?.Invoke(ClimbEvent.LadderGrab, null); return true;
                 }
                 if (g.Kind != GimmickKind.Rope || Grounded) continue;
@@ -269,7 +311,7 @@ namespace PauseClimb
                 float fraction = Mathf.Clamp01(Vector2.Dot(chest - anchor, line) / Mathf.Max(ROPE_LINE_SQUARED_EPSILON, line.sqrMagnitude));
                 Vector2 closest = anchor + line * fraction;
                 if (fraction < _tuning.RopeMinimumGrabFraction || Vector2.Distance(chest, closest) > _tuning.RopeGrabRadius) continue;
-                _attachedGimmick = g; _support = null; _isActiveJump = false; _effectiveRopeLength = Mathf.Max(_tuning.RopeMinimumLength, Vector2.Distance(anchor, closest));
+                _attachedGimmick = g; _support = null; _hasLongFall = false; _supportTrampolineId = NO_TRAMPOLINE; _isActiveJump = false; _effectiveRopeLength = Mathf.Max(_tuning.RopeMinimumLength, Vector2.Distance(anchor, closest));
                 _ropeAngle = Mathf.Atan2(closest.x - anchor.x, anchor.y - closest.y);
                 Vector2 tangent = new Vector2(Mathf.Cos(_ropeAngle), Mathf.Sin(_ropeAngle));
                 float existingAngular = Mathf.Cos(_level.WorldTime * g.SwingSpeed) * g.SwingAmplitude * Mathf.Deg2Rad * g.SwingSpeed;
@@ -342,12 +384,21 @@ namespace PauseClimb
             if (trampoline != null)
             {
                 float height = drop * Mathf.Clamp(trampoline.BounceRatio, 0f, 1f);
-                _support = null; _isBellyBouncing = false; _contactRemaining = _recoveryRemaining = 0f;
+                _support = null; _supportTrampolineId = NO_TRAMPOLINE; _isBellyBouncing = false; _contactRemaining = _recoveryRemaining = 0f;
+                // [수정됨: 접촉 후 옆으로 미끄러지지 않고 수직으로 반동하며 작은 반동은 안정된 대기로 끝납니다.]
+                _velocity.x = 0f;
+                if (height <= _tuning.TrampolineSettleHeight)
+                {
+                    _support = new ClimbPlatform(-trampoline.Id - 1, PlatformKind.Stone, trampoline.Position.x, highest, trampoline.Size.x);
+                    _supportTrampolineId = trampoline.Id; _supportX = _support.X; _velocity = Vector2.zero;
+                    _isActiveJump = false; _peakHeight = highest; _motionTime = 0f; FinishFall();
+                    EventRaised?.Invoke(ClimbEvent.TrampolineRest, _support); return;
+                }
                 _velocity.y = Mathf.Sqrt(2f * _tuning.Gravity * Mathf.Max(_tuning.TrampolineMinimumBounceHeight, height));
                 _peakHeight = highest; _isActiveJump = true; _motionTime = 0f;
                 EventRaised?.Invoke(ClimbEvent.Trampoline, null); return;
             }
-            _support = candidate; _supportX = candidate.X; _velocity.y = 0f;
+            _support = candidate; _supportTrampolineId = NO_TRAMPOLINE; _supportX = candidate.X; _velocity.y = 0f;
             if (candidate.Kind == PlatformKind.Crumble && candidate.BreakRemaining < 0f) candidate.BreakRemaining = _tuning.CrumbleBreakSeconds;
             if (candidate.Kind == PlatformKind.Cloud && candidate.BreakRemaining < 0f) candidate.BreakRemaining = _tuning.CloudBreakSeconds;
             if (_isBellyBouncing || drop >= _tuning.BellyThreshold)
@@ -355,7 +406,6 @@ namespace PauseClimb
                 if (!_isBellyBouncing)
                 {
                     _bellyBounceCount = 0; _isBellyBouncing = true;
-                    EventRaised?.Invoke(ClimbEvent.LongFall, candidate);
                 }
                 _reboundHeight = drop * _tuning.BellyHeightRatio; _motionTime = 0f; _isActiveJump = true;
                 if (_reboundHeight >= _tuning.MinimumBellyBounce && _bellyBounceCount < _tuning.MaximumBellyBounces)
@@ -366,12 +416,12 @@ namespace PauseClimb
                 }
                 else
                 {
-                    _isBellyBouncing = false; _recoveryRemaining = _tuning.RecoverySeconds; _velocity = Vector2.zero;
+                    _isBellyBouncing = false; _recoveryRemaining = _tuning.RecoverySeconds; _velocity.y = 0f;
                     EventRaised?.Invoke(ClimbEvent.BellyRest, candidate);
                 }
                 _peakHeight = highest; return;
             }
-            _isActiveJump = false; _peakHeight = highest; _motionTime = 0f;
+            _isActiveJump = false; _peakHeight = highest; _motionTime = 0f; FinishFall();
             EventRaised?.Invoke(ClimbEvent.Land, candidate);
         }
 

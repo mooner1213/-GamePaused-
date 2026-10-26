@@ -17,14 +17,13 @@ namespace PauseClimb
         private PauseHudFonts _fonts = new PauseHudFonts();
         [SerializeField, Tooltip("기본 글자·강조·패널·정지 덮개의 색상입니다.")]
         private PauseHudTheme _theme = new PauseHudTheme();
-        [SerializeField, Tooltip("궤도 점 크기·상대 위치·계획 막대·엔딩 파편과 크레딧의 표시 설정입니다.")]
+        [SerializeField, Tooltip("계획 막대·엔딩 파편과 크레딧의 설정입니다. 잔상 표시는 Pause Trajectory Ghost View에서 조절합니다.")]
         private PauseHudEffects _effects = new PauseHudEffects();
         #endregion
 
         #region Reference
         private PauseHudContext _ui;
         private PauseHudGameScreen _gameScreen;
-        private PauseHudGuideScreen _guideScreen;
         private PauseHudMenuScreen _menuScreen;
         #endregion
 
@@ -43,7 +42,6 @@ namespace PauseClimb
             if (source == null) { Debug.LogError("[화면] 게임 관리자 연결이 필요합니다.", this); return; }
             _ui = new PauseHudContext(source, _layout, _theme, _fonts, _effects);
             _gameScreen = new PauseHudGameScreen(_ui);
-            _guideScreen = new PauseHudGuideScreen(_ui);
             _menuScreen = new PauseHudMenuScreen(_ui);
             Debug.Log("[화면] Inspector 배치 설정과 공통 안전 영역으로 HUD를 준비했습니다.", this);
         }
@@ -73,7 +71,7 @@ namespace PauseClimb
         private void DrawGameScreens()
         {
             if (_ui.Game.IsPaused) _ui.Fill(PauseCanvasLayout.FullCanvas, _theme.PauseVeil);
-            if (!_ui.Game.IsFinished) { _guideScreen.DrawTrajectory(); _gameScreen.DrawClimbHud(); }
+            if (!_ui.Game.IsFinished) _gameScreen.DrawClimbHud();
             if (_ui.Game.IsEndingJump || _ui.Game.IsFinished) _menuScreen.DrawEnding();
         }
 

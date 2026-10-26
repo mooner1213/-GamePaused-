@@ -1,0 +1,2 @@
+Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity : foot sprites=2, tiles=0, all transforms and platform/wall settings preserved
+Assets/Scenes/MainScene.unity : foot sprites=2, tiles=8, all transforms and platform/wall settings preserved

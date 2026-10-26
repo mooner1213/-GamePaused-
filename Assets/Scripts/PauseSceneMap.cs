@@ -19,7 +19,7 @@ namespace PauseClimb
         [FormerlySerializedAs("expansionVersion")]
         [SerializeField, Tooltip("확장 생성기를 다시 실행했을 때 수동 배치를 덮어쓰지 않기 위한 버전입니다. 직접 조절하지 마세요.")] private int _expansionVersion;
         [Header("발판 복구 시간")]
-        [SerializeField, Min(0.1f), Tooltip("사라진 구름과 붕괴 발판이 다시 나타날 때까지의 시간입니다.")] private float _restoreDelay = PauseLevel.DEFAULT_RESTORE_DELAY;
+        [SerializeField, Min(0.1f), Tooltip("사라진 금간과 타이머 발판이 다시 나타날 때까지의 시간입니다.")] private float _restoreDelay = PauseLevel.DEFAULT_RESTORE_DELAY;
         #endregion
         #region Reference
         [Header("맵 연결")]
@@ -45,7 +45,10 @@ namespace PauseClimb
         public PauseLevel CreateLevel()
         {
             if (_mapRoot == null || _spawn == null) throw new System.InvalidOperationException("[씬 맵] 맵 루트와 출발 위치를 Inspector에서 연결하세요.");
-            var platforms = _mapRoot.GetComponentsInChildren<PausePlatformObject>().Select(p => p.ReadSurface()).OrderBy(p => p.Id).ToArray();
+            var surfaces = _mapRoot.GetComponentsInChildren<PausePlatformObject>().Select(p => p.ReadSurface()).ToList();
+            // [수정됨: 팔레트 편집] 새로 칠한 발판도 같은 물리·예측 모델에 포함합니다.
+            foreach (PausePaintedCourse painted in _mapRoot.GetComponentsInChildren<PausePaintedCourse>()) surfaces.AddRange(painted.ReadPlatforms());
+            var platforms = surfaces.OrderBy(p => p.Id).ToArray();
             if (platforms.Length == 0 || platforms.Select(p => p.Id).Distinct().Count() != platforms.Length)
                 throw new System.InvalidOperationException("[맵] 발판이 없거나 번호가 중복되었습니다. Inspector의 식별자를 확인하세요.");
             var walls = _mapRoot.GetComponentsInChildren<PauseWallObject>().Select(w => w.ReadWall()).ToArray();
