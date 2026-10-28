@@ -1,0 +1,16 @@
+Stage01_ClassicKeycap : removed visual pieces=10, physics preserved
+Stage02_SlimKeyrail : removed visual pieces=10, physics preserved
+Stage03_FracturedKeycap : removed visual pieces=10, physics preserved
+Stage04_IvoryCastle : removed visual pieces=10, physics preserved
+Stage05_VioletRuins : removed visual pieces=10, physics preserved
+Stage06_VermilionBrick : removed visual pieces=10, physics preserved
+Stage07_BlueGranite : removed visual pieces=10, physics preserved
+Stage08_AntiqueTerminal : removed visual pieces=10, physics preserved
+Stage09_RGBKeyboard : removed visual pieces=10, physics preserved
+Stage10_PorcelainGothic : removed visual pieces=10, physics preserved
+Stage11_ObsidianFortress : removed visual pieces=10, physics preserved
+Stage12_TerracottaBastion : removed visual pieces=10, physics preserved
+Stage13_BronzeClockwork : removed visual pieces=10, physics preserved
+Stage14_NeonData : removed visual pieces=10, physics preserved
+Stage15_GlassCircuit : removed visual pieces=10, physics preserved
+MainScene : removed visual pieces=40, physics preserved

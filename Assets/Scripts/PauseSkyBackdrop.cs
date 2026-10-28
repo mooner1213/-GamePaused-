@@ -39,6 +39,7 @@ namespace PauseClimb
         [SerializeField, Tooltip("최하층 들판 한 장과 그 위에 쌓은 구름 조각입니다. 각 Transform은 재생하지 않고 직접 편집할 수 있습니다.")]
         private SpriteRenderer[] _panels = new SpriteRenderer[0];
         private MaterialPropertyBlock _properties;
+        private PauseSpaceBackdrop _spaceBackdrop;
         #endregion
 
         #region Property
@@ -61,6 +62,7 @@ namespace PauseClimb
         // [수정됨: 카메라 참조와 화면에 맞춰 이동하던 처리를 제거했습니다.]
         public void Initialize()
         {
+            _spaceBackdrop = GetComponentInChildren<PauseSpaceBackdrop>();
             _isFrozen = false; _hasState = false; ApplySettings();
             if (_panels.Length == 0) Debug.LogError("[하늘 배경] 씬의 고정 배경 조각을 연결하세요.", this);
             else Debug.Log("[하늘 배경] 고정 배경 " + _panels.Length + "장 · 월드 높이별 석양 그라데이션을 준비했습니다.", this);
@@ -69,6 +71,7 @@ namespace PauseClimb
         // 정지 전환 때만 셰이더의 흑백 표시를 바꾸며 모든 Transform은 그대로 둡니다.
         public void Draw(bool isFrozen)
         {
+            if (_spaceBackdrop != null) _spaceBackdrop.Draw(isFrozen);
             if (_hasState && _isFrozen == isFrozen) return;
             _isFrozen = isFrozen; ApplySettings();
         }

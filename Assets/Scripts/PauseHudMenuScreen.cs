@@ -19,8 +19,8 @@ namespace PauseClimb
         // DrawEnding 화면을 현재 게임 상태와 Inspector 배치 설정으로 그립니다.
         internal void DrawEnding()
         {
-            if (_ui.Game.IsEndingJump) { if (!_ui.Game.EndingImpactTriggered) _ui.DrawSummitWord(); return; }
-            float age = _ui.Game.EndingElapsed; Vector2 origin = _ui.WorldToCanvas(_ui.Game.WordPosition);
+            if (_ui.Game.IsEndingJump && !_ui.Game.EndingImpactTriggered) { _ui.DrawSummitWord(); return; }
+            float age = _ui.Game.EndingFragmentAge; Vector2 origin = _ui.WorldToCanvas(_ui.Game.WordPosition);
             if (age < _ui.Effects.FragmentSeconds)
             {
                 for (int i = 0; i < _ui.Effects.FragmentCount; i++)
@@ -30,6 +30,7 @@ namespace PauseClimb
                     _ui.Fill(_ui.FragmentAt(p, i), _ui.WithAlpha(_ui.Theme.Fragment, 1f - age / _ui.Effects.FragmentSeconds));
                 }
             }
+            if (_ui.Game.IsEndingJump) return;
             _ui.Fill(PauseCanvasLayout.FullCanvas, _ui.WithAlpha(_ui.Theme.EndingVeil, Mathf.Clamp01((age - _ui.Effects.EndingVeilDelay) / _ui.Effects.EndingVeilSeconds) * _ui.Effects.EndingVeilOpacity));
             float y = Mathf.Max(_ui.Effects.CreditTop, _ui.Effects.CreditStart - age * _ui.Effects.CreditSpeed);
             _ui.Text(_ui.OffsetY(_ui.Layout.EndingHeading, y), "일시정지의 저주를 깨다", _ui.Fonts.EndingTitle, _ui.Theme.Gold, TextAnchor.MiddleCenter);

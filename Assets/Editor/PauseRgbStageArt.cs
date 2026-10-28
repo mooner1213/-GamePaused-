@@ -47,7 +47,7 @@ internal static class PauseRgbStageArt
             }
             float counterScale = width / segments / MAX_SEGMENT_WIDTH;
             if (data.Kind == PlatformKind.Crumble) AddCounter(skin, top + rotation * Vector3.up * (source.VisualSurfaceInset - 0.91f * counterScale), rotation, counterScale);
-            string kindName = data.Kind == PlatformKind.Ice || data.Kind == PlatformKind.SlopeIce ? "기름" : data.Kind == PlatformKind.Cloud ? "금간" : data.Kind == PlatformKind.Crumble ? "타이머" : data.Kind == PlatformKind.Moving ? "이동" : data.Kind == PlatformKind.Goal ? "정상과 마지막 출구" : data.Kind == PlatformKind.SummitStep ? "정상 계단" : "일반";
+            string kindName = data.Kind == PlatformKind.Ice || data.Kind == PlatformKind.SlopeIce ? "기름" : data.Kind == PlatformKind.Cloud ? "금간" : data.Kind == PlatformKind.Crumble ? "타이머" : data.Kind == PlatformKind.Moving ? "이동" : data.Kind == PlatformKind.Goal ? "정상" : data.Kind == PlatformKind.SummitStep ? "정상 계단" : "일반";
             source.name = "발판 " + data.Id.ToString("D3") + " · " + kindName + " · " + data.Y.ToString("0.00") + "m";
     }
 

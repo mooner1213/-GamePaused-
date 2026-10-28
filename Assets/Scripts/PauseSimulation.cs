@@ -11,7 +11,7 @@ namespace PauseClimb
     /// 실제 이동과 예상 궤도가 공유하는 고정 시간 물리와 장치 상태를 계산합니다.
     /// 생성할 때 씬의 PauseLevel과 PauseGame에서 조절한 MovementTuning을 전달합니다.
     /// </summary>
-    public sealed class PauseSimulation
+    public sealed partial class PauseSimulation
     {
         #region Variables
         public const float STEP = 1f / 60f;
@@ -98,6 +98,7 @@ namespace PauseClimb
                 new ClimbPlatform(source._support.Id, PlatformKind.Stone, source._support.X, source._support.Y, source._support.Width) : FindPlatform(source._support.Id);
             _attachedGimmick = source._attachedGimmick;
             _commands.AddRange(source._commands);
+            CopySummitApproach(source);
         }
 
         // 현재 기믹과 물리 상태의 독립 복사본을 만듭니다.
@@ -106,6 +107,7 @@ namespace PauseClimb
         // 재시작 또는 검사에서만 출발 상태를 지정합니다.
         public void Reset(Vector2 feet)
         {
+            _isSummitApproach = false;
             _bellyFlightElapsed = _bellyFlightDuration = 0f;
             _hasLongFall = false; _supportTrampolineId = NO_TRAMPOLINE;
             _position = feet; _velocity = Vector2.zero; _facing = 1; _isActiveJump = false; _commands.Clear(); _commandIndex = 0;
@@ -137,6 +139,7 @@ namespace PauseClimb
             CarrySupport();
             if (TickRecovery(dt) || TickContact(dt) || TickAttachment(dt)) return;
             if (Grounded && _commandIndex < _commands.Count) Launch(_commands[_commandIndex++]);
+            if (_isSummitApproach) { TickSummitApproach(dt); return; }
             bool isIce = Grounded && (_support.Kind == PlatformKind.Ice || _support.Kind == PlatformKind.SlopeIce);
             if (Grounded)
             {
@@ -163,6 +166,7 @@ namespace PauseClimb
         // 예약한 누르기 시간으로 도약 세기를 계산합니다.
         private void Launch(JumpCommand command)
         {
+            TryBeginSummitApproach();
             float power = Mathf.Clamp01(command.HoldSeconds / _tuning.ChargeSeconds);
             float horizontal = Mathf.Lerp(_tuning.MinimumForward, _tuning.MaximumForward, power);
             float vertical = Mathf.Lerp(_tuning.MinimumJump, _tuning.MaximumJump, power);

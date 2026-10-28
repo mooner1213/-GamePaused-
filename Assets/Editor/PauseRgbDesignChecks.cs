@@ -71,9 +71,8 @@ public static class PauseRgbDesignChecks
         Need(interior.HasTile(Vector3Int.zero) && interior.HasTile(new Vector3Int(-4, 3, 0)), path + " 성벽 배경이 창틀 바깥까지 빈틈없이 채워짐");
         Need(windows != null && windows.OpeningCount == 24 && windows.WallLayer == interior && windows.Windows != interior,
             path + " 별도 창문 레이어와 안쪽 모양 마스크 24개");
-        var exits = map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>();
-        Need(exits.Length == 1 && exits[0].GoalPlatform != null && exits[0].GoalPlatform.ReadSurface().Kind == PlatformKind.Goal,
-            path + " 중간 스킵 포탈은 삭제하고 정상 마지막 출구와 엔딩 연결은 보존");
+        var exits = map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>(true);
+        Need(exits.Length == 0, path + " 중간 스킵 포탈과 옥상 마지막 출구 제거 · 정상 발판 기반 어퍼컷 엔딩 유지");
         Need(map.MapRoot.GetComponentsInChildren<PauseTimerPlatformView>().Length == level.Platforms.Count(item => item.Kind == PlatformKind.Crumble), path + " 모든 타이머 발판 아래 도트 숫자 연결");
         Need(scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<Transform>(true))
             .Sum(child => GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(child.gameObject)) == 0, path + " 누락된 스크립트 없음");

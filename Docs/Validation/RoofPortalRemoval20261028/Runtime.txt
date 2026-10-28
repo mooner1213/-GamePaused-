@@ -1,0 +1,1 @@
+scene=MainScene exits=0 summit=True impact=True credits=True frame=3 skyY=477.1144

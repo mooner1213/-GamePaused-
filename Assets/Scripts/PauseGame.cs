@@ -50,8 +50,12 @@ namespace PauseClimb
         private readonly JumpInputRecorder _recorder = new JumpInputRecorder();
         private bool _hasStarted, _isSettingsOpen, _isSoundFrozen, _isSummitReached, _isFinalBatch;
         private float _physicsAccumulator, _guideRefresh, _endingElapsed;
+        private float _finalApproachHeight;
+        private Vector2 _endingWordPosition;
         private int _attempts, _finalChain, _bindingTarget;
         [Header("정상 엔딩 동작")]
+        [SerializeField, Min(0f), Tooltip("가장 높은 발판과 이 높이 차이 이내의 표면에 착지하면 옥상 도달로 인정합니다. 발판 재질·번호·연속 점프 횟수는 관계없으며 공중 통과는 인정하지 않습니다.")]
+        private float _summitHeightTolerance = 0.05f;
         [SerializeField, Tooltip("어퍼컷의 시간·상승 높이·글자 충돌 높이를 조절합니다.")] private PauseEndingSequence _endingSequence = new PauseEndingSequence();
         [Header("예상 궤도 갱신")]
         [SerializeField, Min(0.01f), Tooltip("정지 중 예상 궤도를 다시 계산하는 간격입니다.")] private float _guideRefreshSeconds = 0.07f;
@@ -86,6 +90,8 @@ namespace PauseClimb
         public bool CameraBatchLocked => _batchCamera != null && _batchCamera.IsLocked;
         public bool CameraFollowingFall => _batchCamera != null && _batchCamera.IsFollowingFall;
         public bool EndingImpactTriggered => _endingSequence.HasHit;
+        public bool ShowEndingWord => _hasStarted && _simulation != null && !EndingImpactTriggered &&
+            (_isFinalBatch || _isSummitReached || _simulation.Position.y >= _finalApproachHeight);
         public bool IsRecording => _state.Phase == PlayPhase.Recording;
         public bool IsPaused => _state.IsPaused;
         public bool IsPlayingBack => _simulation != null && _simulation.Busy;
@@ -94,7 +100,8 @@ namespace PauseClimb
         public bool IsEndingJump => _state.Phase == PlayPhase.EndingJump;
         public bool IsSettingsOpen => _isSettingsOpen;
         public bool UseTouchControls => _touchInput != null && _touchInput.EnabledForPlatform;
-        public bool SummitReached => _isSummitReached && _simulation.Grounded && _simulation.Support.Kind == PlatformKind.Goal;
+        public bool SummitReached => _simulation != null && _simulation.Grounded && !_simulation.Recovering &&
+            _simulation.Support.Y >= _level.GoalHeight - Mathf.Max(0f, _summitHeightTolerance);
         public float Height => _currentHeight;
         public float BestHeight => _bestHeight;
         public float Charge01 => Mathf.Clamp01(_recorder.HeldSeconds / _movement.ChargeSeconds);
@@ -113,7 +120,8 @@ namespace PauseClimb
         public int BindingTarget => _bindingTarget;
         public int Facing => _simulation.Facing;
         public Vector2 PlayerPosition => _simulation.Position;
-        public Vector2 WordPosition => _simulation.Position + new Vector2(0f, _simulation.CollisionHeight + _endingSequence.WordOffset);
+        public Vector2 WordPosition => IsEndingJump || IsFinished ? _endingWordPosition : GetEndingWordPosition();
+        public float EndingFragmentAge => _endingSequence.ImpactElapsed;
         public Camera GameCamera => _gameCamera;
         public PauseTouchInput TouchInput => _touchInput;
         public PauseTrajectory Trajectory => _trajectory;
@@ -141,6 +149,7 @@ namespace PauseClimb
             PauseSceneMap sceneMap = FindFirstObjectByType<PauseSceneMap>();
             if (sceneMap == null) throw new InvalidOperationException("[맵] 편집 가능한 PauseSceneMap이 없습니다. MainScene을 열어 주세요.");
             _level = sceneMap.CreateLevel(); _simulation = new PauseSimulation(_level, _movement); _trajectory = new PauseTrajectory();
+            _finalApproachHeight = _level.Platforms.First(p => p.Id == _level.FinalStartPlatformId).Y;
             _simulation.EventRaised += HandleSimulationEvent;
             _gameCamera = Camera.main;
             if (_gameCamera == null) { GameObject cameraObject = new GameObject("등반 카메라"); cameraObject.tag = "MainCamera"; _gameCamera = cameraObject.AddComponent<Camera>(); }
@@ -164,18 +173,19 @@ namespace PauseClimb
         {
             float dt = DriverDelta > 0f ? DriverDelta : Mathf.Max(0f, Time.unscaledDeltaTime);
             if (ReadBackgroundWarpShortcut()) return;
-            _batchCamera.ReadPreviewInput(_hasStarted && !_isSettingsOpen && !IsFinished);
+            _batchCamera.ReadPreviewInput(_hasStarted && !_isSettingsOpen && !IsFinished && !IsEndingJump);
             _touchInput.Tick(_hasStarted && !_isSettingsOpen && !IsFinished);
             if (_isSettingsOpen) { HandleRebind(); DrawGame(0f); return; }
             if (!_hasStarted) { DrawGame(0f); return; }
-            if (IsFinished) { _endingElapsed += dt; DrawGame(dt); return; }
+            UpdateSummitArrival();
+            if (IsFinished) { _endingElapsed += dt; _endingSequence.Tick(dt); DrawGame(dt); return; }
             if (IsEndingJump) { TickEndingJump(dt); DrawGame(dt); return; }
             _level.TickCrumble(dt);
             bool isHeld = DriverEnabled ? DriverHeld : Input.GetKey(_jumpKey) || _touchInput.JumpHeld;
             bool isPressed = DriverEnabled ? DriverPressed : Input.GetKeyDown(_jumpKey) || _touchInput.JumpPressed;
             bool isToggle = DriverEnabled ? DriverToggle : Input.GetKeyDown(_pauseKey) || _touchInput.TogglePressed;
             DriverPressed = DriverToggle = false;
-            if (SummitReached && isPressed) { StartEndingJump(); DrawGame(dt); return; }
+            if (IsRecording && SummitReached && isPressed) { StartEndingJump(); DrawGame(dt); return; }
             if (IsRecording) RecordJumpInput(isHeld, dt);
             if (isToggle) RequestPauseToggle();
             // [NOTE] 자동 검증 드라이버는 같은 물리 함수를 명시적 60Hz 시계로 재생합니다.
@@ -276,24 +286,33 @@ namespace PauseClimb
                     PlayEffect(PauseSoundCue.Land);
                     if (_isFinalBatch && _finalChain < _level.FinalStepIds.Count && platform.Id == _level.FinalStepIds[_finalChain] && _simulation.LaunchedCount == _finalChain + 1) _finalChain++;
                     else if (platform.Id != _level.FinalStartPlatformId) { _finalChain = 0; _isFinalBatch = false; }
-                    if (platform.Kind == PlatformKind.Goal && _finalChain == _level.FinalStepIds.Count)
-                    { _isSummitReached = true; Announce("한 계획으로 4연속 도약 성공! 점프 키를 한 번 눌러 어퍼컷하세요. 정지 상태에서도 실행됩니다."); }
+                    if (SummitReached) UpdateSummitArrival();
                     else Announce($"{platform.Id}번 발판 · {platform.Y:0.0}m 착지" + (platform.Kind == PlatformKind.Crumble ? $" · 정지 중에도 {_movement.CrumbleBreakSeconds:0.##}초 뒤 타이머!" : platform.Kind == PlatformKind.Cloud ? " · 다음 예약 점프로 즉시 통과!" : ""));
                     break;
             }
+        }
+        // 실제 최상층 착지만 정상으로 인정하며, 직접 칠한 일반 옥상도 이전 4연속 점프 조건 없이 안내합니다.
+        private void UpdateSummitArrival()
+        {
+            bool arrived = SummitReached;
+            if (_isSummitReached == arrived) return;
+            _isSummitReached = arrived;
+            if (arrived) Announce("옥상 도달! ESC로 정지한 뒤 점프 키를 눌러 어퍼컷으로 글자를 깨세요.");
         }
         // 도트는 실제 모델의 바라보는 방향만 사용하며 경사 미끄러짐으로 임의 회전하지 않습니다.
         private void DrawGame(float dt)
         {
             if (_simulation == null) return;
             UpdateCameraViewport();
-            bool isFrozen = IsPaused || IsEndingJump || _isSettingsOpen || !_hasStarted;
+            bool isFrozen = IsPaused || (IsEndingJump && !EndingImpactTriggered) || _isSettingsOpen || !_hasStarted;
             _modeLabel = _simulation.Recovering ? "엎드림 · 회복 중" : _simulation.OnRope ? "로프 · 자동 매달림" : _simulation.OnLadder ? "사다리 · 자동 등반" : _simulation.BellyBouncing ? "배 반동 · 앞구르기" : IsFinished ? "저주 해제" : IsEndingJump ? "엔딩 · 슬로우 어퍼컷" : _isSettingsOpen ? "설정" : !_hasStarted ? "등반 준비" : IsPaused ? IsInputLocked ? "일시정지 · 입력 잠금" : "일시정지 · 도약 설계" : IsPlayingBack ? "연속 도약 · 세로 화면 고정" : "관찰 · 다음 계획 준비";
-            _characterView.Draw(_simulation, isFrozen, IsEndingJump, _endingSequence.Progress, dt);
-            _characterView.SetEndingScale(IsEndingJump ? _endingSequence.CharacterScale : 1f);
+            _characterView.Draw(_simulation, isFrozen, IsEndingJump || IsFinished, _endingSequence.Progress, dt, EndingImpactTriggered);
+            _characterView.SetEndingScale(IsEndingJump || IsFinished ? _endingSequence.CharacterScale : 1f);
             _ghostView?.Draw(_trajectory, IsPaused);
-            _playerRenderer.transform.position = new Vector3(_simulation.Position.x, _simulation.Position.y + _endingSequence.Offset, -1f);
+            Vector2 displayPosition = _simulation.Position + _endingSequence.FlightOffset;
+            _playerRenderer.transform.position = new Vector3(displayPosition.x, displayPosition.y, -1f);
             _batchCamera.Draw(_simulation, _level.GoalHeight, isFrozen, IsEndingJump || IsFinished, dt);
+            if ((IsEndingJump || IsFinished) && EndingImpactTriggered) _batchCamera.FollowEnding(displayPosition, dt);
             if (CameraFollowingFall && !isFrozen)
                 _modeLabel = _modeLabel.Replace(" · 세로 화면 고정", string.Empty) + " · 낙하 후 연속 추적";
             if (_batchCamera.IsPreviewing) _modeLabel += " · 휠 둘러보기";
@@ -386,14 +405,27 @@ namespace PauseClimb
         }
         // 정상의 정지 글자는 즉시 사라지지 않고 실제로 머리가 위로 이동해 닿아야 깨집니다.
         private void StartEndingJump()
-        { _recorder.Reset(); _physicsAccumulator = 0f; _batchCamera.ResetPreview(); _trajectory.Hide(); _state.Phase = PlayPhase.EndingJump; _endingSequence.Reset(); Announce("[엔딩] 시간을 멈추고 슬로우 어퍼컷을 시작합니다."); AudioListener.pause = false; PlayEffect(PauseSoundCue.Jump); }
-        // 글자 충돌 후에도 어퍼컷의 하강·착지가 끝나야 크레딧을 시작합니다.
+        {
+            _recorder.Reset(); _physicsAccumulator = 0f; _batchCamera.ResetPreview(); _trajectory.Hide();
+            _endingWordPosition = GetEndingWordPosition();
+            _state.Phase = PlayPhase.EndingJump; _endingSequence.Reset();
+            _endingSequence.AimAt(_simulation.Position, _endingWordPosition, _simulation.CollisionHeight * _endingSequence.CharacterScale);
+            Announce("[엔딩] 고정된 흰색 일시정지 글자를 향해 슬로우 어퍼컷으로 날아오릅니다.");
+            AudioListener.pause = false; PlayEffect(PauseSoundCue.Jump);
+        }
+        // 기본 일시정지 제목과 같은 화면 위치를 실제 상승 목표로 환산합니다. HUD 배치 편집도 반영합니다.
+        private Vector2 GetEndingWordPosition()
+        {
+            if (_hud == null || _gameCamera == null) return Vector2.zero;
+            return _hud.EndingWordWorldPosition(_gameCamera);
+        }
+        // 글자 파괴 후 옥상으로 돌아오지 않고 하늘 상승을 보여 준 다음 크레딧을 시작합니다.
         private void TickEndingJump(float dt)
         {
             bool isHadHit = _endingSequence.HasHit; _endingSequence.Tick(dt);
-            if (!isHadHit && _endingSequence.HasHit) { PlayEffect(PauseSoundCue.Ending); Announce("어퍼컷 적중! 글자를 깨고 발판으로 돌아옵니다."); }
+            if (!isHadHit && _endingSequence.HasHit) { PlayEffect(PauseSoundCue.Ending); Announce("어퍼컷 적중! 주먹을 가장 높이 든 채 하늘로 계속 올라갑니다."); }
             if (!_endingSequence.IsComplete) return;
-            _state.Phase = PlayPhase.Credits; _endingElapsed = 0f; Announce("착지 완료 · 일시정지의 저주가 깨졌습니다.");
+            _state.Phase = PlayPhase.Credits; _endingElapsed = 0f; Announce("하늘로 탈출 · 일시정지의 저주가 깨졌습니다.");
         }
         // 사건 하나를 HUD와 Console에 동시에 남깁니다.
         private void Announce(string message, bool isWarning = false)

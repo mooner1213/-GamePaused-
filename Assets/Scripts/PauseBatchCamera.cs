@@ -25,6 +25,8 @@ namespace PauseClimb
         [SerializeField, Tooltip("켜면 기존 정상 높이를 카메라의 위쪽 한계로 사용합니다. 꺼두면 더 높거나 옆으로 확장한 맵도 추적합니다.")] private bool _isHeightLimited;
         [SerializeField, Min(0.1f), Tooltip("마우스 휠 한 칸으로 위아래를 둘러보는 거리입니다. 휠 클릭 또는 ESC로 복귀합니다.")] private float _wheelDistance = 2.5f;
         [SerializeField, Min(1f), Tooltip("휠 둘러보기에서 현재 자동 추적 위치와 벌어질 수 있는 최대 높이 차이입니다.")] private float _previewLimit = 120f;
+        [Header("엔딩 하늘 상승 추적")]
+        [SerializeField, Min(0.01f), Tooltip("문구를 부순 뒤 하늘로 올라가는 캐릭터를 따라가는 완충 시간입니다. 일반 카메라와 휠 높이 제한은 이 연출에 적용하지 않습니다.")] private float _endingFollowSeconds = 0.25f;
         [SerializeField, InspectorName("휠 카메라 Y 범위"), Tooltip("휠로 둘러볼 때 카메라 중심의 최소 Y(X)와 최대 Y(Y)입니다. 기본 범위는 5.7~171.8이며 화면 크기와 탑 높이에 관계없이 적용합니다.")] private Vector2 _previewHeightRange = new Vector2(5.7f, 171.8f);
         [Header("실시간 카메라 상태")]
         [SerializeField, Tooltip("예약 묶음의 잠금 상태입니다. 큰 낙하 중에는 하강 추적이 잠금보다 우선합니다.")] private bool _isLocked;
@@ -51,6 +53,17 @@ namespace PauseClimb
 
         #endregion
         #region Custom Method
+        // 하늘 탈출 때는 캐릭터를 화면 안에 두고 위로만 따라가며 기존 자동 추적·휠 범위와 분리합니다.
+        public void FollowEnding(Vector2 feet, float dt)
+        {
+            if (_camera == null || dt <= 0f) return;
+            Vector3 current = _camera.transform.position;
+            Vector3 target = new Vector3(feet.x, Mathf.Max(current.y, feet.y), current.z);
+            Vector3 next = Vector3.SmoothDamp(current, target, ref _velocity, Mathf.Max(0.01f, _endingFollowSeconds), Mathf.Infinity, dt);
+            // 상승 속도가 커져도 캐릭터와 주먹이 화면 위로 빠져나가지 않게 추적 지연을 제한합니다.
+            next.y = Mathf.Max(next.y, feet.y - _camera.orthographicSize * 0.35f);
+            _camera.transform.position = next;
+        }
         // 외부 카메라 참조를 한 번만 연결합니다.
         public void Initialize(Camera camera) { _camera = camera; ResetTracking(); }
         // 실제 씬의 외벽 경계를 가로 카메라 제한에 전달합니다.

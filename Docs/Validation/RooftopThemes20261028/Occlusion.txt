@@ -1,0 +1,1 @@
+frontOrder=30 playerOrder=20 occludedCharacterPixels=784 visibleCharacterPixels=2387 summit=True

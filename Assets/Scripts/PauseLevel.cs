@@ -100,7 +100,7 @@ namespace PauseClimb
         public float RestoreDelay => _restoreDelay;
         public Vector2 StartPosition { get; internal set; } = new Vector2(-4.7f, 0f);
         public bool SceneWalls { get; internal set; }
-        public float GoalHeight => System.Linq.Enumerable.FirstOrDefault(_platforms, p => p.Kind == PlatformKind.Goal)?.Y ?? SUMMIT_Y;
+        public float GoalHeight => _platforms.Count == 0 ? SUMMIT_Y : System.Linq.Enumerable.Max(_platforms, p => p.Y);
         #endregion
         #region Custom Method
         // 씬에서 읽은 실제 발판과 벽으로 물리 모델을 만듭니다.

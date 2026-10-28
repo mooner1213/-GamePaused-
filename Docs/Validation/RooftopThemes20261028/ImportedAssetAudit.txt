@@ -1,0 +1,16 @@
+Assets/Art/RooftopThemes20261028/01_ClassicKeycap/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/02_SlimKeyrail/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/03_FracturedKeycap/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/04_IvoryCastle/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/05_VioletRuins/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/06_VermilionBrick/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/07_BlueGranite/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/08_AntiqueTerminal/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/09_RGBKeyboard/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/10_PorcelainGothic/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/11_ObsidianFortress/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/12_TerracottaBastion/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/13_BronzeClockwork/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/14_NeonData/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+Assets/Art/RooftopThemes20261028/15_GlassCircuit/옥상_1·3·5줄.png · 1448x1086 · 도트필터=Point · 보이는 픽셀=287397
+15테마 윤곽 차이=0 · 삭제한 2/4줄 잔존 픽셀=0 · 팔레트 옥상 조각=3690 · 그림 누락=0

@@ -45,7 +45,7 @@ public static class PauseGridRevisionChecks
         var before = JsonUtility.FromJson<PauseRgbMainBuilder.Snapshot>(File.ReadAllText(PauseGridRevision.REPORT_ROOT + "/Before_" + Path.GetFileNameWithoutExtension(path) + ".json"));
         var after = PauseRgbMainBuilder.Capture(map, path);
         Need(before.platforms.SequenceEqual(after.platforms), path + " 기존 106개 발판의 ID·표면·좌표·너비·경사·이동 설정 보존");
-        Need(after.walls == 2 && after.portals == 0 && map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>().Length == 1, path + " 외곽 두 벽과 마지막 출구 보존, 중간 포탈 없음");
+        Need(after.walls == 2 && after.portals == 0 && map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>(true).Length == 0, path + " 외곽 두 벽 보존 · 중간 포탈과 옥상 출구 없음");
         var windows = map.MapRoot.GetComponentInChildren<PauseWindowLayer>();
         Need(windows.OpeningCount == 24 && windows.WallLayer.transform.localScale == Vector3.one, path + " 별도 창문 24개와 실제 1m 배경 격자");
         var tile = windows.WallLayer.GetTile<PauseDesignTile>(Vector3Int.zero);

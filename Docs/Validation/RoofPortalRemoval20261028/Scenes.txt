@@ -1,0 +1,16 @@
+Assets/Scenes\DesignStages\Stage01_ClassicKeycap.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage02_SlimKeyrail.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage03_FracturedKeycap.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage04_IvoryCastle.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage05_VioletRuins.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage06_VermilionBrick.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage07_BlueGranite.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage08_AntiqueTerminal.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage09_RGBKeyboard.unity · 옥상 출구 제거=0 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage10_PorcelainGothic.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage11_ObsidianFortress.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage12_TerracottaBastion.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage13_BronzeClockwork.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage14_NeonData.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\DesignStages\Stage15_GlassCircuit.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes\MainScene.unity · 옥상 출구 제거=1 · 남은 출구=0 · 발판/벽/장치/Tilemap 보존

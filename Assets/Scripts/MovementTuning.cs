@@ -11,6 +11,11 @@ namespace PauseClimb
     public sealed class MovementTuning
     {
         #region Variables
+        [Header("옥상 직전 도약 · 중앙 착지")]
+        [SerializeField, Tooltip("옥상 바로 아래 높이의 발판에서 도약하면 마지막 도약만 옥상 중앙으로 안내합니다. 실제 이동과 예상 궤도에 함께 적용됩니다.")] private bool _isSummitApproachEnabled = true;
+        [SerializeField, Min(0.1f), Tooltip("옥상 중앙까지 날아가는 시간입니다. 점프 충전량과 관계없이 이 마지막 도약에만 적용합니다.")] private float _summitApproachSeconds = 1.05f;
+        [SerializeField, Min(0.1f), Tooltip("마지막 도약이 출발점과 도착점을 잇는 선보다 위로 솟는 높이입니다.")] private float _summitApproachArc = 1.8f;
+        [SerializeField, Min(0f), Tooltip("같은 옥상 또는 바로 아래 발판 층으로 묶는 높이 오차입니다.")] private float _summitLayerTolerance = 0.05f;
         private const float MINIMUM_COLLISION_SIZE = 0.01f;
         // [수정됨: 충돌 크기 공유] 실제 이동과 궤도 예측이 같은 Inspector 크기를 사용합니다.
         [Header("캐릭터 실제 충돌 크기")]
@@ -92,6 +97,10 @@ namespace PauseClimb
         [SerializeField, Min(1), Tooltip("몇 물리 프레임마다 사람 잔상을 표시할지 정합니다. 기본 3은 60Hz 기준 0.05초 간격입니다.")] private int _predictionSampleStride = 3;
         #endregion
         #region Property
+        public bool IsSummitApproachEnabled => _isSummitApproachEnabled;
+        public float SummitApproachSeconds => Mathf.Max(0.1f, _summitApproachSeconds);
+        public float SummitApproachArc => Mathf.Max(0.1f, _summitApproachArc);
+        public float SummitLayerTolerance => Mathf.Max(0f, _summitLayerTolerance);
         public float CollisionHalfWidth => Mathf.Max(MINIMUM_COLLISION_SIZE, _collisionHalfWidth);
         public float CollisionHeight => Mathf.Max(MINIMUM_COLLISION_SIZE, _collisionHeight);
         public float MinimumJump => Mathf.Max(1f, _minimumJump);

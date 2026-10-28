@@ -42,6 +42,10 @@ namespace PauseClimb
         private int _wallUpTurnFrame = 7;
         [SerializeField, Range(0, 11), Tooltip("하강 벽 반동 원화가 자체적으로 방향을 바꾸는 첫 프레임입니다. 이 뒤의 원화를 반대로 선택해 다시 벽 쪽을 보지 않게 합니다.")]
         private int _wallDownTurnFrame = 5;
+        [SerializeField, Range(0, 11), Tooltip("문구를 향해 날아오르는 동안 유지할 어퍼컷 원화 프레임입니다. 도약 준비 이후 주먹을 올린 자세를 유지합니다.")]
+        private int _uppercutFlightFrame = 5;
+        [SerializeField, Range(0, 11), Tooltip("문구를 부순 뒤 하늘로 계속 올라갈 때 고정할 자세입니다. 현재 원화에서 주먹이 가장 높은 03번 프레임을 사용합니다.")]
+        private int _skyUppercutFrame = 3;
         [SerializeField, Tooltip("일반 착지 뒤 압축 자세를 표시하는 시간입니다. 다음 예약 점프가 실행되면 즉시 도약 자세로 바뀝니다.")]
         private float _landingPoseSeconds = 0.24f;
         [SerializeField, Tooltip("정지했을 때 사람 도트를 실제 회색 픽셀로 바꿉니다. 다시 흐르면 원색으로 돌아옵니다.")]
@@ -144,7 +148,7 @@ namespace PauseClimb
 
         // [수정됨: 실제 물리 반동·회복 상태와 사람 PNG를 연결하고 정지 프레임을 보존합니다.]
         // [NOTE] 정지 중에는 회색만 바꾸고 뷰 시계·프레임·좌우를 모두 유지합니다.
-        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingProgress, float dt)
+        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingProgress, float dt, bool hasEndingHit = false)
         {
             if (sim == null || _playerRenderer == null) return;
             LoadClips();
@@ -159,7 +163,8 @@ namespace PauseClimb
             _wallClock += elapsed;
             _landingClock += elapsed;
             if (isEnding)
-                ShowProgress(ClipKind.Uppercut, endingProgress, sim.Facing, "엔딩 · 슬로우 어퍼컷");
+                ShowFrame(ClipKind.Uppercut, !hasEndingHit ? Mathf.Min(_uppercutFlightFrame, Mathf.FloorToInt(endingProgress * _clips[ClipKind.Uppercut].Right.Length * 2f))
+                    : _skyUppercutFrame, sim.Facing, hasEndingHit ? "엔딩 · 최고 어퍼컷 자세로 하늘 상승" : "엔딩 · 상승 어퍼컷");
             else if (sim.Recovering)
                 ShowProgress(ClipKind.GetUp, sim.RecoveryProgress, sim.Facing, "마지막 착지 · 엎어져 일어나기");
             else if (sim.BellyBouncing)

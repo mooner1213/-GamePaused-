@@ -1,0 +1,15 @@
+Stage01_ClassicKeycap.unity renderers=35 layers=3
+Stage02_SlimKeyrail.unity renderers=35 layers=3
+Stage03_FracturedKeycap.unity renderers=35 layers=3
+Stage04_IvoryCastle.unity renderers=35 layers=3
+Stage05_VioletRuins.unity renderers=35 layers=3
+Stage06_VermilionBrick.unity renderers=35 layers=3
+Stage07_BlueGranite.unity renderers=35 layers=3
+Stage08_AntiqueTerminal.unity renderers=35 layers=3
+Stage09_RGBKeyboard.unity renderers=35 layers=3
+Stage10_PorcelainGothic.unity renderers=35 layers=3
+Stage11_ObsidianFortress.unity renderers=35 layers=3
+Stage12_TerracottaBastion.unity renderers=35 layers=3
+Stage13_BronzeClockwork.unity renderers=35 layers=3
+Stage14_NeonData.unity renderers=35 layers=3
+Stage15_GlassCircuit.unity renderers=35 layers=3
