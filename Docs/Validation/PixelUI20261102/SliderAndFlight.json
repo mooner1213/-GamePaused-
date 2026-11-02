@@ -1,0 +1,25 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"pointerDrag\":true,\"music\":0.290268451,\"effects\":0.7097315,\"position\":\"(-9.06, 1.34)\",\"velocity\":\"(4.71, 4.66)\",\"PlaybackRemaining\":1,\"IsOpen\":true},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "pointerDrag": true,
+        "music": 0.290268451,
+        "effects": 0.7097315,
+        "position": "(-9.06, 1.34)",
+        "velocity": "(4.71, 4.66)",
+        "PlaybackRemaining": 1,
+        "IsOpen": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

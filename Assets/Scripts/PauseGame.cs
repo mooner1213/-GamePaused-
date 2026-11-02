@@ -312,7 +312,7 @@ namespace PauseClimb
             Vector2 displayPosition = _simulation.Position + _endingSequence.FlightOffset;
             _playerRenderer.transform.position = new Vector3(displayPosition.x, displayPosition.y, -1f);
             _batchCamera.Draw(_simulation, _level.GoalHeight, isFrozen, IsEndingJump || IsFinished, dt);
-            if ((IsEndingJump || IsFinished) && EndingImpactTriggered) _batchCamera.FollowEnding(displayPosition, dt);
+            if ((IsEndingJump || IsFinished) && EndingImpactTriggered) _batchCamera.FollowEnding(displayPosition, dt, _endingSequence.ImpactElapsed);
             if (CameraFollowingFall && !isFrozen)
                 _modeLabel = _modeLabel.Replace(" · 세로 화면 고정", string.Empty) + " · 낙하 후 연속 추적";
             if (_batchCamera.IsPreviewing) _modeLabel += " · 휠 둘러보기";
@@ -409,7 +409,8 @@ namespace PauseClimb
             _recorder.Reset(); _physicsAccumulator = 0f; _batchCamera.ResetPreview(); _trajectory.Hide();
             _endingWordPosition = GetEndingWordPosition();
             _state.Phase = PlayPhase.EndingJump; _endingSequence.Reset();
-            _endingSequence.AimAt(_simulation.Position, _endingWordPosition, _simulation.CollisionHeight * _endingSequence.CharacterScale);
+            _endingSequence.AimAt(_simulation.Position, _endingWordPosition,
+                _characterView.GetEndingFistOffset(_simulation.Facing, _endingSequence.ImpactCharacterScale));
             Announce("[엔딩] 고정된 흰색 일시정지 글자를 향해 슬로우 어퍼컷으로 날아오릅니다.");
             AudioListener.pause = false; PlayEffect(PauseSoundCue.Jump);
         }

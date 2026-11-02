@@ -43,7 +43,7 @@ namespace PauseClimb
                 if (_ui.Game.IsPlayingBack) _ui.Text(_ui.Layout.PlaybackNotice, _ui.Game.Simulation.HasLongFall ?
                     "낙하 · 예약 취소 / 회복 후 새 입력" : $"연속 도약 · {_ui.Game.PlaybackRemaining}번 남음", _ui.Fonts.Playback, _ui.Theme.Mint, TextAnchor.MiddleCenter);
             }
-            if (_ui.Button(_ui.Layout.SettingsButton, "설정")) _ui.Game.OpenSettings();
+            if (_ui.Layout.IsSettingsButtonVisible && _ui.Button(_ui.Layout.SettingsButton, "설정")) _ui.Game.OpenSettings();
             if (_ui.Game.ShowEndingWord && !_ui.Game.IsEndingJump) _ui.DrawSummitWord();
             if (_ui.Game.IsPaused)
             {

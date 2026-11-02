@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"scene\":\"MainMenu\",\"menu\":true,\"alpha\":0.0,\"font\":true,\"sliders\":2},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "scene": "MainMenu",
+        "menu": true,
+        "alpha": 0.0,
+        "font": true,
+        "sliders": 2
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

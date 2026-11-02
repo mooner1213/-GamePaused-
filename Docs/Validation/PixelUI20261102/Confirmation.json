@@ -1,0 +1,22 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"noPreservesState\":true,\"yesRestarts\":true,\"position\":\"(-10.00, 0.00)\",\"remaining\":0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "noPreservesState": true,
+        "yesRestarts": true,
+        "position": "(-10.00, 0.00)",
+        "remaining": 0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

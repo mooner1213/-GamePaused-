@@ -1,0 +1,136 @@
+// 실제 씬을 저장하거나 변경하지 않고, 별도 숨김 오브젝트에 게임 그림만 복사해 랜덤 배치 사진을 만듭니다.
+string output = "Docs/Art/RandomLayout20261029";
+System.IO.Directory.CreateDirectory(output);
+var map = UnityEngine.Object.FindFirstObjectByType<PauseClimb.PauseSceneMap>();
+var active = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+bool originalDirty = active.isDirty;
+var random = new System.Random(20261029);
+var layout = new System.Collections.Generic.List<Vector4>();
+var kinds = new System.Collections.Generic.List<PauseClimb.PlatformKind>();
+var tiles = UnityEditor.AssetDatabase.FindAssets("t:PauseDesignTile", new[] { "Assets/Tiles/StageDesigns/09_RGBKeyboard" })
+    .Select(g => UnityEditor.AssetDatabase.LoadAssetAtPath<PauseClimb.PauseDesignTile>(UnityEditor.AssetDatabase.GUIDToAssetPath(g)))
+    .Where(t => t.IsPlatform && t.IsSection && t.SectionCell == Vector2Int.zero).ToArray();
+
+// 106개를 그리드 행이나 좌우 교대 규칙 없이 독립적인 확률 좌표로 배치합니다. 같은 곳의 도트 겹침만 피합니다.
+for (int i = 0; i < 106; i++)
+{
+    bool accepted = false;
+    for (int attempt = 0; attempt < 10000 && !accepted; attempt++)
+    {
+        float width = new[] { 2f, 4f, 6f }[random.Next(3)];
+        double choice = random.NextDouble();
+        var kind = choice < .58 ? PauseClimb.PlatformKind.Stone : choice < .76 ? PauseClimb.PlatformKind.Ice : choice < .89 ? PauseClimb.PlatformKind.Cloud : PauseClimb.PlatformKind.Crumble;
+        float x = (float)(random.NextDouble() * (23.0 - width) - (23.0 - width) * .5);
+        float y = 2.0f + (float)random.NextDouble() * 169.0f;
+        float height = kind == PauseClimb.PlatformKind.Ice || kind == PauseClimb.PlatformKind.Crumble ? 2f : 1f;
+        accepted = true;
+        for (int j = 0; j < layout.Count; j++)
+        {
+            Vector4 previous = layout[j];
+            bool horizontalOverlap = Mathf.Abs(x - previous.x) < (width + previous.z) * .5f + .35f;
+            bool verticalOverlap = y - height - .25f < previous.y + .25f && y + .25f > previous.y - previous.w - .25f;
+            if (horizontalOverlap && verticalOverlap) { accepted = false; break; }
+        }
+        if (!accepted) continue;
+        layout.Add(new Vector4(x, y, width, height)); kinds.Add(kind);
+    }
+    if (!accepted) throw new System.Exception("배치 후보 공간이 부족합니다.");
+}
+var csv = new System.Collections.Generic.List<string> { "id,x,y,width,height,kind" };
+foreach (int index in Enumerable.Range(0, layout.Count).OrderBy(i => layout[i].y))
+{
+    Vector4 p = layout[index];
+    csv.Add(string.Join(",", new[] { (index + 1).ToString(), p.x.ToString("0.000", System.Globalization.CultureInfo.InvariantCulture), p.y.ToString("0.000", System.Globalization.CultureInfo.InvariantCulture), p.z.ToString("0"), p.w.ToString("0"), kinds[index].ToString() }));
+}
+System.IO.File.WriteAllLines(output + "/배치좌표_시안전용.csv", csv);
+
+// 미리보기는 별도 레이어에서 그림만 사용하며 충돌·스크립트·실제 플랫폼은 복제하지 않습니다.
+var root = new GameObject("랜덤 발판 사진 · 저장하지 않는 미리보기", typeof(Grid));
+root.hideFlags = HideFlags.HideAndDontSave; root.layer = 31;
+var cameraObject = new GameObject("미리보기 전용 카메라");
+cameraObject.hideFlags = HideFlags.HideAndDontSave;
+var camera = cameraObject.AddComponent<Camera>(); camera.enabled = false;
+camera.orthographic = true; camera.nearClipPlane = .1f; camera.farClipPlane = 150f;
+camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(.12f, .16f, .24f, 1);
+camera.cullingMask = 1 << 31;
+var ownedTextures = new System.Collections.Generic.List<Texture2D>();
+try
+{
+    // 성벽·창문·하늘은 현재 그림을 참조하되 원래 발판과 기믹 그림은 제외합니다.
+    foreach (Renderer old in map.MapRoot.GetComponentsInChildren<Renderer>())
+    {
+        if (!old.enabled || old.GetComponentInParent<PauseClimb.PausePlatformObject>() != null || old.GetComponentInParent<PauseClimb.PauseGimmickObject>() != null) continue;
+        if (old.name.StartsWith("03 발판 추가")) continue;
+        if (!(old is SpriteRenderer) && !(old is UnityEngine.Tilemaps.TilemapRenderer) && !(old is SpriteMask)) continue;
+        var item = new GameObject(old.name); item.layer = 31; item.transform.SetParent(root.transform, false);
+        item.transform.position = old.transform.position; item.transform.rotation = old.transform.rotation; item.transform.localScale = old.transform.lossyScale;
+        Renderer copy = null;
+        var oldSprite = old as SpriteRenderer;
+        var oldMask = old as SpriteMask;
+        if (oldSprite != null)
+        {
+            var picture = item.AddComponent<SpriteRenderer>(); picture.sprite = oldSprite.sprite; picture.color = oldSprite.color;
+            picture.flipX = oldSprite.flipX; picture.flipY = oldSprite.flipY; picture.maskInteraction = oldSprite.maskInteraction; copy = picture;
+        }
+        else if (oldMask != null)
+        {
+            var mask = item.AddComponent<SpriteMask>(); mask.sprite = oldMask.sprite; mask.alphaCutoff = oldMask.alphaCutoff;
+            mask.isCustomRangeActive = oldMask.isCustomRangeActive; mask.backSortingLayerID = oldMask.backSortingLayerID; mask.frontSortingLayerID = oldMask.frontSortingLayerID;
+            mask.backSortingOrder = oldMask.backSortingOrder; mask.frontSortingOrder = oldMask.frontSortingOrder; copy = mask;
+        }
+        else
+        {
+            var source = old.GetComponent<UnityEngine.Tilemaps.Tilemap>();
+            var target = item.AddComponent<UnityEngine.Tilemaps.Tilemap>();
+            var drawing = item.AddComponent<UnityEngine.Tilemaps.TilemapRenderer>();
+            target.tileAnchor = source.tileAnchor; target.color = source.color;
+            foreach (Vector3Int cell in source.cellBounds.allPositionsWithin)
+            {
+                var tile = source.GetTile(cell); if (tile == null) continue;
+                target.SetTile(cell, tile); target.SetTileFlags(cell, UnityEngine.Tilemaps.TileFlags.None);
+                target.SetTransformMatrix(cell, source.GetTransformMatrix(cell)); target.SetColor(cell, source.GetColor(cell));
+            }
+            drawing.maskInteraction = ((UnityEngine.Tilemaps.TilemapRenderer)old).maskInteraction; copy = drawing;
+        }
+        copy.sortingOrder = old.sortingOrder; copy.sortingLayerID = old.sortingLayerID;
+        if (!(copy is SpriteMask)) copy.sharedMaterial = old.sharedMaterial;
+        var properties = new MaterialPropertyBlock(); old.GetPropertyBlock(properties); copy.SetPropertyBlock(properties);
+    }
+    // 길이별 기존 2·4·6칸 도트만 사용하므로 사진과 실제 팔레트의 디자인이 같습니다.
+    for (int i = 0; i < layout.Count; i++)
+    {
+        Vector4 p = layout[i];
+        Sprite sprite = tiles.Where(t => t.PlatformKind == kinds[i]).OrderBy(t => Mathf.Abs(t.SourceSprite.bounds.size.x - p.z)).First().SourceSprite;
+        var item = new GameObject("시안 발판 " + (i + 1)); item.layer = 31; item.transform.SetParent(root.transform, false);
+        float scale = p.z / sprite.bounds.size.x; item.transform.localScale = new Vector3(scale, scale, 1f);
+        item.transform.position = new Vector3(p.x - sprite.bounds.center.x * scale, p.y + .2f - sprite.bounds.max.y * scale, 0);
+        var picture = item.AddComponent<SpriteRenderer>(); picture.sprite = sprite; picture.sortingOrder = 10;
+    }
+    // 사진을 렌더한 뒤 메모리만 해제하며 Unity 씬 파일에는 쓰지 않습니다.
+    System.Func<int, int, float, float, Texture2D> render = (width, height, centerY, size) =>
+    {
+        camera.transform.position = new Vector3(0, centerY, -30); camera.orthographicSize = size; camera.aspect = (float)width / height;
+        var rt = new RenderTexture(width, height, 24); camera.targetTexture = rt; camera.Render();
+        var previous = RenderTexture.active; RenderTexture.active = rt;
+        var image = new Texture2D(width, height, TextureFormat.RGBA32, false); image.ReadPixels(new Rect(0, 0, width, height), 0, 0); image.Apply();
+        RenderTexture.active = previous; camera.targetTexture = null; UnityEngine.Object.DestroyImmediate(rt);
+        ownedTextures.Add(image); return image;
+    };
+    Texture2D full = render(1280, 8192, 87.5f, 89f);
+    System.IO.File.WriteAllBytes(output + "/최대랜덤_전체타워.png", full.EncodeToPNG());
+    var combined = new Texture2D(2304, 1792, TextureFormat.RGBA32, false); ownedTextures.Add(combined);
+    for (int section = 0; section < 3; section++)
+    {
+        Texture2D image = render(768, 1792, 28.5f + section * 58.5f, 31.5f);
+        combined.SetPixels(section * 768, 0, 768, 1792, image.GetPixels());
+    }
+    combined.Apply(); System.IO.File.WriteAllBytes(output + "/최대랜덤_하중상_미리보기.png", combined.EncodeToPNG());
+}
+finally
+{
+    camera.targetTexture = null;
+    foreach (Texture2D texture in ownedTextures) UnityEngine.Object.DestroyImmediate(texture);
+    UnityEngine.Object.DestroyImmediate(cameraObject); UnityEngine.Object.DestroyImmediate(root);
+}
+if (active.isDirty != originalDirty) throw new System.Exception("미리보기가 씬 편집 상태를 바꿨습니다.");
+return "106개 확률 배치 · 전체 타워와 하/중/상 사진 · 실제 발판과 씬 저장 없음 · 완주 미검증";

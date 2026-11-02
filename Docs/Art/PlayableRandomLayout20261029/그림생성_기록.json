@@ -1,0 +1,104 @@
+{
+  "sprites": {
+    "Stone_2": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\일반 발판 · 짧은 2칸\\Full.asset",
+      "width": 64,
+      "height": 32
+    },
+    "Stone_4": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\일반 발판\\Full.asset",
+      "width": 128,
+      "height": 32
+    },
+    "Stone_6": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\일반 발판 · 긴 6칸\\Full.asset",
+      "width": 192,
+      "height": 32
+    },
+    "Ice_2": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\기름 발판 · 짧은 2칸\\Full.asset",
+      "width": 64,
+      "height": 64
+    },
+    "Ice_4": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\기름 발판\\Full.asset",
+      "width": 128,
+      "height": 64
+    },
+    "Ice_6": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\기름 발판 · 긴 6칸\\Full.asset",
+      "width": 192,
+      "height": 64
+    },
+    "Cloud_2": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\금간 발판 · 짧은 2칸\\Full.asset",
+      "width": 64,
+      "height": 32
+    },
+    "Cloud_4": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\금간 발판\\Full.asset",
+      "width": 128,
+      "height": 32
+    },
+    "Cloud_6": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\금간 발판 · 긴 6칸\\Full.asset",
+      "width": 192,
+      "height": 32
+    },
+    "Crumble_2": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\타이머 발판 · 짧은 2칸\\Full.asset",
+      "width": 64,
+      "height": 64
+    },
+    "Crumble_4": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\타이머 발판\\Full.asset",
+      "width": 128,
+      "height": 64
+    },
+    "Crumble_6": {
+      "source": "Assets\\Art\\PlatformLengths20261026\\09_RGBKeyboard\\타이머 발판 · 긴 6칸\\Full.asset",
+      "width": 192,
+      "height": 64
+    },
+    "Facade": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\성 내부_FacadePlain\\Full.asset",
+      "width": 32,
+      "height": 32
+    },
+    "Circuit": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\성 내부_FacadeCircuit\\Full.asset",
+      "width": 32,
+      "height": 32
+    },
+    "Vent": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\성 내부_FacadeVent\\Full.asset",
+      "width": 32,
+      "height": 32
+    },
+    "Window": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\창틀_투명한 창문\\Full.asset",
+      "width": 128,
+      "height": 128
+    },
+    "Wall": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\연결벽_Repeat\\Full.asset",
+      "width": 32,
+      "height": 128
+    },
+    "WallTop": {
+      "source": "Assets\\Art\\RGBMain20261021\\Grid32\\09_RGBKeyboard\\연결벽_WallTop\\Full.asset",
+      "width": 32,
+      "height": 128
+    },
+    "Player": {
+      "source": "Assets/Resources/Characters/HumanPlayer/Idle/Idle_Right.png",
+      "width": 48,
+      "height": 48
+    }
+  },
+  "same_y_groups": 15,
+  "pixels": [
+    896,
+    5744
+  ]
+}

@@ -47,19 +47,20 @@ namespace PauseClimb
         private Vector2 _fragmentBaseSize = new Vector2(5f, 5f);
         [SerializeField, Tooltip("파편 가로세로 크기 종류입니다.")]
         private Vector2 _fragmentSizeVariants = new Vector2(4f, 3f);
-        [SerializeField, Tooltip("엔딩 덮개가 나타나기 전 시간입니다.")]
+        [Header("크레딧 암전과 아래에서 올라오는 연출")]
+        [SerializeField, Min(0f), Tooltip("크레딧 화면 시작부터 서서히 어두워지기 전까지의 대기 시간입니다. 어퍼컷·문구 파괴 시간과는 별개입니다.")]
         private float _endingVeilDelay = 0.8f;
-        [SerializeField, Tooltip("엔딩 덮개가 진해지는 시간입니다.")]
+        [SerializeField, Min(0.1f), Tooltip("밝은 화면이 엔딩 덮개의 최대 불투명도까지 부드럽게 어두워지는 시간입니다. 암전이 끝나면 타이틀과 크레딧이 아래에서 올라옵니다.")]
         private float _endingVeilSeconds = 1.3f;
-        [SerializeField, Tooltip("엔딩 덮개 최대 불투명도입니다.")]
+        [SerializeField, Range(0f, 1f), Tooltip("크레딧 화면의 최종 어두운 정도입니다. 0이면 원래 밝기, 1이면 덮개가 완전히 불투명합니다.")]
         private float _endingVeilOpacity = 0.88f;
-        [SerializeField, Tooltip("크레딧이 멈추는 세로 위치입니다.")]
+        [SerializeField, Tooltip("타이틀과 크레딧 묶음이 최종적으로 멈추는 기준 Y입니다. HUD 배치의 기존 상대 위치를 유지합니다.")]
         private float _creditTop = 190f;
-        [SerializeField, Tooltip("크레딧 최초 세로 위치입니다.")]
+        [SerializeField, Tooltip("암전 후 타이틀과 크레딧이 올라오기 시작하는 기준 Y입니다. 기본 790은 화면 아래쪽 바깥입니다.")]
         private float _creditStart = 790f;
-        [SerializeField, Tooltip("크레딧 화면 이동 속도입니다.")]
+        [SerializeField, Min(1f), Tooltip("크레딧 묶음의 평균 이동 속도입니다. 작을수록 천천히 올라옵니다. 시작과 끝은 부드럽게 가속·감속하며 지정 위치에서 완전히 멈춥니다.")]
         private float _creditSpeed = 96f;
-        [SerializeField, Tooltip("재도전 버튼이 나타나기 전 시간입니다.")]
+        [SerializeField, Min(0f), Tooltip("크레딧 시작 후 재도전 버튼 표시까지의 최소 시간입니다. 이 시간이 지나도 글자가 멈추기 전에는 버튼을 표시하지 않습니다.")]
         private float _restartDelay = 4f;
         [SerializeField, Tooltip("타이머 안내 표시 범위입니다.")]
         private float _crumbleHintSeconds = 3f;
@@ -93,19 +94,41 @@ namespace PauseClimb
         public float FragmentGravity => _fragmentGravity;
         public Vector2 FragmentBaseSize => _fragmentBaseSize;
         public Vector2 FragmentSizeVariants => _fragmentSizeVariants;
-        public float EndingVeilDelay => _endingVeilDelay;
-        public float EndingVeilSeconds => _endingVeilSeconds;
-        public float EndingVeilOpacity => _endingVeilOpacity;
+        public float EndingVeilDelay => Mathf.Max(0f, _endingVeilDelay);
+        public float EndingVeilSeconds => Mathf.Max(0.1f, _endingVeilSeconds);
+        public float EndingVeilOpacity => Mathf.Clamp01(_endingVeilOpacity);
         public float CreditTop => _creditTop;
-        public float CreditStart => _creditStart;
-        public float CreditSpeed => _creditSpeed;
-        public float RestartDelay => _restartDelay;
+        public float CreditStart => Mathf.Max(CreditTop, _creditStart);
+        public float CreditSpeed => Mathf.Max(1f, _creditSpeed);
+        public float RestartDelay => Mathf.Max(0f, _restartDelay);
+        private float CreditScrollDelay => EndingVeilDelay + EndingVeilSeconds;
+        private float CreditScrollSeconds => (CreditStart - CreditTop) / CreditSpeed;
         public float CrumbleHintSeconds => _crumbleHintSeconds;
         public int CloudHintPlatformId => _cloudHintPlatformId;
         public float FirstHintHeight => _firstHintHeight;
         public float WallHintHeight => _wallHintHeight;
         public float IceHintHeight => _iceHintHeight;
         public float CrumbleHintHeight => _crumbleHintHeight;
+        #endregion
+
+        #region Custom Method
+        // 크레딧 전용 시계가 시작된 뒤에만 덮개를 천천히 진하게 만듭니다. 기존 어퍼컷 시계는 사용하지 않습니다.
+        public float GetCreditsVeilAlpha(float elapsed)
+        {
+            float progress = Mathf.Clamp01((elapsed - EndingVeilDelay) / EndingVeilSeconds);
+            return Mathf.SmoothStep(0f, 1f, progress) * EndingVeilOpacity;
+        }
+
+        // 암전이 끝나면 기존 시작점에서 기존 최종 배치까지 아래에서 위로 이동하며 끝에서 감속합니다.
+        public float GetCreditY(float elapsed)
+        {
+            if (CreditScrollSeconds <= Mathf.Epsilon) return CreditTop;
+            float progress = Mathf.Clamp01((elapsed - CreditScrollDelay) / CreditScrollSeconds);
+            return Mathf.Lerp(CreditStart, CreditTop, Mathf.SmoothStep(0f, 1f, progress));
+        }
+
+        // 스크롤 종료 시점 이후에는 위치를 정확히 고정하고 재도전 버튼을 허용합니다.
+        public bool AreCreditsSettled(float elapsed) { return elapsed >= CreditScrollDelay + CreditScrollSeconds; }
         #endregion
     }
 }

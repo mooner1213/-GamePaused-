@@ -39,6 +39,7 @@ namespace PauseClimb
         private Camera _worldCamera;
         private PauseFrozenPalette _palette;
         private PauseSkyBackdrop _skyBackdrop;
+        private PauseSpaceBackdrop _spaceBackdrop;
         private PauseDesignWorldView _designWorld;
         private PausePaintedCourse _paintedCourse;
 
@@ -84,6 +85,8 @@ namespace PauseClimb
             CachePlatformViews();
             _skyBackdrop = _visualRoot.GetComponentInChildren<PauseSkyBackdrop>();
             if (_skyBackdrop != null) _skyBackdrop.Initialize();
+            _spaceBackdrop = _visualRoot.GetComponentInChildren<PauseSpaceBackdrop>();
+            if (_spaceBackdrop != null) _spaceBackdrop.Initialize(_worldCamera);
             _paintedCourse = _visualRoot.GetComponentInChildren<PausePaintedCourse>();
             if (_paintedCourse != null) _paintedCourse.Bind(_level);
             _designWorld = _visualRoot.GetComponentInChildren<PauseDesignWorldView>();
@@ -110,6 +113,8 @@ namespace PauseClimb
             }
             if (_skyBackdrop != null) _skyBackdrop.Draw(isFrozen);
             if (_designWorld != null) _designWorld.Draw(_worldCamera.transform.position, isFrozen);
+            // 우주는 시차 배경의 이동 대상이 아니며 하늘·구름보다 앞에서 부드럽게 덮습니다.
+            if (_spaceBackdrop != null) _spaceBackdrop.Draw(isFrozen);
             if (_paintedCourse != null) _paintedCourse.Draw();
         }
 

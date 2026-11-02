@@ -1,0 +1,3 @@
+credits=True entryElapsed=0 fragmentAge=6.099997 alpha=0 y=790
+t=8.799997 alpha=0.88 finalY=190 originalY=190 stopped=True
+hold10Seconds=True stableY=190

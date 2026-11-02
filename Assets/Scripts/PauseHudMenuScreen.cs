@@ -8,6 +8,10 @@ namespace PauseClimb
     /// </summary>
     internal sealed class PauseHudMenuScreen
     {
+        #region Variables
+        private bool _hasLoggedCreditsRest;
+        #endregion
+
         #region Reference
         private readonly PauseHudContext _ui;
         #endregion
@@ -19,6 +23,7 @@ namespace PauseClimb
         // DrawEnding 화면을 현재 게임 상태와 Inspector 배치 설정으로 그립니다.
         internal void DrawEnding()
         {
+            if (_ui.Game.IsEndingJump) _hasLoggedCreditsRest = false;
             if (_ui.Game.IsEndingJump && !_ui.Game.EndingImpactTriggered) { _ui.DrawSummitWord(); return; }
             float age = _ui.Game.EndingFragmentAge; Vector2 origin = _ui.WorldToCanvas(_ui.Game.WordPosition);
             if (age < _ui.Effects.FragmentSeconds)
@@ -31,12 +36,20 @@ namespace PauseClimb
                 }
             }
             if (_ui.Game.IsEndingJump) return;
-            _ui.Fill(PauseCanvasLayout.FullCanvas, _ui.WithAlpha(_ui.Theme.EndingVeil, Mathf.Clamp01((age - _ui.Effects.EndingVeilDelay) / _ui.Effects.EndingVeilSeconds) * _ui.Effects.EndingVeilOpacity));
-            float y = Mathf.Max(_ui.Effects.CreditTop, _ui.Effects.CreditStart - age * _ui.Effects.CreditSpeed);
+            // [수정됨: 파편 시계와 크레딧 시계를 분리해 크레딧 진입 때 암전과 글자 스크롤이 건너뛰지 않게 합니다.]
+            float creditsAge = _ui.Game.EndingElapsed;
+            _ui.Fill(PauseCanvasLayout.FullCanvas, _ui.WithAlpha(_ui.Theme.EndingVeil, _ui.Effects.GetCreditsVeilAlpha(creditsAge)));
+            float y = _ui.Effects.GetCreditY(creditsAge);
             _ui.Text(_ui.OffsetY(_ui.Layout.EndingHeading, y), "일시정지의 저주를 깨다", _ui.Fonts.EndingTitle, _ui.Theme.Gold, TextAnchor.MiddleCenter);
             _ui.Text(_ui.OffsetY(_ui.Layout.EndingBody, y), "시간을 멈추고, 방향을 설계하고,\n스스로의 도약으로 정상에 닿았습니다.", _ui.Fonts.Subtitle, _ui.Theme.Paper, TextAnchor.MiddleCenter);
             _ui.Text(_ui.OffsetY(_ui.Layout.EndingThanks, y), "기획  일시정지!\n캐릭터  배로 튀는 모험가\n플레이해 주셔서 감사합니다", _ui.Fonts.Credits, _ui.Theme.Mint, TextAnchor.MiddleCenter);
-            if (age > _ui.Effects.RestartDelay && _ui.Button(_ui.Layout.EndingRestart, "처음부터 다시 도전")) _ui.Game.RestartGame();
+            bool isSettled = _ui.Effects.AreCreditsSettled(creditsAge);
+            if (isSettled && !_hasLoggedCreditsRest)
+            {
+                _hasLoggedCreditsRest = true;
+                Debug.Log("[엔딩 크레딧] 타이틀과 크레딧이 지정한 위치에 도착해 멈췄습니다.");
+            }
+            if (isSettled && creditsAge >= _ui.Effects.RestartDelay && _ui.Button(_ui.Layout.EndingRestart, "처음부터 다시 도전")) _ui.Game.RestartGame();
         }
 
         // DrawSettings 화면을 현재 게임 상태와 Inspector 배치 설정으로 그립니다.

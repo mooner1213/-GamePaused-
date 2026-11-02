@@ -1,0 +1,5 @@
+scene=MainScene credits=True creditSeconds=8.999998 cameraY=483.9651 spaceBottom=200 spaceTop=10240 sorting=-50 frozen=0 panelConnected=True
+cameraY=10000 bottom=200 top=10952 parallaxDetached=True
+cameraY=10500 bottom=200 top=11464 parallaxDetached=True
+cameraY=20000 bottom=200 top=20680 parallaxDetached=True
+frozen=True resumed=True

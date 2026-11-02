@@ -32,7 +32,7 @@ namespace PauseClimb
         private float[] _getUp = { .40f, .12f, .10f, .10f, .10f, .10f, .09f, .09f, .09f, .09f, .12f, .35f };
 
         [Header("정상 어퍼컷")]
-        [SerializeField, Tooltip("정상 어퍼컷과 착지 12프레임의 표시 시간입니다. 원화 순서와 12개 길이를 유지하세요. 실제 엔딩 진행 시간은 엔딩 설정에서 조절합니다.")]
+        [SerializeField, Tooltip("기존 어퍼컷·착지 원화 12개의 시간 정보입니다. 현재 엔딩은 01→02→03만 사용하며 실제 슬로우 시간은 게임 관리자 > 정상 엔딩 동작에서 조절합니다. 원화 배열 길이는 유지하세요.")]
         private float[] _uppercut = { .14f, .13f, .09f, .07f, .09f, .11f, .09f, .09f, .07f, .11f, .11f, .20f };
 
         #endregion

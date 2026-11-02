@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"HasStarted\":true,\"IsOpen\":true,\"IsSettingsOpen\":true,\"music\":0.0805,\"effects\":0.213500008,\"hits\":\"우측 상단 · 일시정지\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "HasStarted": true,
+        "IsOpen": true,
+        "IsSettingsOpen": true,
+        "music": 0.0805,
+        "effects": 0.213500008,
+        "hits": "우측 상단 · 일시정지"
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

@@ -27,6 +27,7 @@ namespace PauseClimb
         [SerializeField, Min(1f), Tooltip("휠 둘러보기에서 현재 자동 추적 위치와 벌어질 수 있는 최대 높이 차이입니다.")] private float _previewLimit = 120f;
         [Header("엔딩 하늘 상승 추적")]
         [SerializeField, Min(0.01f), Tooltip("문구를 부순 뒤 하늘로 올라가는 캐릭터를 따라가는 완충 시간입니다. 일반 카메라와 휠 높이 제한은 이 연출에 적용하지 않습니다.")] private float _endingFollowSeconds = 0.25f;
+        [SerializeField, Min(0.05f), Tooltip("문구 충돌 직후 카메라 추적 여유를 서서히 좁히는 시간입니다. 적중 순간은 화면을 고정해 주먹과 문구가 함께 맞닿아 보이고, 이후 빠른 상승에서도 주먹을 화면에 남깁니다.")] private float _endingReleaseSeconds = 0.45f;
         [SerializeField, InspectorName("휠 카메라 Y 범위"), Tooltip("휠로 둘러볼 때 카메라 중심의 최소 Y(X)와 최대 Y(Y)입니다. 기본 범위는 5.7~171.8이며 화면 크기와 탑 높이에 관계없이 적용합니다.")] private Vector2 _previewHeightRange = new Vector2(5.7f, 171.8f);
         [Header("실시간 카메라 상태")]
         [SerializeField, Tooltip("예약 묶음의 잠금 상태입니다. 큰 낙하 중에는 하강 추적이 잠금보다 우선합니다.")] private bool _isLocked;
@@ -54,14 +55,15 @@ namespace PauseClimb
         #endregion
         #region Custom Method
         // 하늘 탈출 때는 캐릭터를 화면 안에 두고 위로만 따라가며 기존 자동 추적·휠 범위와 분리합니다.
-        public void FollowEnding(Vector2 feet, float dt)
+        public void FollowEnding(Vector2 feet, float dt, float impactElapsed)
         {
-            if (_camera == null || dt <= 0f) return;
+            if (_camera == null || dt <= 0f || impactElapsed <= 0f) return;
             Vector3 current = _camera.transform.position;
             Vector3 target = new Vector3(feet.x, Mathf.Max(current.y, feet.y), current.z);
             Vector3 next = Vector3.SmoothDamp(current, target, ref _velocity, Mathf.Max(0.01f, _endingFollowSeconds), Mathf.Infinity, dt);
             // 상승 속도가 커져도 캐릭터와 주먹이 화면 위로 빠져나가지 않게 추적 지연을 제한합니다.
-            next.y = Mathf.Max(next.y, feet.y - _camera.orthographicSize * 0.35f);
+            float blend = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(impactElapsed / Mathf.Max(0.05f, _endingReleaseSeconds)));
+            next.y = Mathf.Max(next.y, feet.y - _camera.orthographicSize * Mathf.Lerp(0.95f, 0.35f, blend));
             _camera.transform.position = next;
         }
         // 외부 카메라 참조를 한 번만 연결합니다.

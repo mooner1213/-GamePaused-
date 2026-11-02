@@ -1,0 +1,8 @@
+{
+  "continuousFormulaHeight": 3.5511363,
+  "continuousFormulaRange": 7.2727275,
+  "measured60HzPeak": 3.4472213,
+  "measured60HzFlatRange": 7.2533264,
+  "steps": 68,
+  "note": "최대 수직속도와 수평속도는 같은 충전 시간으로 결합됩니다. 배치는 연속식만으로 판정하지 않고 60Hz 원본 코드로 재생합니다."
+}

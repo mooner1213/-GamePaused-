@@ -1,0 +1,63 @@
+{
+  "verifiedWith": "Assets 원본 C# 물리 소스 + UnityEngine.CoreModule.dll 독립 60Hz 실행. Unity Editor와 씬은 사용하지 않음.",
+  "Seed": 20261037,
+  "candidateCount": 0,
+  "platformCount": 100,
+  "Success": true,
+  "Reason": "출발점부터 옥상 중앙까지 모든 발판을 순서대로 방문했습니다.",
+  "Frames": 5377,
+  "simulatedSeconds": 89.61667,
+  "recordingSeconds": 88.7,
+  "Jumps": 99,
+  "Batches": 25,
+  "WallBounces": 20,
+  "Clouds": 15,
+  "Timers": 6,
+  "Oils": 12,
+  "MinimumFootMargin": 0.53370667,
+  "FinalX": 0,
+  "FinalY": 175,
+  "allPlatformsVisited": true,
+  "widthProgression": {
+    "early": "0~55m: 4/6칸",
+    "middle": "55~115m: 4칸",
+    "late": "115~173.25m: 2/4칸",
+    "roof": "175m: 24칸"
+  },
+  "globalChargeOffsets": [
+    {
+      "holdOffsetFrames": -2,
+      "Success": false,
+      "Reason": "묶음 2에서 큰 낙하/실패",
+      "Jumps": 6,
+      "FinalY": 9.397152
+    },
+    {
+      "holdOffsetFrames": -1,
+      "Success": false,
+      "Reason": "묶음 3에서 큰 낙하/실패",
+      "Jumps": 12,
+      "FinalY": 19.39716
+    },
+    {
+      "holdOffsetFrames": 1,
+      "Success": false,
+      "Reason": "묶음 4에서 큰 낙하/실패",
+      "Jumps": 16,
+      "FinalY": 26.467937
+    },
+    {
+      "holdOffsetFrames": 2,
+      "Success": false,
+      "Reason": "입력 전 관성 감속 중 발판 이탈",
+      "Jumps": 8,
+      "FinalY": 13.593889
+    }
+  ],
+  "singleChargeOffsets": {
+    "passed": 198,
+    "total": 198,
+    "failures": []
+  },
+  "caveat": "고정 입력의 완주는 물리 모델 검증이며 사람 플레이, Unity Play 화면, 기기 테스트를 뜻하지 않습니다. 최종 도약은 실제 게임과 같은 옥상 중앙 안내 규칙을 사용합니다."
+}

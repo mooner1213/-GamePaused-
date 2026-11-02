@@ -1,0 +1,85 @@
+{
+  "onlyStage09Changed": true,
+  "scenes": [
+    {
+      "path": "Assets/Scenes/MainScene.unity",
+      "unchanged": true,
+      "after": "38B0C9861EB288AE684BE083DBA01C4A56E912647ACF8CC62D55EC86B54B10FC"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+      "unchanged": true,
+      "after": "2B12724F8BCEB971A8D241E19F2F4A17B2B5D9F7978DD7A4B15AC4F7285B629D"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity",
+      "unchanged": true,
+      "after": "CF5868E93C3D21424EF4B45FAD9C394DF17F0AD997B5968E661A3B6D5E342ADA"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity",
+      "unchanged": true,
+      "after": "274F78B64D502448856750C4205F46A23C73CF48EF03F1C3784DE523851DF71A"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity",
+      "unchanged": true,
+      "after": "965D13ACE2B519FCA51007B91A1C7FBAAB8BB82D3636CEBDA3D9F5878494182B"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity",
+      "unchanged": true,
+      "after": "E7A5A68CE7C2B42B3D91B4EF28F20F1BA6EBE4D31F9A386895B755940A81C8E7"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity",
+      "unchanged": true,
+      "after": "DA5EE247D243C1ED9AFD0F6D9D2C79C6549C8DBBBEA2574359BB1F8F86AD97AB"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity",
+      "unchanged": true,
+      "after": "17A79A9CF1AE229619B7D9ED6BE934BBF76002A8B6DF5CA0AFC699FC8291E854"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity",
+      "unchanged": true,
+      "after": "F815D9688719B5DFD7D2AFDF7BD30FDCC9C71B8CE62A15762948953A08A0A1E3"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+      "unchanged": false,
+      "after": "D7E3827ABE5E0DBDC69AAE61EAD3B95200B206E5B5170935B836C7C8429C1530"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity",
+      "unchanged": true,
+      "after": "DE38E8300A11BD4CAA3DB778EA91191EFB830DCC1A967A0E4C6D78A2E2309E84"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity",
+      "unchanged": true,
+      "after": "0845F07990303380C28E432F549BF0B28F892F9AD45A656E2E442BF6621E61B3"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity",
+      "unchanged": true,
+      "after": "1ACDAD6213AFB5D6031277665CEDCC26A64D1E5BE82C2B87423AE2B7532D1176"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity",
+      "unchanged": true,
+      "after": "EB2C0D4008137BE32535D82DFB8BA08CCBC7FD0B159D3012BA3D582E25E525AA"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage14_NeonData.unity",
+      "unchanged": true,
+      "after": "3CB48115D98A48EF8E23FB0B1D17A5663122390FCF71322D116FC9E5C3073335"
+    },
+    {
+      "path": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity",
+      "unchanged": true,
+      "after": "5D3B1936089DDE606E5F551E84073D9AEF32C40C819E36B8BA593FD762EDBE50"
+    }
+  ]
+}
