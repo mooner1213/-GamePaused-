@@ -1,0 +1,22 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"settings\":true,\"music\":0.23,\"effects\":0.61,\"hit\":\"설정\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "settings": true,
+        "music": 0.23,
+        "effects": 0.61,
+        "hit": "설정"
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

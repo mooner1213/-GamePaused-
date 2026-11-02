@@ -1,0 +1,6 @@
+AllSceneHashesUnchanged=True
+platformCount=106
+Cloud=14
+Crumble=9
+Ice=16
+Stone=67

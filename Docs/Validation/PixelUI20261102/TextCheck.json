@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":[{\"name\":\"효과음 슬라이더 백분율\",\"text\":\"61%\",\"fontSize\":30,\"rect\":\"(x:-70.00, y:-20.00, width:140.00, height:40.00)\",\"font\":\"GameKorean\",\"dynamicFont\":true,\"hasDigit\":true,\"verts\":12},{\"name\":\"배경음악 슬라이더 백분율\",\"text\":\"23%\",\"fontSize\":30,\"rect\":\"(x:-70.00, y:-20.00, width:140.00, height:40.00)\",\"font\":\"GameKorean\",\"dynamicFont\":true,\"hasDigit\":true,\"verts\":12}],\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": [
+        {
+          "name": "효과음 슬라이더 백분율",
+          "text": "61%",
+          "fontSize": 30,
+          "rect": "(x:-70.00, y:-20.00, width:140.00, height:40.00)",
+          "font": "GameKorean",
+          "dynamicFont": true,
+          "hasDigit": true,
+          "verts": 12
+        },
+        {
+          "name": "배경음악 슬라이더 백분율",
+          "text": "23%",
+          "fontSize": 30,
+          "rect": "(x:-70.00, y:-20.00, width:140.00, height:40.00)",
+          "font": "GameKorean",
+          "dynamicFont": true,
+          "hasDigit": true,
+          "verts": 12
+        }
+      ],
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

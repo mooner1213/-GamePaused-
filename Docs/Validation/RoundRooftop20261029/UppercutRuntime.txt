@@ -1,0 +1,2 @@
+scene=MainScene lastBeforeHit=2 firstHitFrame=3 hit=True fistError=8.940697E-08 impactCameraJump=0 endingWhileEsc=True target=(0.00, 184.34) fist=(0.00, 184.34)
+credits=True continuousRise=True held03=True fistVisible=True samples=967 displayY=10017.19

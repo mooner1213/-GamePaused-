@@ -1,0 +1,28 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"sprite\":\"Idle_Right · 정지 회색\",\"texture\":\"Idle_Right · 정지 회색\",\"readable\":true,\"packed\":false,\"visibleBounds\":\"Center: (-9.98, 0.52, -1.00), Extents: (0.30, 0.52, 0.00)\",\"fullBounds\":\"Center: (-10.00, 0.50, -1.00), Extents: (0.75, 0.75, 0.10)\",\"gaugeScreen\":\"(116.34, 158.96)\",\"headScreen\":\"(116.34, 154.43, 9.00)\",\"widthRatio\":1.5,\"gapRatio\":0.08},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "sprite": "Idle_Right · 정지 회색",
+        "texture": "Idle_Right · 정지 회색",
+        "readable": true,
+        "packed": false,
+        "visibleBounds": "Center: (-9.98, 0.52, -1.00), Extents: (0.30, 0.52, 0.00)",
+        "fullBounds": "Center: (-10.00, 0.50, -1.00), Extents: (0.75, 0.75, 0.10)",
+        "gaugeScreen": "(116.34, 158.96)",
+        "headScreen": "(116.34, 154.43, 9.00)",
+        "widthRatio": 1.5,
+        "gapRatio": 0.08
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

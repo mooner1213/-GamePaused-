@@ -1,0 +1,16 @@
+Stage01_ClassicKeycap rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage02_SlimKeyrail rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage03_FracturedKeycap rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage04_IvoryCastle rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage05_VioletRuins rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage06_VermilionBrick rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage07_BlueGranite rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage08_AntiqueTerminal rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage09_RGBKeyboard rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage10_PorcelainGothic rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage11_ObsidianFortress rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage12_TerracottaBastion rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage13_BronzeClockwork rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage14_NeonData rooftop/101/106 platforms/exit/preserved background Y PASS
+Stage15_GlassCircuit rooftop/101/106 platforms/exit/preserved background Y PASS
+MainScene rooftop/101/106 platforms/exit/preserved background Y PASS

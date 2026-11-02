@@ -1,0 +1,20 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"blackPanelScale\":1,\"buttonScale\":0.7},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "blackPanelScale": 1,
+        "buttonScale": 0.7
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

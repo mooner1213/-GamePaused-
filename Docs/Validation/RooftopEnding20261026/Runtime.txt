@@ -1,0 +1,4 @@
+097~101: fixed title Rect=(x:450.00, y:24.00, width:380.00, height:58.00), visible throughout PASS
+ESC required; uppercut pose held; rise=1.757721, wordY=177.3577, hit/landing/credits/frozen physics PASS
+
+175m rooftop camera: flight rise=8.500946, fixed word/fist distance=0.08278468, impact PASS

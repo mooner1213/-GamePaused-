@@ -1,0 +1,20 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"HeldSeconds\":1.61666584,\"Charge01\":1.0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "HeldSeconds": 1.61666584,
+        "Charge01": 1.0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

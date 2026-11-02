@@ -1,0 +1,17 @@
+Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage05_VioletRuins.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage07_BlueGranite.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage14_NeonData.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+Assets/Scenes/MainScene.unity · 뒤벽/바닥/앞벽 분리 · 배율1 · 기존 Tilemap/발판/장치 보존
+모든 팔레트 파일 SHA256 동일 · 기존 씬 백업=C:\Users\MBC\Documents\GitHub\PauseClimb-Backups\20261029-round-roof-173006

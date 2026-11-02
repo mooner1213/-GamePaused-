@@ -1,0 +1,1 @@
+summit=True roof=(0.00, 174.80) remaining=0 hit=True credits=True monotonic=True highestFistHeld=True fistVisible=True samples=968 displayY=10009.68 cameraY=10007.16

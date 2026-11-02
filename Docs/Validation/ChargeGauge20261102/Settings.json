@@ -1,0 +1,22 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"hiddenInSettings\":true,\"RecordedCount\":1,\"recordedHold\":0.85,\"MaximumCharge\":0.85},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "hiddenInSettings": true,
+        "RecordedCount": 1,
+        "recordedHold": 0.85,
+        "MaximumCharge": 0.85
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

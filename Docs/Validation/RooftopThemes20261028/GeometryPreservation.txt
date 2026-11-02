@@ -1,0 +1,16 @@
+MainScene.unity: original transform/tilemap/collider blocks=2247, changed (excluding parent child reference)=0
+Stage01_ClassicKeycap.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage02_SlimKeyrail.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage03_FracturedKeycap.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage04_IvoryCastle.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage05_VioletRuins.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage06_VermilionBrick.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage07_BlueGranite.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage08_AntiqueTerminal.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage09_RGBKeyboard.unity: original transform/tilemap/collider blocks=1945, changed (excluding parent child reference)=0
+Stage10_PorcelainGothic.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage11_ObsidianFortress.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage12_TerracottaBastion.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage13_BronzeClockwork.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage14_NeonData.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0
+Stage15_GlassCircuit.unity: original transform/tilemap/collider blocks=1984, changed (excluding parent child reference)=0

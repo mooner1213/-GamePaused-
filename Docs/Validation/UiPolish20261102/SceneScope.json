@@ -1,0 +1,549 @@
+{
+  "status": "PASS",
+  "checkedAtLocal": "2026-11-02T17:13:09",
+  "scope": "Read-only byte comparison of serialized Unity scene YAML documents; no Editor, scene, or source mutation",
+  "sceneCount": 17,
+  "changedScenes": [
+    "Assets/Scenes/MainMenu.unity",
+    "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity"
+  ],
+  "unchangedSceneCount": 15,
+  "scenes": [
+    {
+      "scene": "Assets/Scenes/MainMenu.unity",
+      "beforeHash": "A0D5BD259D7E1F3E36DA143C09F7E201809AB7C6AF7D0178809FA24567AC86A4",
+      "afterHash": "8E171A482B15520A72D27E34E0C25B6F179D9303DD20AA70D2E70880678773B7",
+      "unchanged": false
+    },
+    {
+      "scene": "Assets/Scenes/MainScene.unity",
+      "beforeHash": "38B0C9861EB288AE684BE083DBA01C4A56E912647ACF8CC62D55EC86B54B10FC",
+      "afterHash": "38B0C9861EB288AE684BE083DBA01C4A56E912647ACF8CC62D55EC86B54B10FC",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity",
+      "beforeHash": "2B12724F8BCEB971A8D241E19F2F4A17B2B5D9F7978DD7A4B15AC4F7285B629D",
+      "afterHash": "2B12724F8BCEB971A8D241E19F2F4A17B2B5D9F7978DD7A4B15AC4F7285B629D",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity",
+      "beforeHash": "CF5868E93C3D21424EF4B45FAD9C394DF17F0AD997B5968E661A3B6D5E342ADA",
+      "afterHash": "CF5868E93C3D21424EF4B45FAD9C394DF17F0AD997B5968E661A3B6D5E342ADA",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity",
+      "beforeHash": "274F78B64D502448856750C4205F46A23C73CF48EF03F1C3784DE523851DF71A",
+      "afterHash": "274F78B64D502448856750C4205F46A23C73CF48EF03F1C3784DE523851DF71A",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity",
+      "beforeHash": "965D13ACE2B519FCA51007B91A1C7FBAAB8BB82D3636CEBDA3D9F5878494182B",
+      "afterHash": "965D13ACE2B519FCA51007B91A1C7FBAAB8BB82D3636CEBDA3D9F5878494182B",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage05_VioletRuins.unity",
+      "beforeHash": "E7A5A68CE7C2B42B3D91B4EF28F20F1BA6EBE4D31F9A386895B755940A81C8E7",
+      "afterHash": "E7A5A68CE7C2B42B3D91B4EF28F20F1BA6EBE4D31F9A386895B755940A81C8E7",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity",
+      "beforeHash": "DA5EE247D243C1ED9AFD0F6D9D2C79C6549C8DBBBEA2574359BB1F8F86AD97AB",
+      "afterHash": "DA5EE247D243C1ED9AFD0F6D9D2C79C6549C8DBBBEA2574359BB1F8F86AD97AB",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage07_BlueGranite.unity",
+      "beforeHash": "17A79A9CF1AE229619B7D9ED6BE934BBF76002A8B6DF5CA0AFC699FC8291E854",
+      "afterHash": "17A79A9CF1AE229619B7D9ED6BE934BBF76002A8B6DF5CA0AFC699FC8291E854",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity",
+      "beforeHash": "F815D9688719B5DFD7D2AFDF7BD30FDCC9C71B8CE62A15762948953A08A0A1E3",
+      "afterHash": "F815D9688719B5DFD7D2AFDF7BD30FDCC9C71B8CE62A15762948953A08A0A1E3",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+      "beforeHash": "D7E3827ABE5E0DBDC69AAE61EAD3B95200B206E5B5170935B836C7C8429C1530",
+      "afterHash": "D068728F456AD9DE1537349601E19EFAB52238D78E6D4A5539442357D7595F8B",
+      "unchanged": false
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity",
+      "beforeHash": "DE38E8300A11BD4CAA3DB778EA91191EFB830DCC1A967A0E4C6D78A2E2309E84",
+      "afterHash": "DE38E8300A11BD4CAA3DB778EA91191EFB830DCC1A967A0E4C6D78A2E2309E84",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity",
+      "beforeHash": "0845F07990303380C28E432F549BF0B28F892F9AD45A656E2E442BF6621E61B3",
+      "afterHash": "0845F07990303380C28E432F549BF0B28F892F9AD45A656E2E442BF6621E61B3",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity",
+      "beforeHash": "1ACDAD6213AFB5D6031277665CEDCC26A64D1E5BE82C2B87423AE2B7532D1176",
+      "afterHash": "1ACDAD6213AFB5D6031277665CEDCC26A64D1E5BE82C2B87423AE2B7532D1176",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity",
+      "beforeHash": "EB2C0D4008137BE32535D82DFB8BA08CCBC7FD0B159D3012BA3D582E25E525AA",
+      "afterHash": "EB2C0D4008137BE32535D82DFB8BA08CCBC7FD0B159D3012BA3D582E25E525AA",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage14_NeonData.unity",
+      "beforeHash": "3CB48115D98A48EF8E23FB0B1D17A5663122390FCF71322D116FC9E5C3073335",
+      "afterHash": "3CB48115D98A48EF8E23FB0B1D17A5663122390FCF71322D116FC9E5C3073335",
+      "unchanged": true
+    },
+    {
+      "scene": "Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity",
+      "beforeHash": "5D3B1936089DDE606E5F551E84073D9AEF32C40C819E36B8BA593FD762EDBE50",
+      "afterHash": "5D3B1936089DDE606E5F551E84073D9AEF32C40C819E36B8BA593FD762EDBE50",
+      "unchanged": true
+    }
+  ],
+  "stage09Map": {
+    "sceneMapComponentFileId": 1464778552,
+    "rootTransformFileId": 614736072,
+    "sameRootReference": true,
+    "transformCount": 1325,
+    "gameObjectCount": 1325,
+    "serializedDocumentCount": 3955,
+    "classCounts": {
+      "1": 1325,
+      "4": 1325,
+      "23": 1,
+      "33": 1,
+      "114": 222,
+      "212": 747,
+      "331": 23,
+      "156049354": 101,
+      "483693784": 105,
+      "1839735485": 105
+    },
+    "addedDocumentIds": [],
+    "removedDocumentIds": [],
+    "changedDocumentIds": [],
+    "sameDocuments": true
+  },
+  "stage09OtherChanges": {
+    "addedDocuments": [
+      {
+        "fileId": 161713394,
+        "classId": 1,
+        "gameObjectId": null,
+        "nameYaml": "\"ESC \\uC608\\uC57D \\xB7 \\uD53D\\uC140 \\uC77C\\uC2DC\\uC815\\uC9C0 \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 161713395,
+        "classId": 114,
+        "gameObjectId": 161713394,
+        "nameYaml": "\"ESC \\uC608\\uC57D \\xB7 \\uD53D\\uC140 \\uC77C\\uC2DC\\uC815\\uC9C0 \\uC81C\\uBAA9\"",
+        "script": "fe87c0e1cc204ed48ad3b37840f39efc",
+        "changes": []
+      },
+      {
+        "fileId": 161713396,
+        "classId": 222,
+        "gameObjectId": 161713394,
+        "nameYaml": "\"ESC \\uC608\\uC57D \\xB7 \\uD53D\\uC140 \\uC77C\\uC2DC\\uC815\\uC9C0 \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 161713397,
+        "classId": 224,
+        "gameObjectId": 161713394,
+        "nameYaml": "\"ESC \\uC608\\uC57D \\xB7 \\uD53D\\uC140 \\uC77C\\uC2DC\\uC815\\uC9C0 \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 510439821,
+        "classId": 1,
+        "gameObjectId": null,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 510439822,
+        "classId": 114,
+        "gameObjectId": 510439821,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": "5f7201a12d95ffc409449d95f23cf332",
+        "changes": []
+      },
+      {
+        "fileId": 510439823,
+        "classId": 114,
+        "gameObjectId": 510439821,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": "cfabb0440166ab443bba8876756fdfa9",
+        "changes": []
+      },
+      {
+        "fileId": 510439824,
+        "classId": 222,
+        "gameObjectId": 510439821,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 510439825,
+        "classId": 224,
+        "gameObjectId": 510439821,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 510439826,
+        "classId": 225,
+        "gameObjectId": 510439821,
+        "nameYaml": "\"\\uCD08\\uBC18 ESC\\xB7SPACE \\uD0A4 \\uC548\\uB0B4\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 1973066389,
+        "classId": 114,
+        "gameObjectId": 1973066383,
+        "nameYaml": "\"\\uAC8C\\uC784 \\uAD00\\uB9AC Canvas \\xB7 \\uD3B8\\uC9D1 \\uAC00\\uB2A5\"",
+        "script": "PauseGameplayGuidance.cs",
+        "changes": []
+      },
+      {
+        "fileId": 2039540769,
+        "classId": 1,
+        "gameObjectId": null,
+        "nameYaml": "\"UI \\uD06C\\uAE30 70% \\xB7 20261102\"",
+        "script": null,
+        "changes": []
+      },
+      {
+        "fileId": 2039540770,
+        "classId": 4,
+        "gameObjectId": 2039540769,
+        "nameYaml": "\"UI \\uD06C\\uAE30 70% \\xB7 20261102\"",
+        "script": null,
+        "changes": []
+      }
+    ],
+    "removedDocuments": [],
+    "modifiedDocuments": [
+      {
+        "fileId": 300669287,
+        "classId": 224,
+        "gameObjectId": 300669284,
+        "nameYaml": "\"\\uD6A8\\uACFC\\uC74C \\uC2AC\\uB77C\\uC774\\uB354 \\uBC31\\uBD84\\uC728\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 517059846,
+        "classId": 224,
+        "gameObjectId": 517059845,
+        "nameYaml": "\"\\uC77C\\uC2DC\\uC815\\uC9C0 \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 708950606,
+        "classId": 224,
+        "gameObjectId": 708950605,
+        "nameYaml": "\"\\uB2E4\\uC2DC \\uC2DC\\uC791\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 786201625,
+        "classId": 224,
+        "gameObjectId": 786201624,
+        "nameYaml": "\"\\uACBD\\uACE0 \\uBB38\\uAD6C\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1060613827,
+        "classId": 224,
+        "gameObjectId": 1060613826,
+        "nameYaml": "\"\\uD6A8\\uACFC\\uC74C \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1061916933,
+        "classId": 224,
+        "gameObjectId": 1061916932,
+        "nameYaml": "\"\\uC608\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1141463801,
+        "classId": 224,
+        "gameObjectId": 1141463797,
+        "nameYaml": "\"\\uC6B0\\uCE21 \\uC0C1\\uB2E8 \\xB7 \\uC77C\\uC2DC\\uC815\\uC9C0\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1196846921,
+        "classId": 224,
+        "gameObjectId": 1196846920,
+        "nameYaml": "\"\\uC544\\uB2C8\\uC624\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1264516087,
+        "classId": 224,
+        "gameObjectId": 1264516085,
+        "nameYaml": "\"\\uD6A8\\uACFC\\uC74C \\uC2AC\\uB77C\\uC774\\uB354\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1464778547,
+        "classId": 114,
+        "gameObjectId": 1464778546,
+        "nameYaml": "\"\\uC77C\\uC2DC\\uC815\\uC9C0 \\uAC8C\\uC784 \\xB7 \\uC124\\uC815\\uC740 Inspector\\uC5D0\\uC11C\"",
+        "script": "PauseTouchInput.cs",
+        "changes": [
+          "-    x: 1030",
+          "-    y: 548",
+          "-    width: 218",
+          "-    height: 132",
+          "+    x: 1062.7",
+          "+    y: 567.8",
+          "+    width: 152.59999",
+          "+    height: 92.4",
+          "-    x: 32",
+          "-    y: 548",
+          "-    width: 218",
+          "-    height: 132",
+          "+    x: 64.700005",
+          "+    y: 567.8",
+          "+    width: 152.59999",
+          "+    height: 92.4"
+        ]
+      },
+      {
+        "fileId": 1464778548,
+        "classId": 114,
+        "gameObjectId": 1464778546,
+        "nameYaml": "\"\\uC77C\\uC2DC\\uC815\\uC9C0 \\uAC8C\\uC784 \\xB7 \\uC124\\uC815\\uC740 Inspector\\uC5D0\\uC11C\"",
+        "script": "PauseHud.cs",
+        "changes": [
+          "+    _isCompactGameplayHud: 1",
+          "-      x: 478",
+          "-      y: 582",
+          "-      width: 324",
+          "-      height: 55",
+          "+      x: 526.6",
+          "+      y: 590.25",
+          "+      width: 226.8",
+          "+      height: 38.5",
+          "-    _title: 52",
+          "-    _subtitle: 23",
+          "-    _stepNumber: 27",
+          "-    _body: 18",
+          "-    _hint: 17",
+          "-    _caption: 15",
+          "-    _height: 26",
+          "-    _playback: 24",
+          "-    _pauseTitle: 36",
+          "-    _touchToggle: 31",
+          "-    _touchJump: 25",
+          "-    _context: 19",
+          "-    _bounceMarker: 28",
+          "-    _summitWord: 34",
+          "-    _endingTitle: 40",
+          "-    _credits: 20",
+          "-    _settingsTitle: 35",
+          "-    _settingsBody: 22",
+          "-    _button: 21",
+          "+    _title: 36",
+          "+    _subtitle: 16",
+          "+    _stepNumber: 19",
+          "+    _body: 13",
+          "+    _hint: 12",
+          "+    _caption: 10",
+          "+    _height: 18",
+          "+    _playback: 17",
+          "+    _pauseTitle: 25",
+          "+    _touchToggle: 22",
+          "+    _touchJump: 18",
+          "+    _context: 13",
+          "+    _bounceMarker: 20",
+          "+    _summitWord: 24",
+          "+    _endingTitle: 28",
+          "+    _credits: 14",
+          "+    _settingsTitle: 24",
+          "+    _settingsBody: 15",
+          "+    _button: 15"
+        ]
+      },
+      {
+        "fileId": 1492143685,
+        "classId": 224,
+        "gameObjectId": 1492143684,
+        "nameYaml": "\"\\uBA54\\uC778\\uC73C\\uB85C\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1497451480,
+        "classId": 224,
+        "gameObjectId": 1497451479,
+        "nameYaml": "\"\\uC77C\\uC2DC\\uC815\\uC9C0 \\uD654\\uBA74\\uC73C\\uB85C\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1509295120,
+        "classId": 224,
+        "gameObjectId": 1509295119,
+        "nameYaml": "\"\\uC774\\uC5B4\\uD558\\uAE30\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1513339519,
+        "classId": 224,
+        "gameObjectId": 1513339518,
+        "nameYaml": "\"\\uC124\\uC815\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1518631589,
+        "classId": 224,
+        "gameObjectId": 1518631588,
+        "nameYaml": "\"\\uC7AC\\uC2DC\\uC791 \\uACBD\\uACE0 \\uC0C1\\uC790\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1700983868,
+        "classId": 224,
+        "gameObjectId": 1700983867,
+        "nameYaml": "\"\\uBC30\\uACBD\\uC74C\\uC545 \\uC81C\\uBAA9\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1828728382,
+        "classId": 224,
+        "gameObjectId": 1828728380,
+        "nameYaml": "\"\\uBC30\\uACBD\\uC74C\\uC545 \\uC2AC\\uB77C\\uC774\\uB354\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 1973066383,
+        "classId": 1,
+        "gameObjectId": null,
+        "nameYaml": "\"\\uAC8C\\uC784 \\uAD00\\uB9AC Canvas \\xB7 \\uD3B8\\uC9D1 \\uAC00\\uB2A5\"",
+        "script": null,
+        "changes": [
+          "+  - component: {fileID: 1973066389}"
+        ]
+      },
+      {
+        "fileId": 1973066388,
+        "classId": 224,
+        "gameObjectId": 1973066383,
+        "nameYaml": "\"\\uAC8C\\uC784 \\uAD00\\uB9AC Canvas \\xB7 \\uD3B8\\uC9D1 \\uAC00\\uB2A5\"",
+        "script": null,
+        "changes": [
+          "+  - {fileID: 161713397}",
+          "+  - {fileID: 510439825}"
+        ]
+      },
+      {
+        "fileId": 2089273176,
+        "classId": 224,
+        "gameObjectId": 2089273173,
+        "nameYaml": "\"\\uBC30\\uACBD\\uC74C\\uC545 \\uC2AC\\uB77C\\uC774\\uB354 \\uBC31\\uBD84\\uC728\"",
+        "script": null,
+        "changes": [
+          "-  m_LocalScale: {x: 1, y: 1, z: 1}",
+          "+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}"
+        ]
+      },
+      {
+        "fileId": 9223372036854775807,
+        "classId": 1660057539,
+        "gameObjectId": null,
+        "nameYaml": null,
+        "script": null,
+        "changes": [
+          "+  - {fileID: 2039540770}"
+        ]
+      }
+    ]
+  }
+}

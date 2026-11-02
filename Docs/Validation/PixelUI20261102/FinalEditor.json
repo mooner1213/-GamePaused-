@@ -1,0 +1,26 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"scene\":\"Assets/Scenes/MainMenu.unity\",\"playing\":false,\"dirty\":false,\"compiling\":false,\"reloadLocked\":false,\"mainIsFirstBuildScene\":true,\"editorFadeAlpha\":0.0,\"unity\":\"6000.3.22f1\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "scene": "Assets/Scenes/MainMenu.unity",
+        "playing": false,
+        "dirty": false,
+        "compiling": false,
+        "reloadLocked": false,
+        "mainIsFirstBuildScene": true,
+        "editorFadeAlpha": 0.0,
+        "unity": "6000.3.22f1"
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

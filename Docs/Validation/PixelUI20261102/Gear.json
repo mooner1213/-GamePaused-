@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"정지 상태 보존 및 톱니 설정 진입 통과\",\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": "정지 상태 보존 및 톱니 설정 진입 통과",
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

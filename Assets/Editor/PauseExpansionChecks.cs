@@ -346,8 +346,8 @@ public static class PauseExpansionChecks
             Require(definitions.Any(gimmick => gimmick.Kind == kind), "실제 씬에 비활성으로 보관한 장치를 포함해 " + kind + " 정의가 있어야 합니다.");
         }
         if (design != null)
-            Require(!definitions.Any(item => item.Kind == GimmickKind.Portal) && map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>().Length == 1,
-                "중간 스킵 포탈은 제거하고 마지막 출구는 하나 유지해야 합니다.");
+            Require(!definitions.Any(item => item.Kind == GimmickKind.Portal) && map.MapRoot.GetComponentsInChildren<PauseGoalExitObject>(true).Length == 0,
+                "중간 스킵 포탈과 옥상 마지막 출구가 모두 없어야 합니다.");
         Require(definitions.Where(gimmick => gimmick.gameObject.activeInHierarchy).Select(gimmick => gimmick.Id).OrderBy(id => id)
             .SequenceEqual(sceneLevel.Gimmicks.Select(gimmick => gimmick.Id).OrderBy(id => id)), "사용자가 비활성화한 장치는 실제 물리에 포함하지 않아야 합니다.");
         foreach (ClimbGimmick portal in sceneLevel.Gimmicks.Where(gimmick => gimmick.Kind == GimmickKind.Portal))

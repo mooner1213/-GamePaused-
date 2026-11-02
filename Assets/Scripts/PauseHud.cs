@@ -35,6 +35,14 @@ namespace PauseClimb
         #endregion
 
         #region Custom Method
+        // 고정 제목의 캔버스 중심을 실제 월드 목표로 바꾸므로 화면 비율·안전 영역 변경에도 주먹이 같은 글자를 향합니다.
+        public Vector2 EndingWordWorldPosition(Camera camera)
+        {
+            PauseCanvasLayout.Calculate(_ui != null && _ui.Game.UseTouchControls, out float scale, out Vector2 offset);
+            Vector2 center = _layout.PauseHeading.center;
+            Vector3 screen = new Vector3(offset.x + center.x * scale, Screen.height - offset.y - center.y * scale, -camera.transform.position.z);
+            return camera.ScreenToWorldPoint(screen);
+        }
         // [수정됨: 직렬화 표시 설정과 화면별 그림 책임을 분리하며 기존 배치 기본값을 유지합니다.]
         public void Initialize(PauseGame source)
         {

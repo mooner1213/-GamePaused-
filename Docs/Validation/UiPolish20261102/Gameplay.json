@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"tutorialAlpha\":1.0,\"compactHud\":true,\"IsPaused\":true},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "tutorialAlpha": 1.0,
+        "compactHud": true,
+        "IsPaused": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

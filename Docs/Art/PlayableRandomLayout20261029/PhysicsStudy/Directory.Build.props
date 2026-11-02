@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>../../../../../GamePaused-StudyCache/obj/</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>../../../../../GamePaused-StudyCache/obj/</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+</Project>

@@ -108,7 +108,7 @@ namespace PauseClimb
         }
 
         // 정상 글자를 실제 충돌 위치에 맞춰 여러 화면에서 공통으로 표시합니다.
-        internal void DrawSummitWord() { Text(Offset(Layout.SummitWord, WorldToCanvas(Game.WordPosition)), "일시정지", Fonts.SummitWord, Theme.Gold, TextAnchor.MiddleCenter); }
+        internal void DrawSummitWord() { Text(Layout.PauseHeading, "일시정지", Fonts.PauseTitle, Color.white, TextAnchor.MiddleCenter); }
         // 키보드 설정을 짧은 키 이름으로 안내합니다.
         internal string KeyName(KeyCode code) { return code == KeyCode.Space ? "SPACE" : code == KeyCode.Escape ? "ESC" : code.ToString().ToUpperInvariant(); }
         // 공유 Resources 글꼴을 보존하고 직접 만든 시스템 대체 글꼴만 해제합니다.

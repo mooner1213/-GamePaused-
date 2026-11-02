@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"returnedToMain\":true,\"audioResumed\":true,\"music\":0.290268451,\"effects\":0.7097315,\"faders\":1},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "returnedToMain": true,
+        "audioResumed": true,
+        "music": 0.290268451,
+        "effects": 0.7097315,
+        "faders": 1
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

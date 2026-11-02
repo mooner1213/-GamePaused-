@@ -1,0 +1,1 @@
+coveredActorPixels=1211 visibleActorPixels=1960 pausedTilemapFrozen=1 resumedFrozen=0 hit=True credits=True frame=3 displayY=513.0952

@@ -1,0 +1,28 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"scene\":\"Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity\",\"dirty\":false,\"playing\":false,\"compiling\":false,\"repeatUnchanged\":true,\"reloadLocked\":false,\"editablePlatforms\":98,\"counters\":6,\"surfaces\":111,\"roof\":174.8},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+        "dirty": false,
+        "playing": false,
+        "compiling": false,
+        "repeatUnchanged": true,
+        "reloadLocked": false,
+        "editablePlatforms": 98,
+        "counters": 6,
+        "surfaces": 111,
+        "roof": 174.8
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

@@ -1,0 +1,16 @@
+Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage05_VioletRuins.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage07_BlueGranite.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity · Y=174.8 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage14_NeonData.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30
+Assets/Scenes/MainScene.unity · Y=175 · 원본 물리/기존 타일 보존 · 뒤=-15/캐릭터=20/앞=30

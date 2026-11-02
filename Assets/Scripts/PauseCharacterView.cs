@@ -29,6 +29,7 @@ namespace PauseClimb
         private const int EXPECTED_SPRITE_COUNT = 154;
         private const string RESOURCE_ROOT = "Characters/HumanPlayer/";
         private const int IDLE_POSE_COUNT = 4;
+        private const int UPPERCUT_FIRST_FRAME = 1;
         private const float IDLE_POSE_TIME_RATIO = 0.5f;
         private enum ClipKind { Idle, Jump, WallUp, WallDown, BellyLoop, GetUp, Uppercut }
 
@@ -42,6 +43,8 @@ namespace PauseClimb
         private int _wallUpTurnFrame = 7;
         [SerializeField, Range(0, 11), Tooltip("하강 벽 반동 원화가 자체적으로 방향을 바꾸는 첫 프레임입니다. 이 뒤의 원화를 반대로 선택해 다시 벽 쪽을 보지 않게 합니다.")]
         private int _wallDownTurnFrame = 5;
+        [SerializeField, Range(2, 11), Tooltip("01번에서 이 프레임까지 순서대로 슬로우 재생합니다. 현재 03번에 도달하는 순간 문구를 부수고 이 자세를 계속 유지합니다.")]
+        private int _skyUppercutFrame = 3;
         [SerializeField, Tooltip("일반 착지 뒤 압축 자세를 표시하는 시간입니다. 다음 예약 점프가 실행되면 즉시 도약 자세로 바뀝니다.")]
         private float _landingPoseSeconds = 0.24f;
         [SerializeField, Tooltip("정지했을 때 사람 도트를 실제 회색 픽셀로 바꿉니다. 다시 흐르면 원색으로 돌아옵니다.")]
@@ -144,7 +147,7 @@ namespace PauseClimb
 
         // [수정됨: 실제 물리 반동·회복 상태와 사람 PNG를 연결하고 정지 프레임을 보존합니다.]
         // [NOTE] 정지 중에는 회색만 바꾸고 뷰 시계·프레임·좌우를 모두 유지합니다.
-        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingProgress, float dt)
+        public void Draw(PauseSimulation sim, bool isFrozen, bool isEnding, float endingProgress, float dt, bool hasEndingHit = false)
         {
             if (sim == null || _playerRenderer == null) return;
             LoadClips();
@@ -159,7 +162,8 @@ namespace PauseClimb
             _wallClock += elapsed;
             _landingClock += elapsed;
             if (isEnding)
-                ShowProgress(ClipKind.Uppercut, endingProgress, sim.Facing, "엔딩 · 슬로우 어퍼컷");
+                ShowFrame(ClipKind.Uppercut, GetUppercutFrame(endingProgress, hasEndingHit), sim.Facing,
+                    hasEndingHit ? "엔딩 · 03번 적중 자세로 하늘 상승" : "엔딩 · 01→02→03 슬로우 어퍼컷");
             else if (sim.Recovering)
                 ShowProgress(ClipKind.GetUp, sim.RecoveryProgress, sim.Facing, "마지막 착지 · 엎어져 일어나기");
             else if (sim.BellyBouncing)
@@ -189,6 +193,32 @@ namespace PauseClimb
         // 어퍼컷 확대는 발 기준 Transform에만 적용하며 물리 판정과 다른 캐릭터의 배율은 바꾸지 않습니다.
         public void SetEndingScale(float multiplier)
         { if (_playerRenderer != null) _playerRenderer.transform.localScale = _baseScale * Mathf.Max(1f, multiplier); }
+
+        // 적중 전에는 마지막 자세를 앞당겨 표시하지 않고 충돌 틱부터 정확히 같은 프레임을 유지합니다.
+        public int GetUppercutFrame(float progress, bool hasHit)
+        {
+            int last = Mathf.Clamp(_skyUppercutFrame, UPPERCUT_FIRST_FRAME + 1, _clips[ClipKind.Uppercut].Right.Length - 1);
+            return hasHit ? last : Mathf.Min(last - 1, UPPERCUT_FIRST_FRAME + Mathf.FloorToInt(Mathf.Clamp01(progress) * (last - UPPERCUT_FIRST_FRAME)));
+        }
+
+        // 좌우 원화의 가장 높은 불투명 픽셀을 주먹 끝으로 읽어 실제 확대 배율과 발 기준 좌표로 환산합니다.
+        public Vector2 GetEndingFistOffset(int facing, float multiplier)
+        {
+            LoadClips();
+            SpriteClip clip = _clips[ClipKind.Uppercut];
+            Sprite sprite = (facing < 0 ? clip.Left : clip.Right)[Mathf.Clamp(_skyUppercutFrame, UPPERCUT_FIRST_FRAME + 1, clip.Right.Length - 1)];
+            int width = (int)sprite.rect.width, height = (int)sprite.rect.height;
+            Color[] pixels = sprite.texture.GetPixels((int)sprite.rect.x, (int)sprite.rect.y, width, height);
+            for (int y = height - 1; y >= 0; y--)
+            {
+                int count = 0; float sum = 0f;
+                for (int x = 0; x < width; x++) if (pixels[y * width + x].a > 0.5f) { count++; sum += x + 0.5f; }
+                if (count == 0) continue;
+                Vector2 point = new Vector2(sum / count - sprite.pivot.x, y + 1f - sprite.pivot.y) / sprite.pixelsPerUnit;
+                return Vector2.Scale(point, new Vector2(_baseScale.x, _baseScale.y)) * Mathf.Max(1f, multiplier);
+            }
+            return Vector2.up * sprite.bounds.max.y * Mathf.Abs(_baseScale.y) * Mathf.Max(1f, multiplier);
+        }
 
         // 재시작 때 이전 벽 반동·착지 연출과 프레임을 초기화합니다. 물리 위치는 건드리지 않습니다.
         public void ResetView()

@@ -1,0 +1,4 @@
+MODEL cases=30 failures=0 maxPredictionError=0
+
+RUNTIME hit=True credits=True rise=True held03=True visible=True frames=968 Y=10011.3 cameraY=10008.79
+RESTART ending=False credits=False approach=False player=(-11.20, 0.00, -1.00) scale=(1.00, 1.00, 1.00)

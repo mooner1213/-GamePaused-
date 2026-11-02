@@ -68,7 +68,7 @@ public static class PauseRgbMainBuilder
                 theme.normal, "기름막이 덮인 " + theme.normal, string.Join("\n", theme.sources));
             EditorSceneManager.MarkSceneDirty(scene);
             if (!EditorSceneManager.SaveScene(scene)) throw new InvalidOperationException("[메인 디자인] 저장 실패: " + path);
-            Debug.Log("[메인 디자인] " + Path.GetFileNameWithoutExtension(path) + " 저장 · 발판 배치 보존 · 중간 스킵 포탈 삭제 · 마지막 출구 유지");
+            Debug.Log("[메인 디자인] " + Path.GetFileNameWithoutExtension(path) + " 저장 · 발판 배치 보존 · 중간 스킵 포탈과 옥상 출구 제거");
         }
         AssetDatabase.SaveAssets();
         EditorSceneManager.OpenScene(MAIN_SCENE, OpenSceneMode.Single);
@@ -84,7 +84,7 @@ public static class PauseRgbMainBuilder
             if (SceneManager.GetSceneAt(i).isDirty) throw new InvalidOperationException("[메인 디자인] 저장되지 않은 씬을 먼저 정리하세요. 사용자 편집을 덮어쓰지 않았습니다.");
     }
 
-    // 외곽 두 벽은 유지하고 내부 방향 전환 벽과 중간 스킵 포탈을 제거합니다. 엔딩 출구는 별도로 보존합니다.
+    // 외곽 두 벽은 유지하고 내부 방향 전환 벽과 중간 스킵 포탈을 제거합니다. 옥상 출구도 별도 정리 단계에서 제거합니다.
     private static void RemoveBarriers(PauseSceneMap map)
     {
         Transform game = map.GetComponentInParent<PauseGame>().transform;

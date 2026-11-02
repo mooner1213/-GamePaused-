@@ -1,0 +1,1 @@
+roof=(0.00, 174.80) hit=True credits=True frame=3 displayY=443.0949 cameraY=440.5749

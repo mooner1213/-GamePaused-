@@ -1,0 +1,22 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"maximumDisplayed\":true,\"HeldSeconds\":1.61666584,\"MaximumCharge\":0.85,\"DisplayedCharge\":1.0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "maximumDisplayed": true,
+        "HeldSeconds": 1.61666584,
+        "MaximumCharge": 0.85,
+        "DisplayedCharge": 1.0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

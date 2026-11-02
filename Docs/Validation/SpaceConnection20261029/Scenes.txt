@@ -1,0 +1,17 @@
+Assets/Scenes/DesignStages/Stage01_ClassicKeycap.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage02_SlimKeyrail.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage03_FracturedKeycap.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage04_IvoryCastle.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage05_VioletRuins.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage06_VermilionBrick.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage07_BlueGranite.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage08_AntiqueTerminal.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage10_PorcelainGothic.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage11_ObsidianFortress.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage12_TerracottaBastion.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage13_BronzeClockwork.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage14_NeonData.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/DesignStages/Stage15_GlassCircuit.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+Assets/Scenes/MainScene.unity · 우주 월드 고정 · Renderer 연결 · 하늘/구름 위 혼합 · 발판/벽/장치/Tilemap 보존
+backup=C:\Users\MBC\Documents\GitHub\PauseClimb-Backups\20261029-space-182814

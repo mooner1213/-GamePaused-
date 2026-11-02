@@ -1,0 +1,15 @@
+01_ClassicKeycap · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+02_SlimKeyrail · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+03_FracturedKeycap · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+04_IvoryCastle · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+05_VioletRuins · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+06_VermilionBrick · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+07_BlueGranite · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+08_AntiqueTerminal · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+09_RGBKeyboard · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+10_PorcelainGothic · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+11_ObsidianFortress · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+12_TerracottaBastion · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+13_BronzeClockwork · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+14_NeonData · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0
+15_GlassCircuit · 32픽셀/PPU32 · 타일 변환행렬 단위행렬 · 가로 바닥줄 투명픽셀=0

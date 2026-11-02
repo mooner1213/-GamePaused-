@@ -34,6 +34,17 @@ namespace PauseClimb
         // DrawClimbHud 화면을 현재 게임 상태와 Inspector 배치 설정으로 그립니다.
         internal void DrawClimbHud()
         {
+            // [수정됨: 간소화 모드에서는 픽셀 HUD만 표시하고 정상 타격 문구와 터치 조작은 유지합니다.]
+            if (!_ui.Layout.IsCompactGameplayHud) DrawLegacyStatus();
+            if (_ui.Layout.IsSettingsButtonVisible && _ui.Button(_ui.Layout.SettingsButton, "설정")) _ui.Game.OpenSettings();
+            if (_ui.Game.ShowEndingWord && !_ui.Game.IsEndingJump) _ui.DrawSummitWord();
+            if (!_ui.Game.IsEndingJump) DrawPlanStrip();
+            DrawTouchControls();
+        }
+
+        // 간소화 모드를 사용하지 않는 기존 씬의 상태 문구를 그대로 표시합니다.
+        private void DrawLegacyStatus()
+        {
             if (_ui.Game.DriverEnabled) _ui.Text(_ui.Layout.DriverNotice, "자동 입력 시연", _ui.Fonts.Hint, _ui.Theme.Gold);
             if (!_ui.Game.IsPaused)
             {
@@ -43,30 +54,33 @@ namespace PauseClimb
                 if (_ui.Game.IsPlayingBack) _ui.Text(_ui.Layout.PlaybackNotice, _ui.Game.Simulation.HasLongFall ?
                     "낙하 · 예약 취소 / 회복 후 새 입력" : $"연속 도약 · {_ui.Game.PlaybackRemaining}번 남음", _ui.Fonts.Playback, _ui.Theme.Mint, TextAnchor.MiddleCenter);
             }
-            if (_ui.Button(_ui.Layout.SettingsButton, "설정")) _ui.Game.OpenSettings();
             if (_ui.Game.IsPaused)
             {
-                if (_ui.Game.SummitReached) _ui.DrawSummitWord();
-                else
+                if (!_ui.Game.ShowEndingWord)
                 {
-                    _ui.Text(_ui.Layout.PauseHeading, "일시정지", _ui.Fonts.PauseTitle, _ui.Theme.Paper, TextAnchor.MiddleCenter);
+                    _ui.Text(_ui.Layout.PauseHeading, "일시정지", _ui.Fonts.PauseTitle, Color.white, TextAnchor.MiddleCenter);
                     _ui.Text(_ui.Layout.PauseDetail, _ui.Game.Simulation.HasLongFall ? "낙하 판정 · 남은 점프 취소 / 회복 중" :
                         _ui.Game.IsInputLocked ? "입력 잠금 · 남은 점프 그대로 보존" : "누른 시간 = 점프 세기", _ui.Fonts.Body, _ui.Game.IsInputLocked ? _ui.Theme.Gold : _ui.Theme.Mint, TextAnchor.MiddleCenter);
                 }
-            }
-            if (!_ui.Game.IsEndingJump) DrawPlanStrip();
-            if (_ui.Game.UseTouchControls && !_ui.Game.IsEndingJump)
-            {
-                _ui.Panel(_ui.Game.TouchInput.ToggleArea); _ui.Text(_ui.Game.TouchInput.ToggleArea, _ui.Game.IsPaused ? "재생" : "정지", _ui.Fonts.TouchToggle, _ui.Theme.Paper, TextAnchor.MiddleCenter);
-                _ui.Panel(_ui.Game.TouchInput.JumpArea); _ui.Text(_ui.Game.TouchInput.JumpArea, _ui.Game.IsInputLocked ? "입력 잠김" : _ui.Game.SummitReached ? "어퍼컷\n한 번 누르기" : "점프\n누르고 떼기", _ui.Fonts.TouchJump, _ui.Game.IsInputLocked ? _ui.Theme.Disabled : _ui.Theme.Mint, TextAnchor.MiddleCenter);
             }
             if (_ui.Game.CrumbleRemaining >= 0f && _ui.Game.CrumbleRemaining <= _ui.Effects.CrumbleHintSeconds)
                 _ui.Text(_ui.Layout.CrumbleNotice, $"타이머 {_ui.Game.CrumbleRemaining:0.0}초 · 정지 중에도 카운트가 줄어듭니다", _ui.Fonts.Body, _ui.Theme.Gold, TextAnchor.MiddleCenter);
         }
 
+        // 모바일에서는 화면을 간소화해도 정지·점프 입력 버튼을 계속 표시합니다.
+        private void DrawTouchControls()
+        {
+            if (_ui.Game.UseTouchControls && !_ui.Game.IsEndingJump)
+            {
+                _ui.Panel(_ui.Game.TouchInput.ToggleArea); _ui.Text(_ui.Game.TouchInput.ToggleArea, _ui.Game.IsPaused ? "재생" : "정지", _ui.Fonts.TouchToggle, _ui.Theme.Paper, TextAnchor.MiddleCenter);
+                _ui.Panel(_ui.Game.TouchInput.JumpArea); _ui.Text(_ui.Game.TouchInput.JumpArea, _ui.Game.IsInputLocked ? "입력 잠김" : _ui.Game.SummitReached ? "어퍼컷\n한 번 누르기" : "점프\n누르고 떼기", _ui.Fonts.TouchJump, _ui.Game.IsInputLocked ? _ui.Theme.Disabled : _ui.Theme.Mint, TextAnchor.MiddleCenter);
+            }
+        }
+
         // DrawPlanStrip 화면을 현재 게임 상태와 Inspector 배치 설정으로 그립니다.
         internal void DrawPlanStrip()
         {
+            if (_ui.Layout.IsCompactGameplayHud) return;
             _ui.Panel(_ui.Layout.PlanPanel);
             if (_ui.Game.IsRecording && !_ui.Game.SummitReached)
             {
@@ -81,7 +95,7 @@ namespace PauseClimb
             }
             else
             {
-                string message = _ui.Game.IsInputLocked ? "추가 입력 잠금 · 정지와 재개만 가능합니다" : _ui.Game.SummitReached ? "점프 키 한 번 = 어퍼컷 · 정지 상태에서도 실행" : GetContextHint();
+                string message = _ui.Game.IsInputLocked ? "추가 입력 잠금 · 정지와 재개만 가능합니다" : _ui.Game.SummitReached ? "ESC 정지 후 점프 키 한 번 = 문구를 향해 어퍼컷" : GetContextHint();
                 _ui.Text(_ui.Layout.ContextHint, message, _ui.Fonts.Context, _ui.Game.IsInputLocked ? _ui.Theme.Gold : _ui.Theme.Paper, TextAnchor.MiddleCenter);
                 _ui.Text(_ui.Layout.HotkeyHint, _ui.Game.UseTouchControls ? "왼쪽 정지·재생   /   오른쪽 점프 버튼 유지로 세기 입력" : $"{_ui.KeyName(_ui.Game.PauseKey)} 정지·재생   /   {_ui.KeyName(_ui.Game.JumpKey)} 정지 중 점프 입력", _ui.Fonts.Hint, _ui.Theme.Mint, TextAnchor.MiddleCenter);
             }
@@ -106,7 +120,7 @@ namespace PauseClimb
             if (_ui.Game.CameraFollowingFall) return "낙하 후 회복까지 계속 추적 · 휠 둘러보기 / 휠 클릭·ESC 복귀";
             if (_ui.Game.CameraBatchLocked) return "연속 도약 중 세로 화면 고정 · 큰 낙하가 시작되면 계속 추적";
             if (_ui.Game.Simulation.Grounded && _ui.Game.Simulation.Support.Id == _ui.Effects.CloudHintPlatformId) return "금간 진입 전 3번을 예약하세요 · 금간 위에서는 새 입력 불가";
-            if (_ui.Game.Simulation.Grounded && _ui.Game.Simulation.Support.Id == _ui.Game.Level.FinalStartPlatformId) return "마지막 구간 · 네 번의 점프를 한 계획으로 예약하세요";
+            if (_ui.Game.Simulation.Grounded && _ui.Game.Simulation.Support.Id == _ui.Game.Level.FinalStartPlatformId) return "마지막 구간 · 옥상에 착지한 뒤 ESC → 점프 키로 어퍼컷하세요";
             if (_ui.Game.Height < _ui.Effects.FirstHintHeight) return "걷기 없이 점프만 · 초반 궤도로 거리와 세기를 익히세요";
             if (_ui.Game.Height < _ui.Effects.WallHintHeight) return "반대쪽으로 가려면 벽에 박치기하세요";
             if (_ui.Game.Height < _ui.Effects.IceHintHeight) return "기름은 착지 후에도 미끄러집니다 · 궤도가 서서히 사라집니다";

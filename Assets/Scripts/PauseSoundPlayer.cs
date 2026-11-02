@@ -25,6 +25,7 @@ namespace PauseClimb
         [SerializeField, Tooltip("순서대로 도약·착지·반동·엔딩의 음표 길이입니다.")] private Vector4 _noteSeconds = new Vector4(0.065f,0.07f,0.06f,0.18f);
         [SerializeField, Tooltip("순서대로 도약·착지·반동·엔딩의 파형 크기입니다.")] private Vector4 _effectLoudness = new Vector4(0.32f,0.22f,0.2f,0.25f);
         [SerializeField, Tooltip("음표가 끝날 때 소리가 줄어드는 감쇠율입니다.")] private float _toneDecay = 2f;
+        private float _masterVolume = 1f;
 
         #endregion
         #region Reference
@@ -32,9 +33,13 @@ namespace PauseClimb
         private readonly List<AudioClip> _clips = new List<AudioClip>();
         private AudioClip[] _effects;
         #endregion
+        #region Property
+        public float MusicVolume => _musicSource == null ? 0f : _musicSource.volume;
+        public float EffectsVolume => _effectSource == null ? 0f : _effectSource.volume;
+        #endregion
         #region Unity Event Method
         // 컴포넌트 수명이 끝나면 직접 생성한 음원만 정리합니다.
-        private void OnDestroy() { ReleaseClips(); }
+        private void OnDestroy() { PauseAudioPreferences.Changed -= ApplyVolumes; ReleaseClips(); }
 
         #endregion
         #region Custom Method
@@ -44,10 +49,24 @@ namespace PauseClimb
             _musicSource = GetComponent<AudioSource>(); _effectSource = gameObject.AddComponent<AudioSource>();
             _musicSource.loop = true; _musicSource.clip = MakeTone("탑의 리듬", _backgroundNotes, _backgroundNoteSeconds, _backgroundLoudness);
             _effects = new[] { MakeTone("도약",_jumpNotes,_noteSeconds.x,_effectLoudness.x),MakeTone("착지",_landNotes,_noteSeconds.y,_effectLoudness.y),MakeTone("반동",_bounceNotes,_noteSeconds.z,_effectLoudness.z),MakeTone("저주 해제",_endingNotes,_noteSeconds.w,_effectLoudness.w) };
+            PauseAudioPreferences.Changed -= ApplyVolumes;
+            PauseAudioPreferences.Changed += ApplyVolumes;
             SetVolume(volume); _musicSource.Play();
         }
-        // 설정 UI의 음량을 두 소스에 함께 적용합니다.
-        public void SetVolume(float value) { if (_musicSource != null) _musicSource.volume = Mathf.Clamp01(value); if (_effectSource != null) _effectSource.volume = Mathf.Clamp01(value); }
+        // 기존 전체 음량은 보존하고 BGM·SFX의 사용자 설정을 각각 곱합니다.
+        public void SetVolume(float value) { _masterVolume = Mathf.Clamp01(value); ApplyVolumes(); }
+        // 슬라이더 변경 사건이 생길 때만 소스 음량을 갱신합니다.
+        private void ApplyVolumes()
+        {
+            if (_musicSource != null) _musicSource.volume = _masterVolume * PauseAudioPreferences.Music;
+            if (_effectSource != null) _effectSource.volume = _masterVolume * PauseAudioPreferences.Effects;
+        }
+        // 관리 메뉴에서만 설정한 소리를 들을 수 있게 하고, ESC 점프 계획의 기존 음원 정지는 유지합니다.
+        public void SetMenuPreview(bool isEnabled)
+        {
+            if (_musicSource != null) _musicSource.ignoreListenerPause = isEnabled;
+            if (_effectSource != null) _effectSource.ignoreListenerPause = isEnabled;
+        }
         // 호출자는 정지 여부를 확인하고 사건이 생긴 시점에만 재생합니다.
         public void Play(PauseSoundCue cue) { if (_effects != null) _effectSource.PlayOneShot(_effects[(int)cue]); }
 

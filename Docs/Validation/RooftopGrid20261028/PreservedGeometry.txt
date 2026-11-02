@@ -1,0 +1,16 @@
+MainScene.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage01_ClassicKeycap.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage02_SlimKeyrail.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage03_FracturedKeycap.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage04_IvoryCastle.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage05_VioletRuins.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage06_VermilionBrick.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage07_BlueGranite.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage08_AntiqueTerminal.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage09_RGBKeyboard.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage10_PorcelainGothic.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage11_ObsidianFortress.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage12_TerracottaBastion.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage13_BronzeClockwork.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage14_NeonData.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0
+Stage15_GlassCircuit.unity: changed layer transforms=2; changed tilemaps=2; replaced sprite transforms=26; changed colliders=0

@@ -1,0 +1,8 @@
+facing=-1 dt=0.03333334 sequence=01,02,03 hitError=5.960464E-08 held03=True
+facing=-1 dt=0.01666667 sequence=01,02,03 hitError=5.960464E-08 held03=True
+facing=-1 dt=0.008333334 sequence=01,02,03 hitError=5.960464E-08 held03=True
+facing=-1 dt=0.17 sequence=01,02,03 hitError=5.960464E-08 held03=True
+facing=1 dt=0.03333334 sequence=01,02,03 hitError=0 held03=True
+facing=1 dt=0.01666667 sequence=01,02,03 hitError=0 held03=True
+facing=1 dt=0.008333334 sequence=01,02,03 hitError=0 held03=True
+facing=1 dt=0.17 sequence=01,02,03 hitError=0 held03=True

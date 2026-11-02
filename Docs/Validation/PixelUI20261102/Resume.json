@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"frozenInFlight\":true,\"resumePreservesState\":true,\"confirm\":true,\"position\":\"(-9.06, 1.34)\",\"remaining\":1},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "frozenInFlight": true,
+        "resumePreservesState": true,
+        "confirm": true,
+        "position": "(-9.06, 1.34)",
+        "remaining": 1
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}
