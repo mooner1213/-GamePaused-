@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"PASS · 99회 실제 예약 도약 · 옥상 중앙 · 어퍼컷 적중 · 크레딧\",\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": "PASS · 99회 실제 예약 도약 · 옥상 중앙 · 어퍼컷 적중 · 크레딧",
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

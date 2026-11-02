@@ -29,6 +29,8 @@ namespace PauseClimb.EditorTools
             Slice("Settings", "MenuSheet", new Rect(825, 452, 250, 142));
             Slice("Quit", "MenuSheet", new Rect(106, 722, 465, 140));
             Slice("Back", "MenuSheet", new Rect(900, 728, 108, 140));
+            Slice("Trophy", "MenuSheet", new Rect(208, 1010, 252, 238));
+            Slice("Costume", "MenuSheet", new Rect(832, 967, 262, 289));
             Slice("PauseTitle", "PauseSheet", new Rect(160, 140, 930, 277));
             Slice("Pause", "PauseSheet", new Rect(480, 523, 294, 322));
             Slice("Gear", "PauseSheet", new Rect(458, 900, 337, 320));

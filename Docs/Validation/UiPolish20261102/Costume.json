@@ -1,0 +1,19 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"costumeMessage\":\"코스튬은 아직 구현되지 않은 기능입니다.\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "costumeMessage": "코스튬은 아직 구현되지 않은 기능입니다."
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

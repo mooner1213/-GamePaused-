@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"도약 8/99 · 묶음 2 · 높이 13.60m · 오류 0\",\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": "도약 8/99 · 묶음 2 · 높이 13.60m · 오류 0",
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

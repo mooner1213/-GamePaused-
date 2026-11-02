@@ -1,0 +1,41 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"buttons\":[{\"name\":\"게임 종료\",\"scale\":0.7},{\"name\":\"코스튬 · 준비 중\",\"scale\":0.7},{\"name\":\"트로피 · 준비 중\",\"scale\":0.7},{\"name\":\"게임 시작\",\"scale\":0.7},{\"name\":\"설정\",\"scale\":0.7}],\"trophyMessage\":\"트로피는 아직 구현되지 않은 기능입니다.\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "buttons": [
+          {
+            "name": "게임 종료",
+            "scale": 0.7
+          },
+          {
+            "name": "코스튬 · 준비 중",
+            "scale": 0.7
+          },
+          {
+            "name": "트로피 · 준비 중",
+            "scale": 0.7
+          },
+          {
+            "name": "게임 시작",
+            "scale": 0.7
+          },
+          {
+            "name": "설정",
+            "scale": 0.7
+          }
+        ],
+        "trophyMessage": "트로피는 아직 구현되지 않은 기능입니다."
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

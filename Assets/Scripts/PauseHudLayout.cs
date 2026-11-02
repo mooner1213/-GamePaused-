@@ -14,6 +14,9 @@ namespace PauseClimb
         [Header("관리 메뉴 표시")]
         [SerializeField, Tooltip("별도 픽셀 메뉴가 있는 씬에서는 꺼서 기존 설정 버튼과 겹치지 않게 합니다.")]
         private bool _isSettingsButtonVisible = true;
+        [Header("등반 화면 간소화")]
+        [SerializeField, InspectorName("픽셀 게임 화면만 표시"), Tooltip("픽셀 HUD를 사용하는 씬에서 켭니다. 기존 높이·방향·상단 정지 제목·하단 점프 계획과 상황 안내를 숨깁니다. 터치 버튼과 정상 문구·엔딩은 유지합니다.")]
+        private bool _isCompactGameplayHud;
         [Header("화면 패널과 안내 영역")]
         // [TUNE] 기본값은 기존 화면의 배치와 표시를 그대로 유지합니다.
         [SerializeField, Tooltip("시작 안내 카드입니다.")]
@@ -106,6 +109,7 @@ namespace PauseClimb
 
         #region Property
         public bool IsSettingsButtonVisible => _isSettingsButtonVisible;
+        public bool IsCompactGameplayHud => _isCompactGameplayHud;
         public Rect TitlePanel => _titlePanel;
         public Rect TitleHeading => _titleHeading;
         public Rect TitleSubtitle => _titleSubtitle;

@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"rows\":[{\"scene\":\"Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity\",\"missingScripts\":0,\"buttons\":8},{\"scene\":\"Assets/Scenes/MainMenu.unity\",\"missingScripts\":0,\"buttons\":6}],\"repeatCheck\":\"Repeat.json\",\"playing\":false,\"compiling\":false,\"reloadLocked\":false,\"activeScene\":\"Assets/Scenes/MainMenu.unity\"},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "rows": [
+          {
+            "scene": "Assets/Scenes/DesignStages/Stage09_RGBKeyboard.unity",
+            "missingScripts": 0,
+            "buttons": 8
+          },
+          {
+            "scene": "Assets/Scenes/MainMenu.unity",
+            "missingScripts": 0,
+            "buttons": 6
+          }
+        ],
+        "repeatCheck": "Repeat.json",
+        "playing": false,
+        "compiling": false,
+        "reloadLocked": false,
+        "activeScene": "Assets/Scenes/MainMenu.unity"
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

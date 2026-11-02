@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"bestHeight\":16.7680912,\"IsDismissed\":true,\"TutorialAlpha\":0.0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "bestHeight": 16.7680912,
+        "IsDismissed": true,
+        "TutorialAlpha": 0.0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}
