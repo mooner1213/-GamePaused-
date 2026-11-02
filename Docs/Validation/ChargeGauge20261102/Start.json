@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"hiddenDuringPlayback\":true,\"IsRecording\":true,\"maximumCharge\":0.85},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "hiddenDuringPlayback": true,
+        "IsRecording": true,
+        "maximumCharge": 0.85
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

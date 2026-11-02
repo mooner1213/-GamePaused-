@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"visible\":true,\"displayed\":0.50980407,\"actual\":0.50980407,\"widthPixels\":27.31018,\"heightPixels\":4.0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "visible": true,
+        "displayed": 0.50980407,
+        "actual": 0.50980407,
+        "widthPixels": 27.31018,
+        "heightPixels": 4.0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

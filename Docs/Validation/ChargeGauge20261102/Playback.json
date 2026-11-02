@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"hiddenDuringReplay\":true,\"IsPaused\":true,\"IsInputLocked\":true},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "hiddenDuringReplay": true,
+        "IsPaused": true,
+        "IsInputLocked": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}
