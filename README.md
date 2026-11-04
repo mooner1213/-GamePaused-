@@ -31,7 +31,7 @@
 
 ## 기획 자료
 
-- **[게임 기획서 PDF · 통합본 1.0 · 16쪽](Docs/Planning/GameDesign_v1.0.pdf)**
+- **[게임 기획서 PDF · 통합본 1.0 · 16쪽](Docs/Planning/GamePaused_게임기획서.pdf)**
 - **[기획 요약과 세부 규칙](Docs/Planning/README.md)**
 
 
