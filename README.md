@@ -2,87 +2,62 @@
 
 **시간을 멈추고 점프를 설계하며 성벽을 오르는 2D 도트 등반 플랫포머입니다.**
 
-전반부의 핵심은 ESC로 시간을 멈춘 뒤 점프를 사전 입력하는 플레이입니다. 성벽 정상에서 일시정지를 파괴하면 조력자 ESC가 배신하고 정지 기능을 잃은 후반부로 이어지는 구성을 기획했습니다.
-
-> **문재혁과 전주호가 함께 제작하는 2인 팀 프로젝트입니다.** 기획서의 목표와 제안 규칙은 현재 구현·검증이 완료된 기능과 구분합니다.
-
-## 프로젝트와 담당 역할
+[게임 기획서 PDF](Docs/Planning/GamePaused_게임기획서.pdf) · [기획 요약](Docs/Planning/README.md) · [플레이 씬](Assets/Scenes/MainScene.unity) · [개발 기록](Docs/DevelopmentNotes.md)
 
 | 항목 | 내용 |
 | --- | --- |
-| 팀 규모 | 2명 · 문재혁 / 전주호 |
-| 제작 방식 | 기획 구체화와 디자인·콘텐츠 제작 및 개발 전반에 AI 활용 |
-| 목표 플랫폼 | PC · 기획 기준 |
-| 제작 상태 | 미완성 프로토타입. 최종 플레이 화면과 시연 자료 준비 중 |
+| 제작 | 문재혁 · 전주호 / 2인 팀 프로젝트 |
+| 목표 플랫폼 | PC |
+| 개발 환경 | Unity 6000.3.22f1 · C# |
+| 현재 단계 | 점프 예약·벽 반사·예상 궤도를 포함한 프로토타입 개발 중 |
 
-### 팀원별 담당 역할
+## 팀 구성
 
-**문재혁 · 메인 기획 / UI 콘셉트 디자인**
-
-- 게임 콘셉트와 핵심 규칙 설계
-- 스토리와 플레이 흐름 구성
-- UI 콘셉트 디자인과 디자인 방향 수립
-
-**전주호 · 개발 / 애니메이션**
-
-- Unity·C# 기반 게임 시스템 개발
-- 기획에 따른 게임 기능 구현
-- 프로토타입 제작
-
-## 기획 자료
-
-- **[게임 기획서 PDF · 통합본 1.0 · 16쪽](Docs/Planning/GamePaused_게임기획서.pdf)**
-- **[기획 요약과 세부 규칙](Docs/Planning/README.md)**
-
-
-## 핵심 기획 의도
-
-| 설계 과제 | 선택한 규칙 | 의도한 경험 |
-| --- | --- | --- |
-| 단순한 조작에서 경로 선택을 만들기 | 방향키 없이 점프와 벽 충돌로 이동·방향 전환 | 발판의 위치와 반사 지점을 읽고 경로 설계 |
-| 실시간 조작 부담을 줄이기 | 시간을 멈추고 누름 시간으로 점프 강도 예약 | 관찰 → 계획 → 실행 → 결과 확인 |
-| 규칙 학습에서 숙련으로 이어지기 | 초반 예상 궤도를 보여 주고 높이에 따라 축소 | 가이드로 물리를 익힌 뒤 거리 감각 활용 |
-| 스토리 사건을 플레이 변화로 연결하기 | ESC의 배신 이후 정지 기능 상실 | 익숙한 차지·벽 반사 규칙을 다른 조건에서 재해석 |
-| 클리어 이후 목표 제공 | 업적으로 추가 스테이지와 코스튬 해금 | 기록 갱신과 새로운 콘텐츠 탐색 |
-
-위 경험은 설계 목표입니다. 플레이 테스트를 통한 달성 결과와 수치 검증은 별도 자료로 관리합니다.
-
-## 플레이 흐름 · 기획 기준
-
-1. 지형과 벽의 위치 및 캐릭터 방향을 확인합니다.
-2. ESC로 시간을 멈추고 Space를 누른 시간으로 점프 강도와 순서를 입력합니다.
-3. 정지를 해제해 점프를 실행하고 착지나 추락 결과를 확인합니다.
-4. 성벽 정상에서 일시정지를 파괴하면 배신 사건과 재실행을 거쳐 후반부로 이어집니다.
-5. 변화한 성벽을 재등반해 ESC를 격파하고 최종 결말에 도달합니다.
-
-배신 이후의 직접 차지 점프와 보스전 조작은 기획서의 설계 제안·후속 확정 항목입니다.
-
-## 기획 범위와 구현 범위
-
-| 구분 | 내용 |
+| 팀원 | 담당 |
 | --- | --- |
-| 기획서에 정의한 방향 | 스토리와 전·후반 구조. 조작 제약. 단계별 학습과 UI. 업적·해금 및 재플레이 기록 |
-| 프로토타입 코드 포함 | 점프 입력 기록과 이동 시뮬레이션·벽 반사·예상 궤도 및 발판·기믹·카메라·HUD |
-| 제안 또는 조정 대상 | 연속 점프의 세부 실행 규칙. 후반부 직접 점프. 구름 발판 시간. 보스 패턴·피해 판정. 업적 최종 수치 |
-| 이후 확인 | 전체 스토리의 구현·완주 검증과 최종 UI·시연 자료 |
+| 문재혁 | 기획·스토리·플레이 흐름·UI 콘셉트 디자인 |
+| 전주호 | Unity 개발·게임 기능 구현·애니메이션 |
 
-## 프로토타입 코드 탐색
+기획 구체화와 디자인·콘텐츠 제작 및 개발 과정에 AI를 활용합니다.
 
-전주호가 담당한 프로토타입 개발의 주요 코드입니다.
+## 핵심 플레이
 
-| 항목 | 관련 코드 |
+1. 지형과 벽의 위치를 살펴보고 이동 경로를 생각합니다.
+2. ESC로 시간을 멈춘 뒤 Space를 누르는 시간으로 점프 강도와 순서를 예약합니다.
+3. 정지를 해제해 예약한 점프를 실행하고 착지·추락 결과를 확인합니다.
+4. 벽 충돌에 따른 방향 전환을 활용해 다음 경로를 계획합니다.
+
+방향키 없이 점프와 벽 반사로 이동합니다. 초반에는 예상 궤도로 조작을 익히고 이후에는 거리 감각과 경로 판단의 비중을 높이는 구성을 기획했습니다.
+
+## 기획 방향
+
+| 요소 | 설계 의도 |
 | --- | --- |
-| 점프 명령 기록 | [JumpInputRecorder](Assets/Scripts/JumpInputRecorder.cs) · [JumpCommand](Assets/Scripts/JumpCommand.cs) |
-| 이동과 충돌 계산 | [PauseSimulation](Assets/Scripts/PauseSimulation.cs) |
-| 실제 이동과 계산을 공유하는 궤도 예측 | [PauseTrajectory](Assets/Scripts/PauseTrajectory.cs) |
-| 발판과 기믹 | [PausePlatformObject](Assets/Scripts/PausePlatformObject.cs) · [PauseGimmickObject](Assets/Scripts/PauseGimmickObject.cs) |
-| 캐릭터·카메라 표현 | [PauseCharacterView](Assets/Scripts/PauseCharacterView.cs) · [PauseBatchCamera](Assets/Scripts/PauseBatchCamera.cs) |
+| 시간 정지와 점프 예약 | 관찰 → 계획 → 실행 → 결과 확인의 반복 |
+| 점프와 벽 반사 | 단순한 조작 안에서 발판과 반사 지점을 읽는 경로 선택 |
+| 높이에 따른 궤도 가이드 축소 | 물리 규칙 학습에서 거리 판단과 숙련으로 연결 |
+| ESC의 배신과 정지 기능 상실 | 스토리 사건을 전·후반의 플레이 규칙 변화로 연결 |
+| 업적과 콘텐츠 해금 | 클리어 이후 추가 스테이지·코스튬과 기록 갱신 목표 제공 |
 
-## 실행과 조작 · 현재 프로토타입
+세부 규칙과 스토리·UI 방향은 [기획 요약](Docs/Planning/README.md)에서 확인할 수 있습니다.
+
+## 진행 상태
+
+| 구분 | 범위 |
+| --- | --- |
+| 프로토타입 코드 | 점프 입력 기록·이동 시뮬레이션·벽 반사·예상 궤도·발판과 기믹·카메라·HUD |
+| 기획 | 전·후반 스토리·학습과 난이도·UI·업적과 해금·재플레이 기록 |
+| 후속 설계·제작 | 연속 점프 세부 규칙·후반부 직접 점프·보스전·업적 수치·최종 UI |
+| 검증 | 개별 기능의 기존 검사 기록 보관. 전체 스토리 구현과 완주 검증은 후속 작업 |
+
+## 실행 방법
 
 1. Unity Hub에서 프로젝트를 추가하고 **Unity 6000.3.22f1**로 엽니다.
-2. `Assets/Scenes/MainScene.unity`를 엽니다.
+2. [MainScene](Assets/Scenes/MainScene.unity)을 엽니다.
 3. Play Mode로 실행합니다.
+
+<details>
+<summary>현재 프로토타입 조작</summary>
 
 | 입력 | 동작 |
 | --- | --- |
@@ -91,26 +66,31 @@
 | 마우스 휠 | 위아래 둘러보기 |
 | 휠 클릭 / Esc | 자동 카메라 위치로 복귀 |
 
-예약된 점프가 남아 있으면 추가 입력이 제한됩니다. 위 조작은 현재 프로토타입 기준이며 기획서의 후반부 전체가 구현됐다는 의미는 아닙니다.
+예약된 점프가 남아 있으면 추가 입력이 제한됩니다. 후반부 조작은 후속 설계 대상입니다.
 
-## 자료 구조
+</details>
 
-| 경로 | 역할 |
-| --- | --- |
-| [Docs/Planning](Docs/Planning) | 원본 기획서와 웹용 요약 |
-| [Docs/Art](Docs/Art) | 아트와 팔레트 관련 기록 |
-| [Docs/Validation](Docs/Validation) | 기존 검증 기록 |
-| [Assets/Scripts](Assets/Scripts) | 프로토타입 코드 |
-| [Assets/Editor](Assets/Editor) | 편집·빌드 도구 |
-| [Assets/Scenes](Assets/Scenes) | 플레이·편집 씬 |
+## 개발 자료
 
-## 개발 기록과 검증
-
-- [기존 개발 상세 기록](Docs/DevelopmentNotes.md)
-- [플레이 피드백 기록](Docs/2026-10-20-플레이-피드백.md)
+- [기획서 PDF](Docs/Planning/GamePaused_게임기획서.pdf) · [기획 요약과 세부 규칙](Docs/Planning/README.md)
+- [개발 상세 기록](Docs/DevelopmentNotes.md) · [플레이 피드백 기록](Docs/2026-10-20-플레이-피드백.md)
 - [발판 길이와 엔딩 어퍼컷 수정](Docs/2026-10-26-발판길이와-엔딩어퍼컷.md)
-- [프로젝트 작업 규칙](AGENTS.md)
+- [아트 자료](Docs/Art) · [검증 기록](Docs/Validation) · [프로젝트 작업 규칙](AGENTS.md)
 
-개발 도구에는 Windows·Android 빌드 경로가 있으나 기획상 목표 플랫폼은 PC입니다. `-expansionQA` 검사는 시작점의 제한된 도약과 장치별 정지 표시를 확인합니다. 전체 코스 완주나 최종 게임의 완성도를 검증하는 결과와 구분합니다.
+<details>
+<summary>주요 코드와 검증 범위</summary>
 
-외부 폰트와 리소스의 출처 및 이용 조건은 해당 라이선스를 따릅니다.
+| 항목 | 관련 코드 |
+| --- | --- |
+| 점프 명령 기록 | [JumpInputRecorder](Assets/Scripts/JumpInputRecorder.cs) · [JumpCommand](Assets/Scripts/JumpCommand.cs) |
+| 이동과 충돌 계산 | [PauseSimulation](Assets/Scripts/PauseSimulation.cs) |
+| 이동 계산을 공유하는 궤도 예측 | [PauseTrajectory](Assets/Scripts/PauseTrajectory.cs) |
+| 발판과 기믹 | [PausePlatformObject](Assets/Scripts/PausePlatformObject.cs) · [PauseGimmickObject](Assets/Scripts/PauseGimmickObject.cs) |
+| 캐릭터와 카메라 | [PauseCharacterView](Assets/Scripts/PauseCharacterView.cs) · [PauseBatchCamera](Assets/Scripts/PauseBatchCamera.cs) |
+
+`-expansionQA` 검사는 시작점의 제한된 도약과 장치별 정지 표시를 확인하는 범위입니다. 전체 코스 완주 검증은 별도로 진행해야 합니다. 개발 도구에는 Windows·Android 빌드 경로가 있으며 기획상 목표 플랫폼은 PC입니다.
+
+</details>
+
+외부 폰트와 리소스는 각 제공자의 라이선스를 따릅니다.
+
